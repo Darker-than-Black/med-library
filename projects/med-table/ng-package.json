@@ -5,8 +5,8 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-    "lodash.get",
     "primeflex",
+    "lodash",
     "primeng"
   ]
 }

@@ -8,12 +8,15 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "patch:medTable": "cd ./projects/med-table && npm version patch && cd ../../",
-    "build:medTable": "ng build mew-table",
-    "publish:medTable": "npm run patch:medTable && build:medTable && cd dist/med-table && npm pack && npm publish"
+    "build:medTable": "ng build med-table",
+    "publish:medTable": "npm run patch:medTable && npm run build:medTable && cd dist/med-table && npm pack && npm publish",
+
+    "buildNpm": "cd ./projects/med-table && npm version patch && cd ../../ && ng build med-table  && cd dist/med-table && npm link && cd ../.."
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
+    "@angular/cdk": "^13.3.1",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
@@ -21,7 +24,7 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
-    "lodash.get": "^4.4.2",
+    "lodash": "^4.17.21",
     "primeflex": "^3.1.3",
     "primeng": "^13.3.0",
     "rxjs": "~7.5.0",
@@ -33,7 +36,7 @@
     "@angular/cli": "~13.2.6",
     "@angular/compiler-cli": "~13.2.0",
     "@types/jasmine": "~3.10.0",
-    "@types/lodash.get": "^4.4.6",
+    "@types/lodash": "^4.14.180",
     "@types/node": "^12.20.47",
     "jasmine-core": "~4.0.0",
     "karma": "~6.3.0",

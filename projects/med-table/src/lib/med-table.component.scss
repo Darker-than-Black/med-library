@@ -1,0 +1,53 @@
+:host ::ng-deep {
+  .med-table {
+    .p-datatable-header {
+      @media screen and (min-width: 960px) {
+        display: none;
+      }
+    }
+
+    .p-datatable-wrapper {
+      overflow-x: scroll;
+    }
+  }
+}
+
+.med-table {
+  &__column-title {
+    display: none;
+  }
+
+  &__row {
+    &:nth-child(even) {
+      @media screen and (max-width: 960px) {
+        background: var(--gray-50);
+      }
+    }
+  }
+
+  &__td {
+    padding: 0 !important;
+  }
+
+  &__btn {
+    @media screen and (max-width: 960px) {
+      font-size: 14px;
+    }
+  }
+}
+
+.up-scroll {
+  width: 100%;
+  height: 15px;
+  overflow-x: scroll;
+
+  &__row {
+    width: 1px;
+    height: 1px;
+    padding: 0!important;
+  }
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
+}

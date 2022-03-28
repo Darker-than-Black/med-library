@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MedTableComponent } from './med-table.component';
+import { TableDataComponent } from './table-data.component';
 
-describe('MedTableComponent', () => {
-  let component: MedTableComponent<any>;
-  let fixture: ComponentFixture<MedTableComponent<any>>;
+describe('TableDataComponent', () => {
+  let component: TableDataComponent;
+  let fixture: ComponentFixture<TableDataComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MedTableComponent ]
+      declarations: [ TableDataComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MedTableComponent);
+    fixture = TestBed.createComponent(TableDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

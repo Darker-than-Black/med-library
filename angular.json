@@ -5,6 +5,11 @@
   "projects": {
     "med-table": {
       "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "projects/med-table",
       "sourceRoot": "projects/med-table/src",
       "prefix": "lib",

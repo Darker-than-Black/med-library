@@ -1,0 +1,33 @@
+<div class="table-data__item">
+  <span class="table-data__column-title">
+    {{ config.label }}
+  </span>
+
+  <span class="table-data__content">
+<!--    <formly-form-->
+<!--      *ngIf="fields.length"-->
+<!--      [fields]="fields"-->
+<!--      [model]="model"-->
+<!--    ></formly-form>-->
+
+    <div
+      [hidden]="fields.length"
+      [className]="isEditable ? 'editable' : ''"
+      (click)="setEditor()"
+    >
+      <span #contentRef>
+        <ng-container *ngTemplateOutlet="
+          template || defaultTemplate;
+          context: { $implicit: previewData, item: item }"
+        ></ng-container>
+      </span>
+
+      <ng-container
+        *ngIf="isEmptyTemplate"
+        [ngTemplateOutlet]="defaultTemplate"
+      ></ng-container>
+    </div>
+  </span>
+</div>
+
+<ng-template #defaultTemplate>{{ previewData }}</ng-template>
