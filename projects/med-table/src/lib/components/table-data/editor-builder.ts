@@ -1,12 +1,12 @@
-import {TableColumnConfig} from '../../types/table';
-import {CustomFormlyFieldConfig} from '../../types/form';
+import { MedTableColumnConfig } from '../../types/table';
+import { MedCustomFormlyFieldConfig } from '../../types/form';
 import { FIELD_TYPES } from '../../constants/fieldTypes';
 
-export interface EditorBuilderOptions extends TableColumnConfig {
+export interface EditorBuilderOptions extends MedTableColumnConfig {
   onLeave: () => void
 }
 
-export class EditorBuilder implements CustomFormlyFieldConfig {
+export class EditorBuilder implements MedCustomFormlyFieldConfig {
   key: string;
   type: string;
   templateOptions = {

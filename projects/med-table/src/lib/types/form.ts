@@ -1,9 +1,9 @@
 import { FieldTypeConfig, FormlyFieldConfig, FormlyTemplateOptions } from '@ngx-formly/core';
 import { FIELD_TYPES } from '../constants/fieldTypes';
 
-export interface ItemForm extends Record<string, any> {}
+export interface MedItemForm extends Record<string, any> {}
 
-export interface FormFieldConfig {
+export interface MedFormFieldConfig {
   key: string
   label: string
   type: FIELD_TYPES
@@ -14,7 +14,7 @@ export interface FormFieldConfig {
 
 /* ------ FORMLY ------ */
 
-export interface CustomFormlyTemplateOptions extends FormlyTemplateOptions {
+export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   mask?: string
   label?: string
   class?: string
@@ -23,11 +23,11 @@ export interface CustomFormlyTemplateOptions extends FormlyTemplateOptions {
   onLeave: () => void
 }
 
-export interface CustomFormlyFieldConfig extends Omit<FormlyFieldConfig, 'templateOptions'> {
-  templateOptions?: CustomFormlyTemplateOptions
+export interface MedCustomFormlyFieldConfig extends Omit<FormlyFieldConfig, 'templateOptions'> {
+  templateOptions?: MedCustomFormlyTemplateOptions
 }
 
-export interface CustomFieldTypeConfig extends Omit<FieldTypeConfig, 'templateOptions' | 'key'> {
+export interface MedCustomFieldTypeConfig extends Omit<FieldTypeConfig, 'templateOptions' | 'key'> {
   key: string
-  templateOptions: NonNullable<CustomFormlyTemplateOptions>
+  templateOptions: NonNullable<MedCustomFormlyTemplateOptions>
 }

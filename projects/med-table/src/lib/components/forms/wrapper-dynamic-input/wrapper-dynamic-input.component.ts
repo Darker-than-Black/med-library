@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FieldWrapper } from '@ngx-formly/core';
 
-import { CustomFormlyFieldConfig } from '../../../types/form';
+import { MedCustomFormlyFieldConfig } from '../../../types/form';
 
 
 @Component({
@@ -9,4 +9,4 @@ import { CustomFormlyFieldConfig } from '../../../types/form';
   templateUrl: './wrapper-dynamic-input.component.html',
   styleUrls: ['./wrapper-dynamic-input.component.scss']
 })
-export class WrapperDynamicInputComponent extends FieldWrapper<CustomFormlyFieldConfig> {}
+export class WrapperDynamicInputComponent extends FieldWrapper<MedCustomFormlyFieldConfig> {}

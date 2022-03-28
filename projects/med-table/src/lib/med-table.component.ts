@@ -2,7 +2,7 @@ import { Table } from 'primeng/table';
 import { Component, Input, ViewChild, TemplateRef, ElementRef, Output, EventEmitter } from '@angular/core';
 
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
-import { TableColumnConfig, TableSettings, TableSettingsLocal } from './types/table';
+import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal } from './types/table';
 
 @Component({
   selector: 'med-table',
@@ -13,8 +13,8 @@ export class MedTableComponent<ItemType> {
   @Input() data: ItemType[] = [];
   @Input() loading: boolean = false;
 
-  @Input() config: TableColumnConfig[] = [];
-  @Input() tableSettings?: TableSettings;
+  @Input() config: MedTableColumnConfig[] = [];
+  @Input() tableSettings?: MedTableSettings;
 
   @Input() captionTemplate?: TemplateRef<any>;
   @Input() tableDataTemplate?: TemplateRef<any>;
@@ -31,7 +31,7 @@ export class MedTableComponent<ItemType> {
       .map(({key}) => key);
   }
 
-  get localTableSettings(): TableSettingsLocal {
+  get localTableSettings(): MedTableSettingsLocal {
     return {...this.tableSettings, ...DEFAULT_TABLE_SETTINGS};
   }
 

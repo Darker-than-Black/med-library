@@ -1,6 +1,6 @@
 import { FIELD_TYPES } from '../constants/fieldTypes';
 
-export interface TableSettingsLocal {
+export interface MedTableSettingsLocal {
   rows: number
   filterDelay: number
   paginator: boolean
@@ -11,7 +11,7 @@ export interface TableSettingsLocal {
   currentPageReportTemplate: string
 }
 
-export interface TableSettings {
+export interface MedTableSettings {
   rows?: number
   filterDelay?: number
   paginator?: boolean
@@ -22,7 +22,7 @@ export interface TableSettings {
   currentPageReportTemplate?: string
 }
 
-export interface TableColumnConfig {
+export interface MedTableColumnConfig {
   key: string
   label: string
   filterable?: boolean

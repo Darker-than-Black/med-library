@@ -12,8 +12,8 @@ import {
 } from '@angular/core';
 
 import { EditorBuilder } from './editor-builder';
-import { TableColumnConfig } from '../../types/table';
-import { CustomFormlyFieldConfig } from '../../types/form';
+import { MedTableColumnConfig } from '../../types/table';
+import { MedCustomFormlyFieldConfig } from '../../types/form';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
@@ -26,14 +26,14 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   constructor(private cd: ChangeDetectorRef) {}
 
   @Input() item!: ItemType;
-  @Input() config!: TableColumnConfig;
+  @Input() config!: MedTableColumnConfig;
   @Input() template?: TemplateRef<any>;
 
   @Output() update = new EventEmitter<ItemType>();
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
-  fields: CustomFormlyFieldConfig[] = [];
+  fields: MedCustomFormlyFieldConfig[] = [];
   model: Record<string, any> = {};
 
   get fieldData(): string {

@@ -1,6 +1,6 @@
-import { TableSettingsLocal } from '../types/table';
+import { MedTableSettingsLocal } from '../types/table';
 
-export const DEFAULT_TABLE_SETTINGS: TableSettingsLocal = {
+export const DEFAULT_TABLE_SETTINGS: MedTableSettingsLocal = {
   rows: 25,
   filterDelay: 0,
   paginator: true,
