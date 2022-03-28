@@ -1,8 +1,16 @@
 {
   "name": "med-table",
-  "version": "0.0.21",
+  "version": "0.0.23",
   "author": "Dmytro Rybachek",
   "license": "MIT",
+  "description": "Wrapper over table of primeng library for Ministry of Health",
+  "keywords": [
+    "angular",
+    "table",
+    "primeng",
+    "p-table",
+    "editor"
+  ],
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
