@@ -1,13 +1,13 @@
 :host ::ng-deep {
   .med-table {
-    .p-datatable-header {
-      @media screen and (min-width: 960px) {
+    @media screen and (min-width: 960px) {
+      .p-datatable-header {
         display: none;
       }
-    }
 
-    .p-datatable-wrapper {
-      overflow-x: scroll;
+      .p-datatable-wrapper {
+        overflow-x: scroll;
+      }
     }
   }
 }

@@ -5,17 +5,19 @@ export interface MedTableSettingsLocal {
   filterDelay: number
   paginator: boolean
   colMinWidth: string
+  scrollHeight: string
   emptyMessage: string
   rowsPerPageOptions: number[]
   showCurrentPageReport: boolean
   currentPageReportTemplate: string
 }
 
-export interface MedTableSettings {
+export interface MedTableSettings extends Record<string, any> {
   rows?: number
   filterDelay?: number
   paginator?: boolean
   colMinWidth?: string
+  scrollHeight?: string
   emptyMessage?: string
   rowsPerPageOptions?: number[]
   showCurrentPageReport?: boolean

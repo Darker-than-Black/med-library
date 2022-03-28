@@ -5,6 +5,7 @@ export const DEFAULT_TABLE_SETTINGS: MedTableSettingsLocal = {
   filterDelay: 0,
   paginator: true,
   colMinWidth: '15rem',
+  scrollHeight: 'flex',
   showCurrentPageReport: true,
   emptyMessage: 'Дані відсутні.',
   rowsPerPageOptions: [10,25,50,100],

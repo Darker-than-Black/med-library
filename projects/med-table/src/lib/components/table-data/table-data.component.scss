@@ -28,6 +28,12 @@
     width: 100%;
     height: 100%;
     padding: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 
     @media screen and (max-width: 960px) {
       padding: 5px;

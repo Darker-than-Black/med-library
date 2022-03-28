@@ -32,6 +32,7 @@ export class MedTableComponent<ItemType> {
   }
 
   get localTableSettings(): MedTableSettingsLocal {
+    console.log('localTableSettings', {...this.tableSettings, ...DEFAULT_TABLE_SETTINGS});
     return {...this.tableSettings, ...DEFAULT_TABLE_SETTINGS};
   }
 
@@ -45,7 +46,14 @@ export class MedTableComponent<ItemType> {
     const { offsetWidth: tableWidth } = tableRef.querySelector('table');
     this.upScrollRowRef.nativeElement.style.width = `${tableWidth}px`;
 
-    upScrollRef.onscroll = () => tableRef.scrollLeft = upScrollRef.scrollLeft;
-    tableRef.onscroll = () => upScrollRef.scrollLeft = tableRef.scrollLeft;
+    upScrollRef.onscroll = () => {
+      if (tableRef.scrollLeft !== upScrollRef.scrollLeft)
+        tableRef.scrollLeft = upScrollRef.scrollLeft;
+    };
+
+    tableRef.onscroll = () => {
+      if (upScrollRef.scrollLeft !== tableRef.scrollLeft)
+        upScrollRef.scrollLeft = tableRef.scrollLeft;
+    };
   }
 }
