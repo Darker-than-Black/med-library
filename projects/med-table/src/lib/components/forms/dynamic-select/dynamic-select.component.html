@@ -1,0 +1,8 @@
+<app-select
+  [inputId]="field.key"
+  [formControl]="formControl"
+  [formlyAttributes]="field"
+  [fieldName]="field.key"
+  [autoFocus]="field.templateOptions.autoFocus"
+  (leave)="field.templateOptions.onLeave()"
+></app-select>

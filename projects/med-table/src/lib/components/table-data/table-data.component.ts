@@ -13,7 +13,7 @@ import {
 
 import { EditorBuilder } from './editor-builder';
 import { TableColumnConfig } from '../../types/table';
-// import { CustomFormlyFieldConfig } from '../../types/form';
+import { CustomFormlyFieldConfig } from '../../types/form';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
@@ -33,8 +33,7 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
-  // fields: CustomFormlyFieldConfig[] = [];
-  fields: any[] = [];
+  fields: CustomFormlyFieldConfig[] = [];
   model: Record<string, any> = {};
 
   get fieldData(): string {

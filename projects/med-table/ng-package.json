@@ -5,8 +5,9 @@
     "entryFile": "src/public-api.ts"
   },
   "allowedNonPeerDependencies": [
-    "primeflex",
     "lodash",
-    "primeng"
+    "primeng",
+    "primeflex",
+    "@ngx-formly/core"
   ]
 }

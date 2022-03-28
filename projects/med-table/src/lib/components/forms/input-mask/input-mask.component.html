@@ -1,0 +1,10 @@
+<p-inputMask
+  #input
+  [mask]="mask"
+  [type]="type"
+  [inputId]="inputId"
+  [(ngModel)]="value"
+  [placeholder]="mask"
+  (focusout)="leave.emit()"
+  (keydown.enter)="leave.emit()"
+></p-inputMask>

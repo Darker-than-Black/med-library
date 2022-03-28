@@ -1,13 +1,12 @@
 import {TableColumnConfig} from '../../types/table';
-// import {CustomFormlyFieldConfig} from '../../types/form';
+import {CustomFormlyFieldConfig} from '../../types/form';
 import { FIELD_TYPES } from '../../constants/fieldTypes';
 
 export interface EditorBuilderOptions extends TableColumnConfig {
   onLeave: () => void
 }
 
-// export class EditorBuilder implements CustomFormlyFieldConfig {
-export class EditorBuilder {
+export class EditorBuilder implements CustomFormlyFieldConfig {
   key: string;
   type: string;
   templateOptions = {

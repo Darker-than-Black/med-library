@@ -1,0 +1,9 @@
+<input
+  #input
+  pInputText
+  [id]="inputId"
+  [type]="type"
+  [(ngModel)]="value"
+  (focusout)="leave.emit()"
+  (keydown.enter)="leave.emit()"
+/>
