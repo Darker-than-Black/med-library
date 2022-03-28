@@ -1,0 +1,7 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./projects/med-table/src/styles/_style.scss",
+    "rootDir": "./projects/med-table",
+    "outFile": "./dist/med-table/med-table.scss"
+  }
+}

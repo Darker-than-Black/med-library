@@ -8,6 +8,7 @@
     "lodash",
     "primeng",
     "primeflex",
+    "primeicons",
     "@ngx-formly/core"
   ]
 }

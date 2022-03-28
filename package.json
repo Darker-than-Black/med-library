@@ -8,8 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "patch:medTable": "cd ./projects/med-table && npm version patch && cd ../../",
+    "build:scss": "scss-bundle -c ./scss-bundle.config.json",
     "build:medTable": "ng build med-table",
-    "publish:medTable": "npm run patch:medTable && npm run build:medTable && cd dist/med-table && npm pack && npm publish",
+    "publish:medTable": "npm run patch:medTable && npm run build:medTable && npm run build:scss && cd dist/med-table && npm pack && npm publish",
     "build:testMedTable": "cd ./projects/med-table && npm version patch && cd ../../ && ng build med-table  && cd dist/med-table && npm link && cd ../.."
   },
   "private": true,
@@ -26,6 +27,7 @@
     "@ngx-formly/core": "^5.11.2",
     "lodash": "^4.17.21",
     "primeflex": "^3.1.3",
+    "primeicons": "^5.0.0",
     "primeng": "^13.3.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
