@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "med-table": {
+      "projectType": "library",
+      "root": "projects/med-table",
+      "sourceRoot": "projects/med-table/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/med-table/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/med-table/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/med-table/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/med-table/src/test.ts",
+            "tsConfig": "projects/med-table/tsconfig.spec.json",
+            "karmaConfig": "projects/med-table/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "my-lib"
 }
