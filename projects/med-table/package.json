@@ -1,6 +1,8 @@
 {
   "name": "med-table",
-  "version": "0.0.1",
+  "version": "0.0.3",
+  "author": "Dmytro Rybachek",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"

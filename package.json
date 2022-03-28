@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "patch:medTable": "cd ./projects/med-table && npm version patch && cd ../../",
+    "build:medTable": "ng build mew-table",
+    "publish:medTable": "npm run patch:medTable && build:medTable && cd dist/med-table && npm pack && npm publish"
   },
   "private": true,
   "dependencies": {
