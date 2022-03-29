@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, set } from 'lodash';
 import {
   ChangeDetectorRef,
   Component,
@@ -12,8 +12,8 @@ import {
 } from '@angular/core';
 
 import { EditorBuilder } from './editor-builder';
-import { MedTableColumnConfig } from '../../types/table';
 import { MedCustomFormlyFieldConfig } from '../../types/form';
+import { MedTableColumnConfig, MedUpdateColumnEvent } from '../../types/table';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
@@ -29,7 +29,7 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   @Input() config!: MedTableColumnConfig;
   @Input() template?: TemplateRef<any>;
 
-  @Output() update = new EventEmitter<ItemType>();
+  @Output() update = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
@@ -37,7 +37,7 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   model: Record<string, any> = {};
 
   get fieldData(): string {
-    return get(this.item, this.config.key, '');
+    return this.getValue(this.item, this.config.key);
   }
 
   get previewData(): string {
@@ -57,7 +57,7 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   ngOnInit(): void {
     const { key } = this.config;
-    this.model[key] = this.item[key] || '';
+    set(this.model, key, this.getValue(this.item, key));
   }
 
   ngAfterViewInit() {
@@ -79,10 +79,14 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   onLeave(): void {
     const { key } = this.config;
 
-    if (this.model[key] !== this.item[key]) {
-      this.update.emit({...this.item, ...this.model});
+    if (this.getValue(this.model, key) !== this.getValue(this.item, key)) {
+      this.update.emit({item: {...this.item, ...this.model}, key});
     }
 
     this.fields = [];
+  }
+
+  private getValue(data: Record<string, any>, key: string): any {
+    return get(data, key) || '';
   }
 }

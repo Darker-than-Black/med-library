@@ -13,7 +13,7 @@ import {
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
-import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal } from './types/table';
+import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal, MedUpdateColumnEvent } from './types/table';
 
 @Component({
   selector: APP_SELECTOR,
@@ -32,7 +32,7 @@ export class MedTableComponent<ItemType> {
   @Input() captionTemplate?: TemplateRef<any>;
   @Input() tableDataTemplate?: TemplateRef<any>;
 
-  @Output() updateColumn = new EventEmitter<ItemType>();
+  @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
   @ViewChild('tableRef') tableRef!: Table;
   @ViewChild('upScrollRef') upScrollRef!: ElementRef<HTMLElement>;

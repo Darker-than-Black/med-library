@@ -39,3 +39,8 @@ export interface MedTableColumnConfig {
   decimal?: boolean // use with FIELD_TYPES.TEXT
   viewHandler?: (data: any) => any
 }
+
+export interface MedUpdateColumnEvent<T> {
+  key: string
+  item: T
+}

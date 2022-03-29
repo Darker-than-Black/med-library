@@ -1,6 +1,9 @@
-import {Component} from '@angular/core';
-import {MOCK_DATA} from "./mockData";
-import {TABLE_CONFIG} from "./tableConfig";
+import { Component } from '@angular/core';
+import { MedTableService, MedUpdateColumnEvent } from 'med-table';
+
+import { MOCK_DATA } from './mockData';
+import { SELECTS } from './mockSelectData';
+import { TABLE_CONFIG } from './tableConfig';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +14,13 @@ export class AppComponent {
   readonly data = MOCK_DATA;
   readonly tableConfig = TABLE_CONFIG;
 
-  onUpdateColumn(item: any) {
-    console.log(item);
+  constructor(private medTableService: MedTableService) {
+    Object.entries(SELECTS).forEach(([key, data]) => {
+      medTableService.setSelectData(data, key);
+    });
+  }
+
+  onUpdateColumn({ item, key }: MedUpdateColumnEvent<any>) {
+    console.log(key, item);
   }
 }
