@@ -1,8 +1,9 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-// import { StoreService } from '../../../services/store.service';
+import { MedSelectOption } from '../../../types/form';
 import { FormInputMixin } from '../../../mixins/FormInputMixin';
+import { MedTableService } from '../../../services/med-table.service';
 
 @Component({
   selector: 'app-select',
@@ -14,15 +15,14 @@ import { FormInputMixin } from '../../../mixins/FormInputMixin';
     multi: true
   }]
 })
-export class SelectComponent<ItemType> extends FormInputMixin{
-  // constructor(private store: StoreService<ItemType>) {
-  //   super();
-  // }
+export class SelectComponent<T> extends FormInputMixin{
+  constructor(private store: MedTableService) {
+    super();
+  }
 
   @Input() fieldName: string = '';
 
-  get selectOptions(): string[] {
-    // return this.store.selectOptions[this.fieldName] || [];
-    return [];
+  get selectOptions(): MedSelectOption<T>[] {
+    return this.store.selectData[this.fieldName] || [];
   }
 }

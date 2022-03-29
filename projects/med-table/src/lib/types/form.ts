@@ -12,6 +12,11 @@ export interface MedFormFieldConfig {
   required?: boolean
 }
 
+export interface MedSelectOption<T> {
+  value: T
+  label: string
+}
+
 /* ------ FORMLY ------ */
 
 export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {

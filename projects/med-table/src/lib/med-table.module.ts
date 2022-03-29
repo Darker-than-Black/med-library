@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FormlyModule } from '@ngx-formly/core';
+import { FORMLY_INPUT_LIST } from './formlyInputList';
 
 import { TableModule } from 'primeng/table';
 import { InputMaskModule } from 'primeng/inputmask';
@@ -20,7 +21,6 @@ import { DynamicSelectComponent } from './components/forms/dynamic-select/dynami
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
-import {FORMLY_INPUT_LIST} from "./formlyInputList";
 
 @NgModule({
   declarations: [
