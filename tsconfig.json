@@ -13,6 +13,10 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "paths": {
+      "med-dynamic-form": [
+        "dist/med-dynamic-form/med-dynamic-form",
+        "dist/med-dynamic-form"
+      ],
       "med-table": [
         "dist/med-table/med-table",
         "dist/med-table"

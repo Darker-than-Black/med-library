@@ -145,6 +145,42 @@
           }
         }
       }
+    },
+    "med-dynamic-form": {
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/med-dynamic-form",
+      "sourceRoot": "projects/med-dynamic-form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/med-dynamic-form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/med-dynamic-form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/med-dynamic-form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/med-dynamic-form/src/test.ts",
+            "tsConfig": "projects/med-dynamic-form/tsconfig.spec.json",
+            "karmaConfig": "projects/med-dynamic-form/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "my-lib"

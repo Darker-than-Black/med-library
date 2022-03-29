@@ -1,0 +1,9 @@
+<app-input-mask
+  [inputId]="field.key"
+  [formControl]="formControl"
+  [formlyAttributes]="field"
+  [autoFocus]="field.templateOptions.autoFocus"
+  [type]="field.type || ''"
+  [mask]="field.templateOptions.mask || ''"
+  (leave)="field.templateOptions.onLeave()"
+></app-input-mask>

@@ -1,0 +1,8 @@
+<div class="w-full">
+  <label [for]="to['labelKey']">
+    {{ to.label }}
+    <span *ngIf="to['required']" class="text-pink-700">*</span>
+  </label>
+
+  <ng-container #fieldComponent></ng-container>
+</div>

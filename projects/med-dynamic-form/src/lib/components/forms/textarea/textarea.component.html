@@ -1,0 +1,9 @@
+<textarea
+  #input
+  rows="5"
+  pInputTextarea
+  [id]="inputId"
+  [(ngModel)]="value"
+  (focusout)="leave.emit()"
+  (keydown.enter)="leave.emit()"
+></textarea>

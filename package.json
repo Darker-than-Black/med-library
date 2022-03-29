@@ -1,6 +1,6 @@
 {
   "name": "med-library",
-  "version": "0.0.0",
+  "version": "0.3.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,11 +8,17 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
 
-    "app:start": "ng serve med-table-example",
+    "app:start": "ng serve med-table-example --open",
 
-    "lib:patch": "cd ./projects/med-table && npm version patch && cd ../../",
-    "lib:build": "ng build med-table",
-    "lib:publish": "npm run lib:patch && npm run lib:build && cd dist/med-table && npm pack && npm publish"
+    "lib:table:patch": "cd ./projects/med-table && npm version patch && cd ../../",
+    "lib:table:build": "ng build med-table",
+    "lib:table:watch": "ng build med-table --watch",
+    "lib:table:publish": "npm run lib:table:patch && npm run lib:table:build && cd dist/med-table && npm pack && npm publish",
+
+    "lib:form:patch": "cd ./projects/med-dynamic-form && npm version patch && cd ../../",
+    "lib:form:build": "ng build med-dynamic-form",
+    "lib:form:watch": "ng build med-dynamic-form --watch",
+    "lib:form:publish": "npm run lib:form:patch && npm run lib:form:build && cd dist/med-dynamic-form && npm pack && npm publish"
   },
   "private": true,
   "dependencies": {

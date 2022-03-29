@@ -1,0 +1,9 @@
+<app-input
+  [inputId]="field.key"
+  [type]="field.type || ''"
+  [formControl]="formControl"
+  [formlyAttributes]="field"
+  [isDecimal]="field.templateOptions.decimal"
+  [autoFocus]="field.templateOptions.autoFocus"
+  (leave)="field.templateOptions.onLeave()"
+></app-input>
