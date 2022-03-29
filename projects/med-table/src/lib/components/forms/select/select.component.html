@@ -7,7 +7,7 @@
     (keydown.enter)="leave.emit()"
     (focusout)="leave.emit()"
   >
-    <option *ngFor="let item of selectOptions" [value]="item.value">{{ item.label }}</option>
+    <option *ngFor="let item of selectOptions" [ngValue]="item.value">{{ item.label }}</option>
   </select>
 
   <div class="select__arrow"></div>

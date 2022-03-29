@@ -41,180 +41,309 @@ export const SELECTS = {
       "label": "33600000-6"
     }
   ],
-  ['responsible.name']: [
+  responsible: [
     {
-      "value": "180",
-      "label": "Руслана Баратюк"
-    },
-    {
-      "value": "188",
-      "label": "Марія Морозова"
-    },
-    {
-      "value": "191",
-      "label": "arsen.zhumadilov@gmail.com"
-    },
-    {
-      "value": "209",
-      "label": "Ксенія Квітка"
-    },
-    {
-      "value": "284",
-      "label": "Владислав Павленко"
-    },
-    {
-      "value": "290",
-      "label": "Катерина Некрасова"
-    },
-    {
-      "value": "295",
-      "label": "alex"
-    },
-    {
-      "value": "504",
-      "label": "thenozen@gmail.com"
-    },
-    {
-      "value": "622",
-      "label": "Євгенія"
-    },
-    {
-      "value": "625",
-      "label": "Oksana"
-    },
-    {
-      "value": "626",
-      "label": "Karina"
-    },
-    {
-      "value": "645",
-      "label": "Марина Кучер"
-    },
-    {
-      "value": "911",
-      "label": "John Doe"
-    },
-    {
-      "value": "931",
-      "label": "Павло Каганюк"
-    },
-    {
-      "value": "936",
-      "label": "Viktoriia Turenko"
-    },
-    {
-      "value": "952",
-      "label": "Олександр Вдовін"
-    },
-    {
-      "value": "953",
-      "label": "Iryna Revenko"
-    },
-    {
-      "value": "993",
-      "label": "Анна Горб"
-    },
-    {
-      "value": "1607",
-      "label": "Oksana Mishchenko"
-    },
-    {
-      "value": "1608",
-      "label": "Andriy Kuzyo"
-    },
-    {
-      "value": "1673",
-      "label": "Oleksandr Harnazhenko"
-    },
-    {
-      "value": "1938",
-      "label": "y.shevchuk@medzakupivli.com"
-    },
-    {
-      "value": "1943",
-      "label": "y.stakhovska@medzakupivli.com"
-    },
-    {
-      "value": "2006",
-      "label": "Olga Vlasenko"
-    }
-  ],
-  ['publisher.name']: [
-    {
-      "value": "143",
+      "value": {
+        "id": "143",
+        "name": "ireva"
+      },
       "label": "ireva"
     },
     {
-      "value": "206",
+      "value": {
+        "id": "206",
+        "name": "vadym.kachurovskyi@gmail.com"
+      },
       "label": "vadym.kachurovskyi@gmail.com"
     },
     {
-      "value": "287",
+      "value": {
+        "id": "287",
+        "name": "Zinchenko.mzu@gmail.com"
+      },
       "label": "Zinchenko.mzu@gmail.com"
     },
     {
-      "value": "289",
+      "value": {
+        "id": "289",
+        "name": "o.ivakhnenko@medzakupivli.com"
+      },
       "label": "o.ivakhnenko@medzakupivli.com"
     },
     {
-      "value": "295",
+      "value": {
+        "id": "295",
+        "name": "alex"
+      },
       "label": "alex"
     },
     {
-      "value": "501",
+      "value": {
+        "id": "501",
+        "name": "Гавриленко Вікторія"
+      },
       "label": "Гавриленко Вікторія"
     },
     {
-      "value": "504",
+      "value": {
+        "id": "504",
+        "name": "thenozen@gmail.com"
+      },
       "label": "thenozen@gmail.com"
     },
     {
-      "value": "528",
+      "value": {
+        "id": "528",
+        "name": "v.zhelieznyi@medzakupivli.com"
+      },
       "label": "v.zhelieznyi@medzakupivli.com"
     },
     {
-      "value": "591",
+      "value": {
+        "id": "591",
+        "name": "Валентина"
+      },
       "label": "Валентина"
     },
     {
-      "value": "622",
+      "value": {
+        "id": "622",
+        "name": "Євгенія"
+      },
       "label": "Євгенія"
     },
     {
-      "value": "626",
+      "value": {
+        "id": "626",
+        "name": "Karina"
+      },
       "label": "Karina"
     },
     {
-      "value": "627",
+      "value": {
+        "id": "627",
+        "name": "Mykyta"
+      },
       "label": "Mykyta"
     },
     {
-      "value": "630",
+      "value": {
+        "id": "630",
+        "name": "Kateryna Shmatkova"
+      },
       "label": "Kateryna Shmatkova"
     },
     {
-      "value": "911",
+      "value": {
+        "id": "911",
+        "name": "John Doe"
+      },
       "label": "John Doe"
     },
     {
-      "value": "919",
+      "value": {
+        "id": "919",
+        "name": "Євген Губа"
+      },
       "label": "Євген Губа"
     },
     {
-      "value": "922",
+      "value": {
+        "id": "922",
+        "name": "o.radchenko@medzakupivli.com"
+      },
       "label": "o.radchenko@medzakupivli.com"
     },
     {
-      "value": "993",
+      "value": {
+        "id": "993",
+        "name": "Анна Горб"
+      },
       "label": "Анна Горб"
     },
     {
-      "value": "994",
+      "value": {
+        "id": "994",
+        "name": "Sergiy Zabolotnyi"
+      },
       "label": "Sergiy Zabolotnyi"
     },
     {
-      "value": "1673",
+      "value": {
+        "id": "1673",
+        "name": "Oleksandr Harnazhenko"
+      },
       "label": "Oleksandr Harnazhenko"
+    }
+  ],
+  publisher: [
+    {
+      "value": {
+        "id": "180",
+        "name": "Руслана Баратюк"
+      },
+      "label": "Руслана Баратюк"
+    },
+    {
+      "value": {
+        "id": "188",
+        "name": "Марія Морозова"
+      },
+      "label": "Марія Морозова"
+    },
+    {
+      "value": {
+        "id": "191",
+        "name": "arsen.zhumadilov@gmail.com"
+      },
+      "label": "arsen.zhumadilov@gmail.com"
+    },
+    {
+      "value": {
+        "id": "209",
+        "name": "Ксенія Квітка"
+      },
+      "label": "Ксенія Квітка"
+    },
+    {
+      "value": {
+        "id": "284",
+        "name": "Владислав Павленко"
+      },
+      "label": "Владислав Павленко"
+    },
+    {
+      "value": {
+        "id": "290",
+        "name": "Катерина Некрасова"
+      },
+      "label": "Катерина Некрасова"
+    },
+    {
+      "value": {
+        "id": "295",
+        "name": "alex"
+      },
+      "label": "alex"
+    },
+    {
+      "value": {
+        "id": "504",
+        "name": "thenozen@gmail.com"
+      },
+      "label": "thenozen@gmail.com"
+    },
+    {
+      "value": {
+        "id": "622",
+        "name": "Євгенія"
+      },
+      "label": "Євгенія"
+    },
+    {
+      "value": {
+        "id": "625",
+        "name": "Oksana"
+      },
+      "label": "Oksana"
+    },
+    {
+      "value": {
+        "id": "626",
+        "name": "Karina"
+      },
+      "label": "Karina"
+    },
+    {
+      "value": {
+        "id": "645",
+        "name": "Марина Кучер"
+      },
+      "label": "Марина Кучер"
+    },
+    {
+      "value": {
+        "id": "911",
+        "name": "John Doe"
+      },
+      "label": "John Doe"
+    },
+    {
+      "value": {
+        "id": "931",
+        "name": "Павло Каганюк"
+      },
+      "label": "Павло Каганюк"
+    },
+    {
+      "value": {
+        "id": "936",
+        "name": "Viktoriia Turenko"
+      },
+      "label": "Viktoriia Turenko"
+    },
+    {
+      "value": {
+        "id": "952",
+        "name": "Олександр Вдовін"
+      },
+      "label": "Олександр Вдовін"
+    },
+    {
+      "value": {
+        "id": "953",
+        "name": "Iryna Revenko"
+      },
+      "label": "Iryna Revenko"
+    },
+    {
+      "value": {
+        "id": "993",
+        "name": "Анна Горб"
+      },
+      "label": "Анна Горб"
+    },
+    {
+      "value": {
+        "id": "1607",
+        "name": "Oksana Mishchenko"
+      },
+      "label": "Oksana Mishchenko"
+    },
+    {
+      "value": {
+        "id": "1608",
+        "name": "Andriy Kuzyo"
+      },
+      "label": "Andriy Kuzyo"
+    },
+    {
+      "value": {
+        "id": "1673",
+        "name": "Oleksandr Harnazhenko"
+      },
+      "label": "Oleksandr Harnazhenko"
+    },
+    {
+      "value": {
+        "id": "1938",
+        "name": "y.shevchuk@medzakupivli.com"
+      },
+      "label": "y.shevchuk@medzakupivli.com"
+    },
+    {
+      "value": {
+        "id": "1943",
+        "name": "y.stakhovska@medzakupivli.com"
+      },
+      "label": "y.stakhovska@medzakupivli.com"
+    },
+    {
+      "value": {
+        "id": "2006",
+        "name": "Olga Vlasenko"
+      },
+      "label": "Olga Vlasenko"
     }
   ],
 };

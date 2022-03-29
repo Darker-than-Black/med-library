@@ -6,13 +6,14 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'CPV-код',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
-    minWidth: '6rem',
+    minWidth: '10rem',
   },
   {
-    key: 'responsible.name',
+    key: 'responsible',
     label: 'Відповідальний менеджер',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
+    viewHandler: ({name}: any) => name || '–',
   },
   {
     key: 's20',
@@ -29,10 +30,11 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     defaultValue: '0',
   },
   {
-    key: 'publisher.name',
+    key: 'publisher',
     label: 'Відповідальна особа за підписання',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
+    viewHandler: ({name}: any) => name || '–',
   },
   {
     key: 'agreement_value',
