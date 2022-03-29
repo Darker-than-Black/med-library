@@ -1,61 +1,6 @@
-import { FIELD_TYPES, MedTableColumnConfig } from 'med-table';
+import {FIELD_TYPES, MedTableColumnConfig} from 'med-table';
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
-  {
-    key: 'mnn_id',
-    label: 'mnn_id',
-    filterable: true,
-  },
-  {
-    key: 'type',
-    label: 'Напрям',
-    filterable: true,
-  },
-  {
-    key: 'subtype',
-    label: 'Піднапрям',
-    filterable: true,
-  },
-  {
-    key: 'name',
-    label: 'МНН',
-    filterable: true,
-  },
-  {
-    key: 'release_form',
-    label: 'Форма випуску',
-    filterable: true,
-  },
-  {
-    key: 'dosage',
-    label: 'Дозування',
-    filterable: true,
-  },
-  {
-    key: 'cpv_code',
-    label: 'CPV-код',
-    filterable: true,
-  },
-  {
-    key: 'resp_manager',
-    label: 'Відповідальний менеджер',
-    filterable: true,
-  },
-  {
-    key: 's20',
-    label: 'Доведена кількість МОЗ',
-    filterable: true,
-  },
-  {
-    key: 'tender_quantity',
-    label: 'Кількість закупівлі',
-    filterable: true,
-  },
-  {
-    key: 'publisher_singing',
-    label: 'Відповідальна особа за підписання',
-    filterable: true,
-  },
   {
     key: 'agreement_value',
     label: 'Сума позиції за договором',
@@ -73,6 +18,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     key: 'agreement_fact_date',
     label: 'Дата підписання договору',
     filterable: true,
+    editorType: FIELD_TYPES.DATE,
   },
   {
     key: 'agreement_final_date',

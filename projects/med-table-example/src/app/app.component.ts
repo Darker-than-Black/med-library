@@ -10,4 +10,8 @@ import {TABLE_CONFIG} from "./tableConfig";
 export class AppComponent {
   readonly data = MOCK_DATA;
   readonly tableConfig = TABLE_CONFIG;
+
+  onUpdateColumn(item: any) {
+    console.log(item);
+  }
 }

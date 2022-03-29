@@ -11,6 +11,7 @@ export const FORMLY_INPUT_LIST: ConfigOption = {
   types: [
     { name: FIELD_TYPES.TEXT, component: DynamicInputComponent },
     { name: FIELD_TYPES.NUMBER, component: DynamicInputComponent },
+    { name: FIELD_TYPES.DATE, component: DynamicInputComponent },
     { name: FIELD_TYPES.MASK, component: DynamicInputMaskComponent },
     { name: FIELD_TYPES.SELECT, component: DynamicSelectComponent },
     { name: FIELD_TYPES.TEXTAREA, component: DynamicTextareaComponent },

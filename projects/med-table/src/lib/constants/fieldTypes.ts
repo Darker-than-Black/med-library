@@ -4,4 +4,5 @@ export enum FIELD_TYPES {
   TEXTAREA = 'textarea',
   SELECT = 'select',
   MASK = 'mask',
+  DATE = 'date',
 }
