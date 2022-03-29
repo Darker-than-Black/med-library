@@ -22,8 +22,7 @@ import { DynamicSelectComponent } from './components/forms/dynamic-select/dynami
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
-import { NumberComponent } from './components/forms/number/number.component';
-import { DynamicNumberComponent } from './components/forms/dynamic-number/dynamic-number.component';
+import { DecimalNumberDirective } from './directives/decimal-number.directive';
 
 @NgModule({
   declarations: [
@@ -38,8 +37,7 @@ import { DynamicNumberComponent } from './components/forms/dynamic-number/dynami
     DynamicTextareaComponent,
     DynamicInputMaskComponent,
     WrapperDynamicInputComponent,
-    NumberComponent,
-    DynamicNumberComponent,
+    DecimalNumberDirective,
   ],
   imports: [
     FormsModule,

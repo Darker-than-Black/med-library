@@ -1,4 +1,6 @@
-export const TABLE_CONFIG = [
+import { FIELD_TYPES, MedTableColumnConfig } from 'med-table';
+
+export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
     key: 'mnn_id',
     label: 'mnn_id',
@@ -58,11 +60,14 @@ export const TABLE_CONFIG = [
     key: 'agreement_value',
     label: 'Сума позиції за договором',
     filterable: true,
+    editorType: FIELD_TYPES.NUMBER,
   },
   {
     key: 'agreement_num',
     label: 'Номер договору',
     filterable: true,
+    editorType: FIELD_TYPES.TEXT,
+    decimal: true,
   },
   {
     key: 'agreement_fact_date',
