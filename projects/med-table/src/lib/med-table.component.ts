@@ -1,20 +1,33 @@
 import { Table } from 'primeng/table';
-import { Component, Input, ViewChild, TemplateRef, ElementRef, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  Input,
+  ViewChild,
+  TemplateRef,
+  ElementRef,
+  Output,
+  EventEmitter,
+  ChangeDetectorRef
+} from '@angular/core';
 
+import { APP_SELECTOR } from './constants/selectors';
+import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
 import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal } from './types/table';
 
 @Component({
-  selector: 'med-table',
+  selector: APP_SELECTOR,
   templateUrl: 'med-table.component.html',
   styleUrls: ['./med-table.component.scss'],
 })
 export class MedTableComponent<ItemType> {
+  constructor(private cb: ChangeDetectorRef) {}
+
   @Input() data: ItemType[] = [];
   @Input() loading: boolean = false;
 
   @Input() config: MedTableColumnConfig[] = [];
-  @Input() tableSettings?: MedTableSettings;
+  @Input() tableSettings: MedTableSettings = {};
 
   @Input() captionTemplate?: TemplateRef<any>;
   @Input() tableDataTemplate?: TemplateRef<any>;
@@ -23,7 +36,7 @@ export class MedTableComponent<ItemType> {
 
   @ViewChild('tableRef') tableRef!: Table;
   @ViewChild('upScrollRef') upScrollRef!: ElementRef<HTMLElement>;
-  @ViewChild('upScrollRowRef') upScrollRowRef!: ElementRef<HTMLElement>;
+  @ViewChild('upScrollItemRef') upScrollItemRef!: ElementRef<HTMLElement>;
 
   get filterableFields(): string[] {
     return this.config
@@ -32,19 +45,31 @@ export class MedTableComponent<ItemType> {
   }
 
   get localTableSettings(): MedTableSettingsLocal {
-    console.log('localTableSettings', {...this.tableSettings, ...DEFAULT_TABLE_SETTINGS});
-    return {...this.tableSettings, ...DEFAULT_TABLE_SETTINGS};
+    return {
+      ...DEFAULT_TABLE_SETTINGS,
+      ...this.tableSettings,
+    };
   }
 
   ngAfterViewInit() {
-    this.addDoubleScrollbar();
+    if (this.localTableSettings.doubleScrollbar) {
+      this.addDoubleScrollbar();
+    }
+
+    if (this.localTableSettings.sticky) {
+      const { tableHeight } = new StickyHeader();
+      this.tableSettings.scrollHeight = tableHeight;
+    }
+
+    this.cb.detectChanges();
   }
 
   private addDoubleScrollbar() {
+    // TODO should create DoubleScrollbar service
     const { nativeElement: upScrollRef } = this.upScrollRef;
     const tableRef = this.tableRef.el.nativeElement.querySelector('.p-datatable-wrapper');
     const { offsetWidth: tableWidth } = tableRef.querySelector('table');
-    this.upScrollRowRef.nativeElement.style.width = `${tableWidth}px`;
+    this.upScrollItemRef.nativeElement.style.width = `${tableWidth}px`;
 
     upScrollRef.onscroll = () => {
       if (tableRef.scrollLeft !== upScrollRef.scrollLeft)

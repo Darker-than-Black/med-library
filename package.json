@@ -7,10 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "patch:medTable": "cd ./projects/med-table && npm version patch && cd ../../",
-    "build:medTable": "ng build med-table",
-    "publish:medTable": "npm run patch:medTable && npm run build:medTable && cd dist/med-table && npm pack && npm publish",
-    "build:testMedTable": "cd ./projects/med-table && npm version patch && cd ../../ && ng build med-table && cd dist/med-table && npm link && cd ../.."
+
+    "app:start": "ng serve med-table-example",
+
+    "lib:patch": "cd ./projects/med-table && npm version patch && cd ../../",
+    "lib:build": "ng build med-table",
+    "lib:publish": "npm run patch:medTable && npm run build:medTable && cd dist/med-table && npm pack && npm publish"
   },
   "private": true,
   "dependencies": {

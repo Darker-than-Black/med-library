@@ -1,5 +1,5 @@
-<div #upScrollRef class="up-scroll">
-  <div #upScrollRowRef class="up-scroll__row"></div>
+<div #upScrollRef class="med-table__up-scroll">
+  <div #upScrollItemRef class="med-table__up-scroll-item"></div>
 </div>
 
 <p-table
@@ -33,7 +33,7 @@
 
   <ng-template pTemplate="header">
     <tr>
-      <th *ngFor="let col of config">{{ col.label }}</th>
+      <th *ngFor="let col of config" class="med-table__header">{{ col.label }}</th>
     </tr>
 
     <tr *ngIf="filterableFields.length">
