@@ -9,6 +9,7 @@ import { FORMLY_INPUT_LIST } from './formlyInputList';
 import { TableModule } from 'primeng/table';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { MedTableComponent } from './med-table.component';
 import { InputComponent } from './components/forms/input/input.component';
@@ -21,6 +22,8 @@ import { DynamicSelectComponent } from './components/forms/dynamic-select/dynami
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
+import { NumberComponent } from './components/forms/number/number.component';
+import { DynamicNumberComponent } from './components/forms/dynamic-number/dynamic-number.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +38,8 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     DynamicTextareaComponent,
     DynamicInputMaskComponent,
     WrapperDynamicInputComponent,
+    NumberComponent,
+    DynamicNumberComponent,
   ],
   imports: [
     FormsModule,
@@ -43,6 +48,7 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     BrowserModule,
     InputTextModule,
     InputMaskModule,
+    InputNumberModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     FormlyModule.forRoot(FORMLY_INPUT_LIST),

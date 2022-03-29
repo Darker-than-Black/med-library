@@ -36,5 +36,6 @@ export interface MedTableColumnConfig {
   minWidth?: string // default: '15rem'
   editorType?: FIELD_TYPES
   inputMask?: string
+  numberMode?: string
   viewHandler?: (data: any) => any
 }

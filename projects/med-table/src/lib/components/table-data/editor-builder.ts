@@ -11,6 +11,7 @@ export class EditorBuilder implements MedCustomFormlyFieldConfig {
   type: string;
   templateOptions = {
     mask: '',
+    mode: '',
     autoFocus: true,
     onLeave: () => {},
   };
@@ -20,5 +21,6 @@ export class EditorBuilder implements MedCustomFormlyFieldConfig {
     this.templateOptions.onLeave = options.onLeave;
     this.type = options.editorType || FIELD_TYPES.TEXT;
     this.templateOptions.mask = options.inputMask || '';
+    this.templateOptions.mode = options.numberMode || '';
   }
 }

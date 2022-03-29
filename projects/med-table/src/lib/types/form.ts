@@ -21,6 +21,7 @@ export interface MedSelectOption<T> {
 
 export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   mask?: string
+  mode?: string
   label?: string
   class?: string
   labelKey?: string
