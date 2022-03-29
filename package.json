@@ -12,7 +12,7 @@
 
     "lib:patch": "cd ./projects/med-table && npm version patch && cd ../../",
     "lib:build": "ng build med-table",
-    "lib:publish": "npm run patch:medTable && npm run build:medTable && cd dist/med-table && npm pack && npm publish"
+    "lib:publish": "npm run lib:patch && npm run lib:build && cd dist/med-table && npm pack && npm publish"
   },
   "private": true,
   "dependencies": {

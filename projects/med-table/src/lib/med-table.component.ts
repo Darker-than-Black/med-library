@@ -27,7 +27,7 @@ export class MedTableComponent<ItemType> {
   @Input() loading: boolean = false;
 
   @Input() config: MedTableColumnConfig[] = [];
-  @Input() tableSettings: MedTableSettings = {};
+  @Input() settings: MedTableSettings = {};
 
   @Input() captionTemplate?: TemplateRef<any>;
   @Input() tableDataTemplate?: TemplateRef<any>;
@@ -44,21 +44,21 @@ export class MedTableComponent<ItemType> {
       .map(({key}) => key);
   }
 
-  get localTableSettings(): MedTableSettingsLocal {
+  get localSettings(): MedTableSettingsLocal {
     return {
       ...DEFAULT_TABLE_SETTINGS,
-      ...this.tableSettings,
+      ...this.settings,
     };
   }
 
   ngAfterViewInit() {
-    if (this.localTableSettings.doubleScrollbar) {
+    if (this.localSettings.doubleScrollbar) {
       this.addDoubleScrollbar();
     }
 
-    if (this.localTableSettings.sticky) {
+    if (this.localSettings.sticky) {
       const { tableHeight } = new StickyHeader();
-      this.tableSettings.scrollHeight = tableHeight;
+      this.settings.scrollHeight = tableHeight;
     }
 
     this.cb.detectChanges();

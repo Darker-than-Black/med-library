@@ -8,14 +8,14 @@
   [value]="data"
   [columns]="config"
   [loading]="loading"
-  [rows]="localTableSettings.rows"
+  [rows]="localSettings.rows"
   [globalFilterFields]="filterableFields"
-  [paginator]="localTableSettings.paginator"
-  [filterDelay]="localTableSettings.filterDelay"
-  [scrollHeight]="localTableSettings.scrollHeight"
-  [rowsPerPageOptions]="localTableSettings.rowsPerPageOptions"
-  [showCurrentPageReport]="localTableSettings.showCurrentPageReport"
-  [currentPageReportTemplate]="localTableSettings.currentPageReportTemplate"
+  [paginator]="localSettings.paginator"
+  [filterDelay]="localSettings.filterDelay"
+  [scrollHeight]="localSettings.scrollHeight"
+  [rowsPerPageOptions]="localSettings.rowsPerPageOptions"
+  [showCurrentPageReport]="localSettings.showCurrentPageReport"
+  [currentPageReportTemplate]="localSettings.currentPageReportTemplate"
 >
   <ng-template pTemplate="caption">
     <span class="p-input-icon-left p-ml-auto">
@@ -40,7 +40,7 @@
       <th *ngFor="let col of config">
         <div
           *ngIf="col.filterable"
-          [style.minWidth]="col.minWidth || localTableSettings.colMinWidth"
+          [style.minWidth]="col.minWidth || localSettings.colMinWidth"
         >
           <p-columnFilter
             type="text"
@@ -76,7 +76,7 @@
 
   <ng-template pTemplate="emptymessage">
     <tr>
-      <td [attr.colspan]="config.length">{{ localTableSettings.emptyMessage }}</td>
+      <td [attr.colspan]="config.length">{{ localSettings.emptyMessage }}</td>
     </tr>
   </ng-template>
 </p-table>

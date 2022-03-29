@@ -1,6 +1,6 @@
 {
   "name": "med-table",
-  "version": "0.0.47",
+  "version": "1.0.1",
   "author": "Dmytro Rybachek",
   "license": "MIT",
   "description": "Wrapper over table of primeng library for Ministry of Health",
@@ -11,6 +11,14 @@
     "p-table",
     "editor"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darker-than-Black/med-library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Darker-than-Black/med-library/issues"
+  },
+  "homepage": "https://github.com/Darker-than-Black/med-library/tree/main/projects/med-table",
   "peerDependencies": {
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0"
