@@ -18,6 +18,13 @@
         overflow: scroll;
       }
     }
+
+    @media screen and (max-width: 960px) {
+      // auto table height
+      .p-datatable-wrapper {
+        height: auto!important;
+      }
+    }
   }
 }
 

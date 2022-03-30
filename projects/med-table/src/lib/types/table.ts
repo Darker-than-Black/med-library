@@ -44,3 +44,8 @@ export interface MedUpdateColumnEvent<T> {
   key: string
   item: T
 }
+
+export interface MedSelectOption<T> {
+  value: T
+  label: string
+}

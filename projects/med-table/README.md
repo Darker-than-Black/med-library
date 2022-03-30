@@ -12,7 +12,7 @@ $ npm i @angular/cdk primeng primeflex primeicons
 
 ```css
 node_modules/primeicons/primeicons.css
-node_modules/primeicons/primeicons.css
+node_modules/primeflex/primeflex.css
 node_modules/primeng/resources/primeng.min.css
 ```
 

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { MedSelectOption } from '../types/form';
+import { MedSelectOption } from '../types/table';
 
 interface MedTableData {
   selectOptions: Record<string, MedSelectOption<any>[]>

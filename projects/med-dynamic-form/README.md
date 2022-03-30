@@ -1,24 +1,60 @@
-# MedDynamicForm
+# MedTable
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+### Wrapper over [@ngx-formly/core](https://github.com/ngx-formly/ngx-formly) library for Ministry of Health
 
-## Code scaffolding
+## Dependencies
 
-Run `ng generate component component-name --project med-dynamic-form` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project med-dynamic-form`.
-> Note: Don't forget to add `--project med-dynamic-form` or else it will be added to the default project in your `angular.json` file. 
+```js
+$ npm i @ngx-formly/core primeng primeflex
+```
 
-## Build
+## Styles
 
-Run `ng build med-dynamic-form` to build the project. The build artifacts will be stored in the `dist/` directory.
+```css
+node_modules/primeicons/primeicons.css
+node_modules/primeflex/primeflex.css
+node_modules/primeng/resources/primeng.min.css
+```
 
-## Publishing
+## Installation
 
-After building your library with `ng build med-dynamic-form`, go to the dist folder `cd dist/med-dynamic-form` and run `npm publish`.
+#### NPM
+```js
+$ npm i med-dynamic-form
+```
 
-## Running unit tests
+#### YARN
+```js
+$ yarn add med-dynamic-form
+```
 
-Run `ng test med-dynamic-form` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Register the component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Global
+
+```js
+import { MedDynamicFormModule } from 'med-dynamic-form';
+
+imports: [
+  MedDynamicFormModule,
+]
+```
+
+## Usage
+
+**Basic Usage**
+
+```angular2html
+<med-dynamic-form
+  [form]="form"
+  [config]="config"
+></med-dynamic-form>
+```
+
+## Props
+
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Type | Required |
+| ----------------- | :--- | :--- |
+| `form` | [FormGroup](https://angular.io/api/forms/FormGroup) | **true** |
+| `config` | Array<[MedFormFieldConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-dynamic-form/src/lib/types/form.ts#L4) > | **true** |
