@@ -33,7 +33,10 @@
 
   <ng-template pTemplate="header">
     <tr>
-      <th *ngFor="let col of config" class="med-table__header">{{ col.label }}</th>
+      <th *ngFor="let col of config" class="med-table__header">
+        <span>{{ col.label }}</span>
+        <p-sortIcon [field]="col.key"></p-sortIcon>
+      </th>
     </tr>
 
     <tr *ngIf="filterableFields.length">

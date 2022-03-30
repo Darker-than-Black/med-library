@@ -1,18 +1,20 @@
-import { FOOTER_SELECTOR, PAGINATOR_SELECTOR, TABLE_SELECTOR } from '../constants/selectors';
+import {
+  FOOTER_SELECTOR,
+  TABLE_SELECTOR,
+  PAGINATOR_SELECTOR,
+  UP_SCROLL_SELECTOR,
+} from '../constants/selectors';
 
 export class StickyHeader {
   /**
    * should call in "ngAfterViewInit" hook
    */
   get tableHeight(): string {
-    const otherContentHeight = this.headerHeight() + this.footerHeight() + this.paginatorHeight();
-    const height = Math.floor(window.outerHeight - otherContentHeight);
+    const MARGINS = 20; // 20px margin app in prod
+    const contentHeight = this.headerHeight() + this.footerHeight()
+      + this.paginatorHeight() + this.upScrollHeight() + MARGINS;
 
-    if (height <= 0) {
-      return 'flex';
-    }
-
-    return `${height}px`;
+    return `calc(100vh - ${contentHeight}px)`;
   }
 
   private headerHeight(): number {
@@ -29,6 +31,10 @@ export class StickyHeader {
 
   private footerHeight(): number {
     return this.getElementHeight(FOOTER_SELECTOR);
+  }
+
+  private upScrollHeight(): number {
+    return this.getElementHeight(UP_SCROLL_SELECTOR);
   }
 
   private getElementHeight(selector: string): number {
