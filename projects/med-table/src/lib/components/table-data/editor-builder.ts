@@ -1,4 +1,4 @@
-import { MedTableColumnConfig } from '../../types/table';
+import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 import { MedCustomFormlyFieldConfig } from '../../types/form';
 import { FIELD_TYPES } from '../../constants/fieldTypes';
 

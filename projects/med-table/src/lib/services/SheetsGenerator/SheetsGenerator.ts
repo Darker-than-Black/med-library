@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import * as XLSX from 'xlsx-js-style';
 import { CellBuilder } from './CellBuilder';
 import { STRING } from '../../constants/string';
-import { MedTableColumnConfig } from '../../types/table';
+import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 
 const DEFAULT_VIEW_HANDLER = (data: any) => data;
 
@@ -11,7 +11,11 @@ export interface SheetsGeneratorInterface {
 }
 
 export class SheetsGenerator implements SheetsGeneratorInterface {
-  constructor(private data: Record<string, any>[], private config: MedTableColumnConfig[]) {}
+  private readonly config: MedTableColumnConfig[];
+
+  constructor(private data: Record<string, any>[], config: MedTableColumnConfig[]) {
+    this.config = config.filter(({ hideExport }) => !hideExport);
+  }
 
   private readonly cellBuilder = new CellBuilder();
 
@@ -22,9 +26,7 @@ export class SheetsGenerator implements SheetsGeneratorInterface {
   }
 
   private get createTableData(): XLSX.CellObject[][] {
-    return this.data.map(row => this.config.map((item) =>
-      this.cellBuilder.createTextCell(this.getField(row, item))
-    ));
+    return this.data.map(row => this.createTableRow(row));
   }
 
   generate(fileName: string = 'document'): void {
@@ -33,6 +35,11 @@ export class SheetsGenerator implements SheetsGeneratorInterface {
 
     XLSX.utils.book_append_sheet(wb, ws);
     XLSX.writeFile(wb, `${fileName}.xlsx`);
+  }
+
+  private createTableRow(row: Record<string, any>): XLSX.CellObject[] {
+    return this.config.map((item) =>
+      this.cellBuilder.createTextCell(this.getField(row, item)));
   }
 
   private getField<T>(data: Record<string, any>, config: MedTableColumnConfig): T {

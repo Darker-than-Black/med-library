@@ -14,7 +14,10 @@ import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
 import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
-import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal, MedUpdateColumnEvent } from './types/table';
+import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
+import { MedTableColumnConfig } from './types/MedTableColumnConfig';
+import { MedTableSettings } from './types/MedTableSettings';
+import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 
 @Component({
   selector: APP_SELECTOR,

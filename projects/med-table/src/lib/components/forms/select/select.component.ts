@@ -1,7 +1,7 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import { MedSelectOption } from '../../../types/table';
+import { MedSelectOption } from '../../../types/MedSelectOption';
 import { FormInputMixin } from '../../../mixins/FormInputMixin';
 import { MedTableService } from '../../../services/med-table.service';
 

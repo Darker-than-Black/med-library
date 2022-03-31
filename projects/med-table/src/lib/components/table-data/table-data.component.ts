@@ -13,7 +13,8 @@ import {
 
 import { EditorBuilder } from './editor-builder';
 import { MedCustomFormlyFieldConfig } from '../../types/form';
-import { MedTableColumnConfig, MedUpdateColumnEvent } from '../../types/table';
+import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
+import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
