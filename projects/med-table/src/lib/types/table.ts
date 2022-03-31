@@ -3,11 +3,13 @@ import { FIELD_TYPES } from '../constants/fieldTypes';
 export interface MedTableSettingsLocal {
   rows: number
   sticky?: boolean
+  export?: boolean
   filterDelay: number
   paginator: boolean
   colMinWidth: string
   scrollHeight: string
   emptyMessage: string
+  exportFileName?: string
   doubleScrollbar: boolean
   rowsPerPageOptions: number[]
   showCurrentPageReport: boolean
@@ -17,6 +19,8 @@ export interface MedTableSettingsLocal {
 export interface MedTableSettings extends Record<string, any> {
   rows?: number
   sticky?: boolean
+  export?: boolean
+  exportFileName?: string
   filterDelay?: number
   paginator?: boolean
   colMinWidth?: string

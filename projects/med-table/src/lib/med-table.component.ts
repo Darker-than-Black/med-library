@@ -13,6 +13,7 @@ import {
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
+import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
 import { MedTableColumnConfig, MedTableSettings, MedTableSettingsLocal, MedUpdateColumnEvent } from './types/table';
 
 @Component({
@@ -29,7 +30,7 @@ export class MedTableComponent<ItemType> {
   @Input() config: MedTableColumnConfig[] = [];
   @Input() settings: MedTableSettings = {};
 
-  @Input() captionTemplate?: TemplateRef<any>;
+  @Input() toolbarTemplate?: TemplateRef<any>;
   @Input() tableDataTemplate?: TemplateRef<any>;
 
   @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
@@ -62,6 +63,11 @@ export class MedTableComponent<ItemType> {
     }
 
     this.cb.detectChanges();
+  }
+
+  exportData(): void {
+    const sheetsGenerator = new SheetsGenerator(this.data, this.config);
+    sheetsGenerator.generate(this.localSettings.exportFileName);
   }
 
   private addDoubleScrollbar() {

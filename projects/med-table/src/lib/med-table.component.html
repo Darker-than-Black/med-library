@@ -1,3 +1,18 @@
+<p-toolbar *ngIf="toolbarTemplate || localSettings.export">
+  <button
+    *ngIf="localSettings.export"
+    pButton
+    pRipple
+    type="button"
+    icon="pi pi-file-excel"
+    class="p-button-rounded p-button-success"
+    (click)="exportData()"
+  ></button>
+
+  <ng-container *ngTemplateOutlet="toolbarTemplate || null"></ng-container>
+</p-toolbar>
+
+
 <div #upScrollRef class="med-table__up-scroll">
   <div #upScrollItemRef class="med-table__up-scroll-item"></div>
 </div>
@@ -27,8 +42,6 @@
         (input)="tableRef.filterGlobal($any($event.target).value, 'contains')"
       />
     </span>
-
-    <ng-container *ngTemplateOutlet="captionTemplate || null"></ng-container>
   </ng-template>
 
   <ng-template pTemplate="header">

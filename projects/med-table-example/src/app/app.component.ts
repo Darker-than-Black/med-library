@@ -64,6 +64,10 @@ export class AppComponent {
       class: 'field col-12 md:col-6',
     },
   ];
+  readonly tableSettings = {
+    export: true,
+    exportFileName: 'Облік поставок',
+  };
   form: FormGroup = new FormGroup({});
 
   get isValid(): boolean {

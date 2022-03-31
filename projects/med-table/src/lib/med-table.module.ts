@@ -7,6 +7,8 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FORMLY_INPUT_LIST } from './formlyInputList';
 
 import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
+import { ToolbarModule } from 'primeng/toolbar';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -43,6 +45,8 @@ import { DecimalNumberDirective } from './directives/decimal-number.directive';
     FormsModule,
     TableModule,
     FormlyModule,
+    ButtonModule,
+    ToolbarModule,
     BrowserModule,
     InputTextModule,
     InputMaskModule,
