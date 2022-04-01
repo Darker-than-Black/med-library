@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "app:start": "ng serve med-table-example --open",
+    "app:start": "ng serve app-example --open",
 
     "lib:table:patch": "cd ./projects/med-table && npm version patch && cd ../../",
     "lib:table:build": "ng build med-table",
