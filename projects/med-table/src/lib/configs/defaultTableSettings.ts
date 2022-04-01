@@ -1,4 +1,4 @@
-import { MedTableSettingsLocal } from '../types/table';
+import { MedTableSettingsLocal } from '../types/MedTableSettingsLocal';
 
 export const DEFAULT_TABLE_SETTINGS: MedTableSettingsLocal = {
   rows: 25,

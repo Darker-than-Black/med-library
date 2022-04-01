@@ -12,7 +12,6 @@
   <ng-container *ngTemplateOutlet="toolbarTemplate || null"></ng-container>
 </p-toolbar>
 
-
 <div #upScrollRef class="med-table__up-scroll">
   <div #upScrollItemRef class="med-table__up-scroll-item"></div>
 </div>
@@ -46,7 +45,11 @@
 
   <ng-template pTemplate="header">
     <tr>
-      <th *ngFor="let col of config" class="med-table__header">
+      <th
+        *ngFor="let col of config"
+        [pSortableColumn]="col.sortKey || col.key"
+        class="med-table__header"
+      >
         <span>{{ col.label }}</span>
         <p-sortIcon [field]="col.key"></p-sortIcon>
       </th>
@@ -59,12 +62,29 @@
           [style.minWidth]="col.minWidth || localSettings.colMinWidth"
         >
           <p-columnFilter
+            *ngIf="!col.filterType || FILTER_TYPES.TEXT === col.filterType"
             type="text"
             matchMode="contains"
             [field]="col.key"
             [showMenu]="false"
             [showClearButton]="false"
           ></p-columnFilter>
+
+          <p-columnFilter
+            *ngIf="FILTER_TYPES.SELECT === col.filterType"
+            [field]="col.sortKey || col.key"
+            matchMode="in"
+            [showMenu]="false"
+          >
+            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+              <p-multiSelect
+                [ngModel]="value"
+                [options]="getFilterSelectOptions(col)"
+                placeholder="Any"
+                (onChange)="filter($event.value)"
+              ></p-multiSelect>
+            </ng-template>
+          </p-columnFilter>
         </div>
       </th>
     </tr>

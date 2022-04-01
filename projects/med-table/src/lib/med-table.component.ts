@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { Table } from 'primeng/table';
 import {
   Component,
@@ -10,6 +11,7 @@ import {
   ChangeDetectorRef
 } from '@angular/core';
 
+import { FILTER_TYPES } from './types/filterTypes';
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
@@ -26,6 +28,8 @@ import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 })
 export class MedTableComponent<ItemType> {
   constructor(private cb: ChangeDetectorRef) {}
+
+  public readonly FILTER_TYPES = FILTER_TYPES;
 
   @Input() data: ItemType[] = [];
   @Input() loading: boolean = false;
@@ -71,6 +75,11 @@ export class MedTableComponent<ItemType> {
   exportData(): void {
     const sheetsGenerator = new SheetsGenerator(this.data, this.config);
     sheetsGenerator.generate(this.localSettings.exportFileName);
+  }
+
+  getFilterSelectOptions({key, sortKey}: MedTableColumnConfig): string[] {
+    const options = this.data.map(obj => get(obj, sortKey || key)).filter(Boolean);
+    return [...new Set(options)]; // delete duplicates
   }
 
   private addDoubleScrollbar() {

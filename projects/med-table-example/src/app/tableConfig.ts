@@ -1,4 +1,4 @@
-import {FIELD_TYPES, MedTableColumnConfig} from 'med-table';
+import {FIELD_TYPES, FILTER_TYPES, MedTableColumnConfig} from 'med-table';
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -10,6 +10,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
   },
   {
     key: 'responsible',
+    sortKey: 'responsible.name',
     label: 'Відповідальний менеджер',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
@@ -31,10 +32,12 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
   },
   {
     key: 'publisher',
+    sortKey: 'publisher.name',
     label: 'Відповідальна особа за підписання',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
     viewHandler: ({name}: any) => name || '–',
+    filterType: FILTER_TYPES.SELECT,
   },
   {
     key: 'agreement_value',

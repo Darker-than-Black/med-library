@@ -1,6 +1,6 @@
 import { ConfigOption } from '@ngx-formly/core';
 
-import { FIELD_TYPES } from './constants/fieldTypes';
+import { FIELD_TYPES } from './types/fieldTypes';
 import { DynamicInputComponent } from './components/forms/dynamic-input/dynamic-input.component';
 import { DynamicSelectComponent } from './components/forms/dynamic-select/dynamic-select.component';
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';

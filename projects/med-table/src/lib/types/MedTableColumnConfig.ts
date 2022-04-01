@@ -1,11 +1,14 @@
-import { FIELD_TYPES } from '../constants/fieldTypes';
+import { FIELD_TYPES } from './fieldTypes';
+import { FILTER_TYPES } from './filterTypes';
 
 export interface MedTableColumnConfig {
   key: string
   label: string
-  filterable?: boolean
+  sortKey?: string
   defaultValue?: any // default '–'
   minWidth?: string // default: '15rem'
+  filterable?: boolean // visible filter
+  filterType?: FILTER_TYPES // default: FILTER_TYPES.TEXT
   editorType?: FIELD_TYPES
   hideExport?: boolean // hide column in export file
   inputMask?: string

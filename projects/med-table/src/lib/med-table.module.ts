@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
+import { MultiSelectModule } from 'primeng/multiselect';
 import { InputNumberModule } from 'primeng/inputnumber';
 
 import { MedTableComponent } from './med-table.component';
@@ -50,6 +51,7 @@ import { DecimalNumberDirective } from './directives/decimal-number.directive';
     BrowserModule,
     InputTextModule,
     InputMaskModule,
+    MultiSelectModule,
     InputNumberModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

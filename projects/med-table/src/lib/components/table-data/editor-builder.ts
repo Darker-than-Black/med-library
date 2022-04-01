@@ -1,6 +1,6 @@
 import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 import { MedCustomFormlyFieldConfig } from '../../types/form';
-import { FIELD_TYPES } from '../../constants/fieldTypes';
+import { FIELD_TYPES } from '../../types/fieldTypes';
 
 export interface EditorBuilderOptions extends MedTableColumnConfig {
   onLeave: () => void

@@ -2,7 +2,8 @@
  * Public API Surface of med-table
  */
 
-export { FIELD_TYPES } from './lib/constants/fieldTypes';
+export { FILTER_TYPES } from './lib/types/filterTypes';
+export { FIELD_TYPES } from './lib/types/fieldTypes';
 
 export * from './lib/types/MedSelectOption';
 export * from './lib/types/MedTableColumnConfig';

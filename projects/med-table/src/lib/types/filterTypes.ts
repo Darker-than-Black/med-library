@@ -1,0 +1,4 @@
+export enum FILTER_TYPES {
+  TEXT = 'text',
+  SELECT = 'select',
+}
