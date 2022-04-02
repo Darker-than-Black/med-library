@@ -14,5 +14,6 @@ export interface MedTableColumnConfig {
   hideExport?: boolean // hide column in export file
   inputMask?: string
   decimal?: boolean // use with FIELD_TYPES.TEXT
+  visibleEditorHandler?: (data: any) => boolean // default: () => true
   viewHandler?: (data: any) => any
 }

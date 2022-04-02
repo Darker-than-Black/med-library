@@ -17,6 +17,7 @@ import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
 import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 
 const DEFAULT_HANDLER = (data: any) => data;
+const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
 @Component({
   selector: 'table-data',
@@ -47,7 +48,8 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   }
 
   get isEditable(): boolean {
-    return Boolean(this.config.editorType);
+    const {editorType, visibleEditorHandler = DEFAULT_VISIBLE_EDITOR_HANDLER} = this.config;
+    return Boolean(editorType) && visibleEditorHandler(this.item);
   }
 
   get isEmptyTemplate(): boolean {
