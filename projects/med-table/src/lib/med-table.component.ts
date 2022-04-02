@@ -1,5 +1,6 @@
 import { get } from 'lodash';
 import { Table } from 'primeng/table';
+import {FilterService, PrimeNGConfig} from 'primeng/api';
 import {
   Component,
   Input,
@@ -20,14 +21,17 @@ import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
 import { MedTableColumnConfig } from './types/MedTableColumnConfig';
 import { MedTableSettings } from './types/MedTableSettings';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
+import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
 
 @Component({
   selector: APP_SELECTOR,
   templateUrl: 'med-table.component.html',
   styleUrls: ['./med-table.component.scss'],
 })
-export class MedTableComponent<ItemType> {
-  constructor(private cb: ChangeDetectorRef) {}
+export class MedTableComponent<ItemType> extends PrimengConfigMixin {
+  constructor(primeConfig: PrimeNGConfig, filterService: FilterService, private cb: ChangeDetectorRef) {
+    super(primeConfig, filterService);
+  }
 
   public readonly FILTER_TYPES = FILTER_TYPES;
 

@@ -9,6 +9,7 @@ import { FORMLY_INPUT_LIST } from './formlyInputList';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
+import { CalendarModule } from 'primeng/calendar';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
@@ -26,6 +27,7 @@ import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dy
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
 import { DecimalNumberDirective } from './directives/decimal-number.directive';
+import { DateRangeComponent } from './components/forms/date-range/date-range.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,7 @@ import { DecimalNumberDirective } from './directives/decimal-number.directive';
     DynamicInputMaskComponent,
     WrapperDynamicInputComponent,
     DecimalNumberDirective,
+    DateRangeComponent,
   ],
   imports: [
     FormsModule,
@@ -49,6 +52,7 @@ import { DecimalNumberDirective } from './directives/decimal-number.directive';
     ButtonModule,
     ToolbarModule,
     BrowserModule,
+    CalendarModule,
     InputTextModule,
     InputMaskModule,
     MultiSelectModule,

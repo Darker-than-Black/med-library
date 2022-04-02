@@ -7,6 +7,7 @@ export interface MedTableColumnConfig {
   sortKey?: string
   defaultValue?: any // default '–'
   minWidth?: string // default: '15rem'
+  maxWidth?: string // default: '20rem'
   filterable?: boolean // visible filter
   filterType?: FILTER_TYPES // default: FILTER_TYPES.TEXT
   editorType?: FIELD_TYPES

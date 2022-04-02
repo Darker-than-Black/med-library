@@ -109,7 +109,10 @@
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "projects/app-example/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "xlsx-js-style"
+            ]
           },
           "configurations": {
             "production": {

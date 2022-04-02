@@ -1,0 +1,14 @@
+<p-calendar
+  #input
+  [touchUI]="true"
+  [showIcon]="true"
+  [inputId]="inputId"
+  [(ngModel)]="value"
+  dateFormat="dd.mm.yy"
+  selectionMode="range"
+  (focusout)="leave.emit()"
+  (keydown.enter)="leave.emit()"
+  (onClose)="select.emit(value)"
+  [panelStyle]="{'mim-width': '0', 'max-width': '360px'}"
+></p-calendar>
+

@@ -13,7 +13,7 @@ import { FormInputMixin } from '../../../mixins/FormInputMixin';
     multi: true
   }]
 })
-export class InputComponent extends FormInputMixin {
+export class InputComponent extends FormInputMixin<string> {
   @Input() type: string = 'text';
   @Input() isDecimal: boolean = false;
 }

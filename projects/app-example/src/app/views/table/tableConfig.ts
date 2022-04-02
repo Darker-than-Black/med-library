@@ -1,4 +1,5 @@
-import {FIELD_TYPES, FILTER_TYPES, MedTableColumnConfig} from 'med-table';
+import {FILTER_TYPES, MedTableColumnConfig} from 'med-table';
+import {FIELD_TYPES} from "med-dynamic-form";
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -57,18 +58,21 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Дата підписання договору',
     filterable: true,
     editorType: FIELD_TYPES.DATE,
+    filterType: FILTER_TYPES.DATE,
   },
   {
     key: 'agreement_final_date',
     label: 'Кінцева дата дії договору',
     filterable: true,
     editorType: FIELD_TYPES.DATE,
+    filterType: FILTER_TYPES.DATE,
   },
   {
     key: 'delivery_date',
     label: 'Строк поставки',
     filterable: true,
     editorType: FIELD_TYPES.DATE,
+    filterType: FILTER_TYPES.DATE,
   },
   {
     key: 'winner',
@@ -130,5 +134,6 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Кінцева дата дії договору (Додаткова угода)',
     filterable: true,
     editorType: FIELD_TYPES.DATE,
+    filterType: FILTER_TYPES.DATE,
   },
 ];

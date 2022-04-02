@@ -5,6 +5,7 @@ export interface MedTableSettingsLocal {
   filterDelay: number
   paginator: boolean
   colMinWidth: string
+  colMaxWidth: string
   scrollHeight: string
   emptyMessage: string
   exportFileName?: string

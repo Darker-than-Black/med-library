@@ -60,31 +60,50 @@
         <div
           *ngIf="col.filterable"
           [style.minWidth]="col.minWidth || localSettings.colMinWidth"
+          [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
         >
-          <p-columnFilter
-            *ngIf="!col.filterType || FILTER_TYPES.TEXT === col.filterType"
-            type="text"
-            matchMode="contains"
-            [field]="col.key"
-            [showMenu]="false"
-            [showClearButton]="false"
-          ></p-columnFilter>
+          <ng-container [ngSwitch]="col.filterType">
+            <p-columnFilter
+              *ngSwitchCase="FILTER_TYPES.SELECT"
+              [field]="col.sortKey || col.key"
+              matchMode="in"
+              [showMenu]="false"
+            >
+              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                <p-multiSelect
+                  [ngModel]="value"
+                  [options]="getFilterSelectOptions(col)"
+                  placeholder="Всі"
+                  (onChange)="filter($event.value)"
+                ></p-multiSelect>
+              </ng-template>
+            </p-columnFilter>
 
-          <p-columnFilter
-            *ngIf="FILTER_TYPES.SELECT === col.filterType"
-            [field]="col.sortKey || col.key"
-            matchMode="in"
-            [showMenu]="false"
-          >
-            <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-              <p-multiSelect
-                [ngModel]="value"
-                [options]="getFilterSelectOptions(col)"
-                placeholder="Any"
-                (onChange)="filter($event.value)"
-              ></p-multiSelect>
-            </ng-template>
-          </p-columnFilter>
+            <p-columnFilter
+              *ngSwitchCase="FILTER_TYPES.DATE"
+              [field]="col.sortKey || col.key"
+              type="date"
+              [showMenu]="false"
+              [matchModeOptions]="matchModeOptions"
+              matchMode="date-range"
+            >
+              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+                <date-range
+                  [ngModel]="value"
+                  (select)="filter($event)"
+                ></date-range>
+              </ng-template>
+            </p-columnFilter>
+
+            <p-columnFilter
+              *ngSwitchDefault
+              type="text"
+              matchMode="contains"
+              [field]="col.key"
+              [showMenu]="false"
+              [showClearButton]="false"
+            ></p-columnFilter>
+          </ng-container>
         </div>
       </th>
     </tr>

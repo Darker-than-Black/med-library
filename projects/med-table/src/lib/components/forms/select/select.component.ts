@@ -15,7 +15,7 @@ import { MedTableService } from '../../../services/med-table.service';
     multi: true
   }]
 })
-export class SelectComponent<T> extends FormInputMixin{
+export class SelectComponent<T> extends FormInputMixin<string> {
   constructor(private store: MedTableService) {
     super();
   }
