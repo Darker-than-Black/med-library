@@ -4,6 +4,10 @@ import { Component, OnInit } from '@angular/core';
 import { PRIMENG_TRANSLATIONS } from '../configs/primengTranslations';
 
 const dateRangeFilterName = 'date-range';
+const END_DATE = {
+  HOURS: 23,
+  MINUTES: 59,
+};
 
 @Component({
   template: '',
@@ -14,7 +18,6 @@ export class PrimengConfigMixin implements OnInit {
   matchModeOptions: SelectItem[] = [
     { label: 'Date range', value: dateRangeFilterName },
   ];
-
 
   ngOnInit() {
     this.primeConfig.setTranslation(PRIMENG_TRANSLATIONS);
@@ -32,7 +35,7 @@ export class PrimengConfigMixin implements OnInit {
      const currentDate = new Date(value).getTime();
 
      if (endDate) {
-       return startDate.getTime() <= currentDate && currentDate <= endDate.getTime();
+       return startDate.getTime() <= currentDate && currentDate < endDate.setHours(END_DATE.HOURS, END_DATE.MINUTES);
      }
 
      return startDate.getTime() <= currentDate;
