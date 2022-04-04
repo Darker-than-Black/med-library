@@ -1,9 +1,9 @@
 :host ::ng-deep {
   .med-table {
     // sticky header
-    .p-datatable .p-datatable-thead > tr > .med-table__header {
+    .p-datatable .p-datatable-thead {
       position: sticky;
-      z-index: 99;
+      z-index: 2;
       top: 0;
     }
 

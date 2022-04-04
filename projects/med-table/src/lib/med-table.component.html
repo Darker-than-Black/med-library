@@ -48,7 +48,6 @@
       <th
         *ngFor="let col of config"
         [pSortableColumn]="col.sortKey || col.key"
-        class="med-table__header"
       >
         <span>{{ col.label }}</span>
         <p-sortIcon [field]="col.key"></p-sortIcon>
