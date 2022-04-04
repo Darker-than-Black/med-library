@@ -17,11 +17,12 @@ import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
 import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
+import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
 import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
 import { MedTableColumnConfig } from './types/MedTableColumnConfig';
 import { MedTableSettings } from './types/MedTableSettings';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
-import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
+import { MedSelectOption } from './types/MedSelectOption';
 
 @Component({
   selector: APP_SELECTOR,
@@ -81,9 +82,11 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin {
     sheetsGenerator.generate(this.localSettings.exportFileName);
   }
 
-  getFilterSelectOptions({key, sortKey}: MedTableColumnConfig): string[] {
-    const options = this.data.map(obj => get(obj, sortKey || key)).filter(Boolean);
-    return [...new Set(options)]; // delete duplicates
+  getFilterSelectOptions({key, sortKey}: MedTableColumnConfig): MedSelectOption<string>[] {
+    const options = this.data
+      .map(obj => get(obj, sortKey || key))
+      .filter(Boolean);
+    return [...new Set(options)].map(value => ({ value, label: value })); // delete duplicates
   }
 
   private addDoubleScrollbar() {

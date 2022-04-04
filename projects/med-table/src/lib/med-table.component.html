@@ -74,6 +74,8 @@
                   [ngModel]="value"
                   [options]="getFilterSelectOptions(col)"
                   placeholder="Всі"
+                  optionValue="value"
+                  optionLabel="label"
                   (onChange)="filter($event.value)"
                 ></p-multiSelect>
               </ng-template>
