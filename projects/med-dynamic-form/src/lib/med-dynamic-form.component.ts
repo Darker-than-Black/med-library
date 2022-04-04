@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { get, set } from 'lodash';
 
 import { FieldBuilder } from './field-builder';
 import { MedCustomFormlyFieldConfig, MedFormFieldConfig } from './types/form';
@@ -14,12 +15,12 @@ export class MedDynamicFormComponent implements OnInit {
   @Input() config!: MedFormFieldConfig[];
   @Input() form: FormGroup = new FormGroup({});
 
-  fields: MedCustomFormlyFieldConfig[] = [];
   model: Record<string, any> = {};
+  fields: MedCustomFormlyFieldConfig[] = [];
 
   ngOnInit() {
     this.config.forEach(item => {
-      this.model[item.key] = '';
+      set(this.model, item.key, get(this.form.value, item.key) || '');
       this.fields.push(new FieldBuilder(item));
     });
   }

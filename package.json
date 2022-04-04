@@ -13,6 +13,7 @@
     "lib:table:build": "ng build med-table",
     "lib:table:watch": "ng build med-table --watch",
     "lib:table:publish": "npm run lib:table:patch && npm run lib:table:build && cd dist/med-table && npm pack && npm publish",
+    "lib:table:update": "cd ./projects/med-table && npm i med-dynamic-form@latest && cd ../../",
 
     "lib:form:patch": "cd ./projects/med-dynamic-form && npm version patch && cd ../../",
     "lib:form:build": "ng build med-dynamic-form",

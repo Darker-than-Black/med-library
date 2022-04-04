@@ -1,24 +1,15 @@
 import { Injectable } from '@angular/core';
+import { MedDynamicFormService } from 'med-dynamic-form';
 
 import { MedSelectOption } from '../types/MedSelectOption';
-
-interface MedTableData {
-  selectOptions: Record<string, MedSelectOption<any>[]>
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class MedTableService {
-  private data: MedTableData = {
-    selectOptions: {}
-  };
-
-  get selectData(): Record<string, MedSelectOption<any>[]> {
-    return this.data.selectOptions;
-  }
+  constructor(private dynamicFormService: MedDynamicFormService) {}
 
   setSelectData(data: MedSelectOption<any>[], key: string): void {
-    this.data.selectOptions[key] = data;
+    this.dynamicFormService.setSelectData(data, key);
   }
 }

@@ -1,4 +1,4 @@
-import { FIELD_TYPES } from './fieldTypes';
+import { FIELD_TYPES } from 'med-dynamic-form';
 import { FILTER_TYPES } from './filterTypes';
 
 export interface MedTableColumnConfig {

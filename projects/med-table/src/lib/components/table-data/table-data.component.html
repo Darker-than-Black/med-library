@@ -4,11 +4,11 @@
   </span>
 
   <span class="table-data__content">
-    <formly-form
+    <med-dynamic-form
       *ngIf="fields.length"
-      [fields]="fields"
-      [model]="model"
-    ></formly-form>
+      [config]="fields"
+      [form]="form"
+    ></med-dynamic-form>
 
     <div
       [hidden]="fields.length"

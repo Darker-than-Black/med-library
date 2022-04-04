@@ -1,6 +1,6 @@
 {
   "name": "med-table",
-  "version": "1.0.25",
+  "version": "1.0.27",
   "author": "Dmytro Rybachek",
   "license": "MIT",
   "description": "Wrapper over table of primeng library for Ministry of Health",
@@ -24,8 +24,8 @@
     "@angular/core": "^13.2.0"
   },
   "dependencies": {
-    "@ngx-formly/core": "^5.11.2",
     "lodash": "^4.17.21",
+    "med-dynamic-form": "^0.1.7",
     "primeflex": "^3.1.3",
     "primeicons": "^5.0.0",
     "primeng": "^13.3.0",

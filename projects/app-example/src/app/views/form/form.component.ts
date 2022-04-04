@@ -1,4 +1,4 @@
-import { FormGroup } from '@angular/forms';
+import {FormControl, FormGroup} from '@angular/forms';
 import { ChangeDetectorRef, Component } from '@angular/core';
 
 import { MedDynamicFormService } from 'med-dynamic-form';
@@ -21,7 +21,9 @@ export class FormComponent {
   }
 
   readonly formConfig = FORM_CONFIG;
-  form: FormGroup = new FormGroup({});
+  form: FormGroup = new FormGroup({
+    s20: new FormControl('1234')
+  });
 
   get isValid(): boolean {
     return this.form.valid;
@@ -31,4 +33,7 @@ export class FormComponent {
     this.cb.detectChanges();
   }
 
+  clearForm() {
+    this.form.reset();
+  }
 }

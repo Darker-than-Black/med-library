@@ -1,26 +1,24 @@
+import { MedFormFieldConfig, FIELD_TYPES } from 'med-dynamic-form';
 import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
-import { MedCustomFormlyFieldConfig } from '../../types/form';
-import { FIELD_TYPES } from '../../types/fieldTypes';
 
 export interface EditorBuilderOptions extends MedTableColumnConfig {
   onLeave: () => void
 }
 
-export class EditorBuilder implements MedCustomFormlyFieldConfig {
+export class EditorBuilder implements MedFormFieldConfig {
   key: string;
-  type: string;
-  templateOptions = {
-    mask: '',
-    decimal: false,
-    autoFocus: true,
-    onLeave: () => {},
-  };
+  editorType: FIELD_TYPES;
+  onLeave = () => {};
+  autoFocus: boolean = true;
+  wrappers: string[] = [];
+  inputMask: string = '';
+  decimal: boolean = false;
 
   constructor(options: EditorBuilderOptions) {
     this.key = options.key;
-    this.templateOptions.onLeave = options.onLeave;
-    this.type = options.editorType || FIELD_TYPES.TEXT;
-    this.templateOptions.mask = options.inputMask || '';
-    this.templateOptions.decimal = options.decimal || false;
+    this.onLeave = options.onLeave;
+    this.editorType = options.editorType || FIELD_TYPES.TEXT;
+    this.inputMask = options.inputMask || this.inputMask;
+    this.decimal = options.decimal || this.decimal;
   }
 }

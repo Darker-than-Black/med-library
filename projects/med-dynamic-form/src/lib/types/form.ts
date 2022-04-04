@@ -11,6 +11,7 @@ export interface MedFormFieldConfig {
   decimal?: boolean // use with FIELD_TYPES.TEXT
   required?: boolean
   wrappers?: string[]
+  autoFocus?: boolean
   onLeave?: () => void
 }
 

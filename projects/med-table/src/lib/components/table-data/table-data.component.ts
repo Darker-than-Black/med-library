@@ -1,4 +1,6 @@
-import { get, set } from 'lodash';
+import { get } from 'lodash';
+import { FormGroup, FormControl } from '@angular/forms';
+import { MedFormFieldConfig } from 'med-dynamic-form';
 import {
   ChangeDetectorRef,
   Component,
@@ -12,7 +14,6 @@ import {
 } from '@angular/core';
 
 import { EditorBuilder } from './editor-builder';
-import { MedCustomFormlyFieldConfig } from '../../types/form';
 import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
 import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
 
@@ -35,8 +36,8 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
-  fields: MedCustomFormlyFieldConfig[] = [];
-  model: Record<string, any> = {};
+  fields: MedFormFieldConfig[] = [];
+  form: any = new FormGroup({});
 
   get fieldData(): string {
     return this.getValue(this.item, this.config.key);
@@ -54,13 +55,13 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   get isEmptyTemplate(): boolean {
     // TODO should show default value if slot "template" is empty
-    const {nativeElement} = this.contentRef || {};
+    const { nativeElement } = this.contentRef || {};
     return !(nativeElement && nativeElement.innerText);
   }
 
   ngOnInit(): void {
     const { key } = this.config;
-    set(this.model, key, this.getValue(this.item, key));
+    this.form.addControl(key, new FormControl(this.fieldData));
   }
 
   ngAfterViewInit() {
@@ -81,12 +82,14 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   onLeave(): void {
     const { key } = this.config;
+    const { value } = this.form;
 
-    if (this.getValue(this.model, key) !== this.getValue(this.item, key)) {
-      this.update.emit({item: {...this.item, ...this.model}, key});
+    if (this.getValue(value, key) !== this.fieldData) {
+      this.update.emit({item: {...this.item, ...value}, key});
     }
 
     this.fields = [];
+    this.form.reset();
   }
 
   private getValue(data: Record<string, any>, key: string): any {
