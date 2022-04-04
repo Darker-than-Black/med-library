@@ -3,6 +3,7 @@
  */
 
 export { FIELD_TYPES } from './lib/constants/fieldTypes';
+export { PATTERN_TYPES } from './lib/constants/patternTypes';
 
 export * from './lib/types/form';
 

@@ -3,7 +3,7 @@
   [type]="field.type || ''"
   [formControl]="formControl"
   [formlyAttributes]="field"
-  [isDecimal]="field.templateOptions.decimal"
+  [pattern]="field.templateOptions.pattern"
   [autoFocus]="field.templateOptions.autoFocus"
   (leave)="field.templateOptions.onLeave()"
 ></app-input>

@@ -3,7 +3,7 @@
   pInputText
   [id]="inputId"
   [type]="type"
-  [decimal]="isDecimal"
+  [inputPattern]="pattern"
   [(ngModel)]="value"
   (focusout)="leave.emit()"
   (keydown.enter)="leave.emit()"

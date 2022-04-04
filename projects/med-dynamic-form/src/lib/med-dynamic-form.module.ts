@@ -10,7 +10,7 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 
-import { DecimalNumberDirective } from './directives/decimal-number.directive';
+import { InputPatternDirective } from './directives/input-pattern.directive';
 import { MedDynamicFormComponent } from './med-dynamic-form.component';
 import { InputComponent } from './components/forms/input/input.component';
 import { SelectComponent } from './components/forms/select/select.component';
@@ -30,7 +30,7 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     InputMaskComponent,
     DynamicInputComponent,
     DynamicSelectComponent,
-    DecimalNumberDirective,
+    InputPatternDirective,
     MedDynamicFormComponent,
     DynamicTextareaComponent,
     DynamicInputMaskComponent,

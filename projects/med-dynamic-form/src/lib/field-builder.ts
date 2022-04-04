@@ -1,3 +1,4 @@
+import { PATTERN_TYPES } from './constants/patternTypes';
 import { MedCustomFormlyFieldConfig, MedFormFieldConfig } from './types/form';
 
 export class FieldBuilder implements MedCustomFormlyFieldConfig {
@@ -8,7 +9,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
   templateOptions = {
     mask: '',
     label: '',
-    decimal: false,
+    pattern: PATTERN_TYPES.NONE,
     labelKey: '',
     required: false,
     autoFocus: false,
@@ -20,7 +21,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     this.key = options.key;
     this.wrappers = options.wrappers || this.wrappers;
     this.templateOptions.mask = options.inputMask || this.templateOptions.mask;
-    this.templateOptions.decimal = options.decimal || this.templateOptions.decimal;
+    this.templateOptions.pattern = options.pattern || this.templateOptions.pattern;
     this.templateOptions.onLeave = options.onLeave || this.templateOptions.onLeave;
     this.templateOptions.labelKey = options.key;
     this.templateOptions.label = options.label || this.templateOptions.label;

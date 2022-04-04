@@ -3,7 +3,7 @@
  */
 
 export { FILTER_TYPES } from './lib/types/filterTypes';
-export { FIELD_TYPES } from 'med-dynamic-form';
+export { FIELD_TYPES, PATTERN_TYPES } from 'med-dynamic-form';
 
 export * from './lib/types/MedSelectOption';
 export * from './lib/types/MedTableColumnConfig';

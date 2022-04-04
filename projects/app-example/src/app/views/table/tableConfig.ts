@@ -1,4 +1,4 @@
-import { FILTER_TYPES, MedTableColumnConfig, FIELD_TYPES } from 'med-table';
+import { FILTER_TYPES, MedTableColumnConfig, FIELD_TYPES, PATTERN_TYPES } from 'med-table';
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -44,7 +44,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Сума позиції за договором',
     filterable: true,
     editorType: FIELD_TYPES.TEXT,
-    decimal: true,
+    pattern: PATTERN_TYPES.DECIMAL,
   },
   {
     key: 'agreement_num',
@@ -126,7 +126,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Сума позиції (Додаткова угода)',
     filterable: true,
     editorType: FIELD_TYPES.TEXT,
-    decimal: true,
+    pattern: PATTERN_TYPES.LATIN_AND_NUMBER,
   },
   {
     key: 'agreement_final_date',

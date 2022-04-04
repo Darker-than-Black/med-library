@@ -1,7 +1,8 @@
-import { Component, Input, forwardRef } from '@angular/core';
-import {  NG_VALUE_ACCESSOR } from '@angular/forms';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, Input } from '@angular/core';
 
 import { FormInputMixin } from '../../../mixins/FormInputMixin';
+import { PATTERN_TYPES } from '../../../constants/patternTypes';
 
 @Component({
   selector: 'app-input',
@@ -15,5 +16,5 @@ import { FormInputMixin } from '../../../mixins/FormInputMixin';
 })
 export class InputComponent extends FormInputMixin {
   @Input() type: string = 'text';
-  @Input() isDecimal: boolean = false;
+  @Input() pattern!: PATTERN_TYPES;
 }

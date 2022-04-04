@@ -1,5 +1,6 @@
 import { FieldTypeConfig, FormlyFieldConfig, FormlyTemplateOptions } from '@ngx-formly/core';
 import { FIELD_TYPES } from '../constants/fieldTypes';
+import { PATTERN_TYPES } from '../constants/patternTypes';
 
 export interface MedFormFieldConfig {
   key: string
@@ -8,11 +9,11 @@ export interface MedFormFieldConfig {
   class?: string
   label?: string
   inputMask?: string
-  decimal?: boolean // use with FIELD_TYPES.TEXT
   required?: boolean
   wrappers?: string[]
   autoFocus?: boolean
   onLeave?: () => void
+  pattern?: PATTERN_TYPES // use with FIELD_TYPES.TEXT
 }
 
 export interface MedSelectOption<T> {
@@ -23,12 +24,12 @@ export interface MedSelectOption<T> {
 /* ------ FORMLY ------ */
 
 export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
-  mask?: string
   label?: string
   class?: string
   labelKey?: string
-  autoFocus?: boolean
-  decimal: boolean
+  mask: string
+  autoFocus: boolean
+  pattern: PATTERN_TYPES
   onLeave: () => void
 }
 

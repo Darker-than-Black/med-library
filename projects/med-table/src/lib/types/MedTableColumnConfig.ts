@@ -1,4 +1,4 @@
-import { FIELD_TYPES } from 'med-dynamic-form';
+import { FIELD_TYPES, PATTERN_TYPES } from 'med-dynamic-form';
 import { FILTER_TYPES } from './filterTypes';
 
 export interface MedTableColumnConfig {
@@ -11,9 +11,9 @@ export interface MedTableColumnConfig {
   filterable?: boolean // visible filter
   filterType?: FILTER_TYPES // default: FILTER_TYPES.TEXT
   editorType?: FIELD_TYPES
+  pattern?: PATTERN_TYPES
   hideExport?: boolean // hide column in export file
   inputMask?: string
-  decimal?: boolean // use with FIELD_TYPES.TEXT
   visibleEditorHandler?: (data: any) => boolean // default: () => true
   viewHandler?: (data: any) => any
 }

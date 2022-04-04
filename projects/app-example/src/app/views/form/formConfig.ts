@@ -1,4 +1,4 @@
-import { MedFormFieldConfig, FIELD_TYPES } from "med-dynamic-form";
+import { MedFormFieldConfig, FIELD_TYPES, PATTERN_TYPES } from "med-dynamic-form";
 
 export const FORM_CONFIG: MedFormFieldConfig[] = [
   {
@@ -28,10 +28,23 @@ export const FORM_CONFIG: MedFormFieldConfig[] = [
     class: 'field col-12 md:col-6',
   },
   {
-    key: 'agreement_value',
-    label: 'Сума позиції за договором',
+    key: 'TEXT',
+    label: 'TEXT',
     editorType: FIELD_TYPES.TEXT,
-    decimal: true,
+    class: 'field col-12 md:col-6',
+  },
+  {
+    key: 'DECIMAL',
+    label: 'PATTERN_TYPES.DECIMAL',
+    editorType: FIELD_TYPES.TEXT,
+    pattern: PATTERN_TYPES.DECIMAL,
+    class: 'field col-12 md:col-6',
+  },
+  {
+    key: 'LATIN_AND_NUMBER',
+    label: 'PATTERN_TYPES.LATIN_AND_NUMBER',
+    editorType: FIELD_TYPES.TEXT,
+    pattern: PATTERN_TYPES.LATIN_AND_NUMBER,
     class: 'field col-12 md:col-6',
   },
   {
