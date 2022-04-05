@@ -3,13 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FormlyModule } from '@ngx-formly/core';
-import { FORMLY_INPUT_LIST } from './formlyInputList';
-
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 
+import { LibFormlyModule } from './lib-formly.module';
 import { InputPatternDirective } from './directives/input-pattern.directive';
 import { MedDynamicFormComponent } from './med-dynamic-form.component';
 import { InputComponent } from './components/forms/input/input.component';
@@ -44,7 +42,7 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     InputNumberModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormlyModule.forRoot(FORMLY_INPUT_LIST),
+    LibFormlyModule,
   ],
   exports: [
     InputPatternDirective,
