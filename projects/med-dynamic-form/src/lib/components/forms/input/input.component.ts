@@ -16,5 +16,5 @@ import { PATTERN_TYPES } from '../../../constants/patternTypes';
 })
 export class InputComponent extends FormInputMixin {
   @Input() type: string = 'text';
-  @Input() pattern!: PATTERN_TYPES;
+  @Input() fieldPattern!: PATTERN_TYPES;
 }

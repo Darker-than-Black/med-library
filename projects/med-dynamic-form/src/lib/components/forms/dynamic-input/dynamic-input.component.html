@@ -3,7 +3,7 @@
   [type]="field.type || ''"
   [formControl]="formControl"
   [formlyAttributes]="field"
-  [pattern]="field.templateOptions.pattern"
   [autoFocus]="field.templateOptions.autoFocus"
+  [fieldPattern]="field.templateOptions.inputPattern"
   (leave)="field.templateOptions.onLeave()"
 ></app-input>

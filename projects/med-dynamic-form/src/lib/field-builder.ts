@@ -9,7 +9,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
   templateOptions = {
     mask: '',
     label: '',
-    pattern: PATTERN_TYPES.NONE,
+    inputPattern: PATTERN_TYPES.NONE,
     labelKey: '',
     required: false,
     autoFocus: false,
@@ -21,7 +21,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     this.key = options.key;
     this.wrappers = options.wrappers || this.wrappers;
     this.templateOptions.mask = options.inputMask || this.templateOptions.mask;
-    this.templateOptions.pattern = options.pattern || this.templateOptions.pattern;
+    this.templateOptions.inputPattern = options.pattern || this.templateOptions.inputPattern;
     this.templateOptions.onLeave = options.onLeave || this.templateOptions.onLeave;
     this.templateOptions.labelKey = options.key;
     this.templateOptions.label = options.label || this.templateOptions.label;

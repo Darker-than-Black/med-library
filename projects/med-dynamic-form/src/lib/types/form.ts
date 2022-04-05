@@ -29,7 +29,7 @@ export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   labelKey?: string
   mask: string
   autoFocus: boolean
-  pattern: PATTERN_TYPES
+  inputPattern: PATTERN_TYPES
   onLeave: () => void
 }
 
