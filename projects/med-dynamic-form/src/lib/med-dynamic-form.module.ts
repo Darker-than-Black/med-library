@@ -47,6 +47,7 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     FormlyModule.forRoot(FORMLY_INPUT_LIST),
   ],
   exports: [
+    InputPatternDirective,
     MedDynamicFormComponent,
   ]
 })
