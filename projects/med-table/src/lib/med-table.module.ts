@@ -14,12 +14,14 @@ import { MedDynamicFormModule } from 'med-dynamic-form';
 import { MedTableComponent } from './med-table.component';
 import { TableDataComponent } from './components/table-data/table-data.component';
 import { DateRangeComponent } from './components/forms/date-range/date-range.component';
+import { MedTemplateDirective } from './directives/med-template.directive';
 
 @NgModule({
   declarations: [
     MedTableComponent,
     TableDataComponent,
     DateRangeComponent,
+    MedTemplateDirective,
   ],
   imports: [
     FormsModule,
@@ -35,7 +37,8 @@ import { DateRangeComponent } from './components/forms/date-range/date-range.com
     BrowserAnimationsModule,
   ],
   exports: [
-    MedTableComponent
+    MedTableComponent,
+    MedTemplateDirective,
   ]
 })
 export class MedTableModule { }

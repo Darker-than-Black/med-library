@@ -132,7 +132,5 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     key: 'agreement_final_date',
     label: 'Кінцева дата дії договору (Додаткова угода)',
     filterable: true,
-    editorType: FIELD_TYPES.DATE,
-    filterType: FILTER_TYPES.DATE,
   },
 ];

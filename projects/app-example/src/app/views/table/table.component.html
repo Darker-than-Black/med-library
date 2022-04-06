@@ -4,4 +4,23 @@
   [config]="tableConfig"
   [settings]="tableSettings"
   (updateColumn)="onUpdateColumn($event)"
-></med-table>
+>
+  <ng-template mTemplate="toolbar">
+    <h1>Hello word</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae ex fugit neque nesciunt quod veniam veritatis! Assumenda atque corporis dignissimos ducimus iure numquam quis similique. Ducimus laborum magnam sint.</p>
+  </ng-template>
+
+  <ng-template mTemplate="tableData" let-data let-item="item" let-config="config">
+    <ng-container [ngSwitch]="config.key">
+      <ng-container *ngSwitchCase="'agreement_final_date'">
+        <button pButton class="p-button-text text-left p-0">
+          Ex: {{ data }}
+        </button>
+      </ng-container>
+    </ng-container>
+  </ng-template>
+
+  <ng-template mTemplate="paginator">
+    <h1>Hello word</h1>
+  </ng-template>
+</med-table>

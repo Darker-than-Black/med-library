@@ -48,6 +48,7 @@
       <th
         *ngFor="let col of config"
         [pSortableColumn]="col.sortKey || col.key"
+        class="med-table__th"
       >
         <span>{{ col.label }}</span>
         <p-sortIcon [field]="col.key"></p-sortIcon>
@@ -55,7 +56,7 @@
     </tr>
 
     <tr *ngIf="filterableFields.length">
-      <th *ngFor="let col of config">
+      <th *ngFor="let col of config" class="med-table__th">
         <div
           *ngIf="col.filterable"
           [style.minWidth]="col.minWidth || localSettings.colMinWidth"
@@ -134,5 +135,9 @@
     <tr>
       <td [attr.colspan]="config.length">{{ localSettings.emptyMessage }}</td>
     </tr>
+  </ng-template>
+
+  <ng-template *ngIf="paginatorTemplate" pTemplate="paginatorleft">
+    <ng-container *ngTemplateOutlet="paginatorTemplate || null"></ng-container>
   </ng-template>
 </p-table>

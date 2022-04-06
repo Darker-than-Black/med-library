@@ -27,7 +27,7 @@
   &__content {
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 5px;
     overflow-wrap: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;
@@ -35,10 +35,6 @@
     -moz-hyphens: auto;
     hyphens: auto;
     word-break: break-all;
-
-    @media screen and (max-width: 960px) {
-      padding: 5px;
-    }
   }
 }
 

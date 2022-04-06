@@ -1,6 +1,7 @@
 import { PrimeNGConfig, FilterService, SelectItem } from 'primeng/api';
 import { Component, OnInit } from '@angular/core';
 
+import { TemplatesMixin } from './TemplatesMixin';
 import { PRIMENG_TRANSLATIONS } from '../configs/primengTranslations';
 
 const dateRangeFilterName = 'date-range';
@@ -12,8 +13,10 @@ const END_DATE = {
 @Component({
   template: '',
 })
-export class PrimengConfigMixin implements OnInit {
-   constructor(private primeConfig: PrimeNGConfig, private filterService: FilterService) {}
+export class PrimengConfigMixin extends TemplatesMixin implements OnInit {
+   constructor(private primeConfig: PrimeNGConfig, private filterService: FilterService) {
+     super();
+   }
 
   matchModeOptions: SelectItem[] = [
     { label: 'Date range', value: dateRangeFilterName },

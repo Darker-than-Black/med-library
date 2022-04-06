@@ -5,11 +5,10 @@ import {
   Component,
   Input,
   ViewChild,
-  TemplateRef,
   ElementRef,
   Output,
   EventEmitter,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from '@angular/core';
 
 import { FILTER_TYPES } from './types/filterTypes';
@@ -38,12 +37,8 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin {
 
   @Input() data: ItemType[] = [];
   @Input() loading: boolean = false;
-
   @Input() config: MedTableColumnConfig[] = [];
   @Input() settings: MedTableSettings = {};
-
-  @Input() toolbarTemplate?: TemplateRef<any>;
-  @Input() tableDataTemplate?: TemplateRef<any>;
 
   @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
