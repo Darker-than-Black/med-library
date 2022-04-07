@@ -15,6 +15,10 @@ import { MedTableComponent } from './med-table.component';
 import { TableDataComponent } from './components/table-data/table-data.component';
 import { DateRangeComponent } from './components/forms/date-range/date-range.component';
 import { MedTemplateDirective } from './directives/med-template.directive';
+import { HostDirective } from './directives/host.directive';
+import { FilterTextComponent } from './components/filters/filter-text/filter-text.component';
+import { FilterDateComponent } from './components/filters/filter-date/filter-date.component';
+import { FilterSelectComponent } from './components/filters/filter-select/filter-select.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,10 @@ import { MedTemplateDirective } from './directives/med-template.directive';
     TableDataComponent,
     DateRangeComponent,
     MedTemplateDirective,
+    HostDirective,
+    FilterTextComponent,
+    FilterDateComponent,
+    FilterSelectComponent,
   ],
   imports: [
     FormsModule,

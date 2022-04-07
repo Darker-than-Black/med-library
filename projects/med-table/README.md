@@ -83,6 +83,6 @@ imports: [
 | Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Type | Required | Description |
 | ----------------- | :--- | :--- | :--- |
 | `data` | Array<Object> | **true** | Table data |
-| `config` | Array<[MedTableColumnConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/table.ts#L31) > | **true** | Columns config |
+| `config` | Array<[MedTableColumnConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableColumnConfig.ts) > | **true** | Columns config |
 | `loading` | Boolean | false | Show loading data process **Default: false** |
-| `settings` | [MedTableSettings](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/table.ts#L17) | false |  **[Default](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/configs/defaultTableSettings.ts)** |
+| `settings` | [MedTableSettings](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableSettings.ts) | false |  **[Default](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/configs/defaultTableSettings.ts)** |

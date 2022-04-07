@@ -63,48 +63,17 @@
           [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
         >
           <ng-container [ngSwitch]="col.filterType">
-            <p-columnFilter
+            <filter-select
               *ngSwitchCase="FILTER_TYPES.SELECT"
-              [field]="col.sortKey || col.key"
-              matchMode="in"
-              [showMenu]="false"
-            >
-              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                <p-multiSelect
-                  [ngModel]="value"
-                  [options]="getFilterSelectOptions(col)"
-                  placeholder="Всі"
-                  optionValue="value"
-                  optionLabel="label"
-                  (onChange)="filter($event.value)"
-                ></p-multiSelect>
-              </ng-template>
-            </p-columnFilter>
+              [key]="col.sortKey || col.key"
+            ></filter-select>
 
-            <p-columnFilter
+            <filter-date
               *ngSwitchCase="FILTER_TYPES.DATE"
-              [field]="col.sortKey || col.key"
-              type="date"
-              [showMenu]="false"
-              [matchModeOptions]="matchModeOptions"
-              matchMode="date-range"
-            >
-              <ng-template pTemplate="filter" let-value let-filter="filterCallback">
-                <date-range
-                  [ngModel]="value"
-                  (select)="filter($event)"
-                ></date-range>
-              </ng-template>
-            </p-columnFilter>
+              [key]="col.sortKey || col.key"
+            ></filter-date>
 
-            <p-columnFilter
-              *ngSwitchDefault
-              type="text"
-              matchMode="contains"
-              [field]="col.key"
-              [showMenu]="false"
-              [showClearButton]="false"
-            ></p-columnFilter>
+            <filter-text *ngSwitchDefault [key]="col.sortKey || col.key"></filter-text>
           </ng-container>
         </div>
       </th>
@@ -115,8 +84,8 @@
     <tr class="med-table__row">
       <td *ngFor="let column of config" class="med-table__td">
         <table-data
-          [config]="column"
           [item]="item"
+          [config]="column"
           [template]="tdTemplate"
           (update)="updateColumn.emit($event)"
         ></table-data>

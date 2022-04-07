@@ -20,12 +20,22 @@ export class TableComponent {
     });
   }
 
-  readonly data = MOCK_DATA;
+  data: any[] = [];
+  loading: boolean = true;
   readonly tableConfig = TABLE_CONFIG;
   readonly tableSettings = {
     export: true,
     exportFileName: 'Облік поставок',
   };
+
+  ngOnInit() {
+    this.loading = true;
+
+    setTimeout(() => {
+      this.data = MOCK_DATA;
+      this.loading = false;
+    }, 2000);
+  }
 
   onUpdateColumn({ item, key }: MedUpdateColumnEvent<any>) {
     console.log(key, item);

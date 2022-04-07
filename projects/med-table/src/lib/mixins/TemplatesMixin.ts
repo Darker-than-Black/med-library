@@ -19,7 +19,6 @@ export class TemplatesMixin implements AfterContentInit {
           this.toolbarTemplate = item.template;
           break;
         case 'tableData':
-          console.log(item);
           this.tableDataTemplate = item.template;
           break;
         case 'paginator':

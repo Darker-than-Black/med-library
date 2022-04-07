@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 import { Table } from 'primeng/table';
-import {FilterService, PrimeNGConfig} from 'primeng/api';
+import { PrimeNGConfig } from 'primeng/api';
 import {
   Component,
   Input,
@@ -9,36 +9,50 @@ import {
   Output,
   EventEmitter,
   ChangeDetectorRef,
+  AfterViewInit,
 } from '@angular/core';
 
 import { FILTER_TYPES } from './types/filterTypes';
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
+import { MedTableSettings } from './types/MedTableSettings';
+import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
+import { MedTableColumnConfig } from './types/MedTableColumnConfig';
+import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
 import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
-import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
-import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
-import { MedTableColumnConfig } from './types/MedTableColumnConfig';
-import { MedTableSettings } from './types/MedTableSettings';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 import { MedSelectOption } from './types/MedSelectOption';
+import { MedTableService } from './services/med-table.service';
 
 @Component({
   selector: APP_SELECTOR,
   templateUrl: 'med-table.component.html',
   styleUrls: ['./med-table.component.scss'],
 })
-export class MedTableComponent<ItemType> extends PrimengConfigMixin {
-  constructor(primeConfig: PrimeNGConfig, filterService: FilterService, private cb: ChangeDetectorRef) {
-    super(primeConfig, filterService);
+export class MedTableComponent<ItemType> extends PrimengConfigMixin implements AfterViewInit {
+  constructor(
+    primeConfig: PrimeNGConfig,
+    private cb: ChangeDetectorRef,
+    private store: MedTableService,
+  ) {
+    super(primeConfig);
   }
 
+  private _data: ItemType[] = [];
   public readonly FILTER_TYPES = FILTER_TYPES;
 
-  @Input() data: ItemType[] = [];
   @Input() loading: boolean = false;
   @Input() config: MedTableColumnConfig[] = [];
   @Input() settings: MedTableSettings = {};
+  @Input() set data(newValue: ItemType[]) {
+    this.store.data = newValue;
+    this._data = newValue;
+  }
+
+  get data(): ItemType[] {
+    return this._data;
+  }
 
   @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
