@@ -77,6 +77,7 @@ Table is a template driven component with named templates such as header and bod
 | `paginator` | Custom content for the left section of the paginator | 
 | `tableData` | Custom content for the table data cell | 
 
+
 ```angular2html
 <med-table
   [data]="data"
@@ -109,6 +110,7 @@ Table is a template driven component with named templates such as header and bod
 | `data` | **true** | Data of the data cell |
 | `item` | false | Object from the table row | 
 | `config` | false | [Object](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableColumnConfig.ts) from the table column | 
+
 
 ```angular2html
 <med-table

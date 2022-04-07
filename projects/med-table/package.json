@@ -1,6 +1,6 @@
 {
   "name": "med-table",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "author": "Dmytro Rybachek",
   "license": "MIT",
   "description": "Wrapper over table of primeng library for Ministry of Health",
