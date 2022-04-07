@@ -1,0 +1,14 @@
+<p-columnFilter
+  type="date"
+  matchMode="date-range"
+  [showMenu]="false"
+  [field]="key"
+  [matchModeOptions]="matchModeOptions"
+>
+  <ng-template pTemplate="filter" let-value let-filter="filterCallback">
+    <date-range
+      [ngModel]="value"
+      (select)="filter($event)"
+    ></date-range>
+  </ng-template>
+</p-columnFilter>
