@@ -47,16 +47,16 @@ imports: [
 
 ## med-table properties
 
-| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Required | Description |
-| ----------------- | :--- | :--- | :--- |
-| `data` | Array<Object> | **true** | Table data |
-| `config` | Array<[MedTableColumnConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableColumnConfig.ts) > | **true** | Columns config |
+| Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Required | Description |
+| :--- | :--- | :--- | :--- |
+| `data` | Object[] | **true** | Table data |
+| `config` | [MedTableColumnConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableColumnConfig.ts) [] | **true** | Columns config |
 | `loading` | Boolean | false | Show loading data process **Default: false** |
 | `settings` | [MedTableSettings](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableSettings.ts) | false |  **[Default](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/configs/defaultTableSettings.ts)** |
 
 ## Usage
 
-**Basic Usage**
+**Table usage**
 
 ```angular2html
 <med-table
@@ -67,24 +67,18 @@ imports: [
 ></med-table>
 ```
 
-**Templates**
+## Templates
 
 Table is a template driven component with named templates such as header and body that we've used so far. Templates grant a great level of customization and flexibility where you have total control over the presentation while table handles the features such as paging, sorting, filtering and more. This speeds up development without sacrificing flexibility. Here is the full list of available templates.
 
 | Name | Description |
-| ---- | ----------- |
+| :--- | :--- |
 | `toolbar` | Toolbar content upper the table |
 | `paginator` | Custom content for the left section of the paginator | 
-| `tableData` | Custom content for the table data cell | 
-
+| `tableData` | Custom content for the table data cell |
 
 ```angular2html
-<med-table
-  [data]="data"
-  [loading]="loading"
-  [config]="config"
-  [settings]="settings"
->
+<med-table [data]="data" [loading]="loading" [config]="config">
   <ng-template mTemplate="toolbar">
     <nav>
       <a href="link">Home</a>
@@ -106,18 +100,13 @@ Table is a template driven component with named templates such as header and bod
 *tableData* template properties:
 
 | Name | Default | Description |
-| ---- | ------- | ----------- |
+| :--- | :--- | :--- |
 | `data` | **true** | Data of the data cell |
 | `item` | false | Object from the table row | 
 | `config` | false | [Object](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableColumnConfig.ts) from the table column | 
 
-
 ```angular2html
-<med-table
-  [data]="data"
-  [loading]="loading"
-  [config]="config"
->
+<med-table [data]="data" [loading]="loading" [config]="config">
   <ng-template mTemplate="tableData" let-data let-item="item" let-config="config">
     <ng-container [ngSwitch]="config.key">
       <ng-container *ngSwitchCase="'name'" >
@@ -132,3 +121,71 @@ Table is a template driven component with named templates such as header and bod
   </ng-template>
 </med-table>
 ```
+
+## Edit
+
+Cell editing provides a rapid and user friendly way to manipulate data.
+
+```ts
+import { MedTableColumnConfig, FIELD_TYPES, MedUpdateColumnEvent } from 'med-table';
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <med-table
+      [data]="data"
+      [loading]="loading"
+      [config]="tableConfig"
+      (updateColumn)="onUpdateColumn($event)"
+    ></med-table>
+  `
+})
+export class AppComponent {
+  data: any[] = [...];
+  tableConfig: MedTableColumnConfig[] = [
+    {
+      key: 'key',
+      label: 'Label',
+      editorType: FIELD_TYPES.TEXT,
+    },
+    ...
+  ];
+
+  onUpdateColumn(event: MedUpdateColumnEvent<any>) {
+      ...
+  }
+}
+```
+
+**Editor field types**
+
+[Link](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-dynamic-form/src/lib/constants/fieldTypes.ts)
+
+```ts
+export enum FIELD_TYPES {
+  TEXT = 'text',
+  NUMBER = 'number',
+  TEXTAREA = 'textarea',
+  SELECT = 'select',
+  MASK = 'mask',
+  DATE = 'date',
+}
+```
+
+If you use FIELD_TYPES.SELECT, you need to set the data for the selected parameters with **MedTableService.setSelectData(data: [MedSelectOption<any>](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedSelectOption.ts), key: string)**.
+
+**key** param must to be as same as **key** fields in [MedTableColumnConfig](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableSettings.ts)
+
+```ts
+import { MedTableService, MedSelectOption } from 'med-table';
+
+...
+
+constructor(private medTableService: MedTableService) {
+  const data: MedSelectOption<any> = [...];
+  const key: string = 'key';
+  medTableService.setSelectData(data, key);
+}
+```
+
+
