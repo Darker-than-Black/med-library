@@ -24,10 +24,6 @@ import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 import { MedSelectOption } from './types/MedSelectOption';
 import { MedTableService } from './services/med-table.service';
-import { TypeChecker } from './services/TypeChecker';
-import { MESSAGES } from './configs/messages';
-
-const typeChecker = new TypeChecker();
 
 @Component({
   selector: APP_SELECTOR,
@@ -44,43 +40,19 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   }
 
   private _data: ItemType[] = [];
-  private _config: MedTableColumnConfig[] = [];
   public readonly FILTER_TYPES = FILTER_TYPES;
 
   @Input() loading: boolean = false;
   @Input() settings: MedTableSettings = {};
+  @Input() config: MedTableColumnConfig[] = [];
 
-  @Input() set config(newValue: MedTableColumnConfig[] | string) {
-    try {
-      if (typeChecker.isString<MedTableColumnConfig[] | string>(newValue)) {
-        newValue = JSON.parse(newValue) as MedTableColumnConfig[];
-      }
-
-      this._config = newValue;
-    } catch {
-      console.error(MESSAGES.error.configProp);
-    }
-  }
-
-  @Input() set data(newValue: ItemType[] | string) {
-    try {
-      if (typeChecker.isString<ItemType[] | string>(newValue)) {
-        newValue = JSON.parse(newValue) as ItemType[];
-      }
-
-      this.store.data = newValue;
-      this._data = newValue;
-    } catch {
-      console.error(MESSAGES.error.dataProp);
-    }
+  @Input() set data(newValue: ItemType[]) {
+    this.store.data = newValue;
+    this._data = newValue;
   }
 
   get data(): ItemType[] {
     return this._data;
-  }
-
-  get config(): MedTableColumnConfig[] {
-    return this._config;
   }
 
   @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();

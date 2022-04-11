@@ -3,6 +3,8 @@
   "version": "0.3.0",
   "scripts": {
     "app:start": "ng serve app-example --open",
+    "app-table:start": "ng serve med-table-app --open",
+    "app-table:build": "ng build med-table-app",
 
     "lib:table:patch": "cd ./projects/med-table && npm version patch && cd ../../",
     "lib:table:build": "ng build med-table",
