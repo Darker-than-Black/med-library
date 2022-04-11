@@ -1,8 +1,7 @@
 import { get } from 'lodash';
 import { Component, Input } from '@angular/core';
 
-import { MedSelectOption } from '../../../types/MedSelectOption';
-import {MedTableService} from "../../../services/med-table.service";
+import { MedTableService } from '../../../services/med-table.service';
 
 @Component({
   selector: 'filter-select',
@@ -14,8 +13,8 @@ export class FilterSelectComponent {
 
   @Input() key!: string;
 
-  get filterSelectOptions(): MedSelectOption<string>[] {
+  get filterSelectOptions(): string[] {
     const options = this.store.data.map(obj => get(obj, this.key)).filter(Boolean);
-    return [...new Set(options)].map(value => ({ value, label: value })); // delete duplicates
+    return [...new Set(options)]; // delete duplicates
   }
 }

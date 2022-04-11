@@ -11,14 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TableComponent } from './views/table/table.component';
 import { FormComponent } from './views/form/form.component';
-import { TableJsonParseComponent } from './views/table-json-parse/table-json-parse.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TableComponent,
     FormComponent,
-    TableJsonParseComponent
   ],
   imports: [
     BrowserModule,

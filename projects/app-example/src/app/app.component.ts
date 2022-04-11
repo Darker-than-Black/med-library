@@ -14,11 +14,6 @@ export class AppComponent {
       routerLink: '/'
     },
     {
-      label: 'Table Json Parse',
-      icon: 'pi pi-fw pi-table',
-      routerLink: '/table-json'
-    },
-    {
       label: 'Form',
       icon: 'pi pi-fw pi-pencil',
       routerLink: '/form'
