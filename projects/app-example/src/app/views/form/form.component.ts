@@ -1,9 +1,9 @@
 import {FormControl, FormGroup} from '@angular/forms';
 import { ChangeDetectorRef, Component } from '@angular/core';
 
-import { MedDynamicFormService } from 'med-dynamic-form';
 import { SELECTS } from '../../mockSelectData';
-import { FORM_CONFIG } from './formConfig';
+import { DATALIST, FORM_CONFIG } from './formConfig';
+import { MedDynamicFormService } from 'med-dynamic-form';
 
 @Component({
   selector: 'app-form',
@@ -18,11 +18,13 @@ export class FormComponent {
     Object.entries(SELECTS).forEach(([key, data]) => {
       medDynamicFormService.setSelectData(data, key);
     });
+
+    medDynamicFormService.setDatalist(DATALIST, 'autocomplete');
   }
 
   readonly formConfig = FORM_CONFIG;
   form: FormGroup = new FormGroup({
-    s20: new FormControl('1234')
+    s20: new FormControl('1234'),
   });
 
   get isValid(): boolean {

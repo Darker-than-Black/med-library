@@ -1,4 +1,4 @@
-<app-select
+<app-autocomplete
   [inputId]="field.key"
   [formControl]="formControl"
   [formlyAttributes]="field"
@@ -6,4 +6,4 @@
   [autoFocus]="field.templateOptions.autoFocus"
   (leave)="field.templateOptions.onLeave()"
   (onSelect)="field.templateOptions.onSelect($event)"
-></app-select>
+></app-autocomplete>

@@ -1,0 +1,7 @@
+:host ::ng-deep {
+  .autocomplete {
+    .p-autocomplete-item {
+      white-space: break-spaces;
+    }
+  }
+}

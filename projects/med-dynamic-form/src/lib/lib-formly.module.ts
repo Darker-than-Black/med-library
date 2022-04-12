@@ -7,6 +7,7 @@ import { DynamicSelectComponent } from './components/forms/dynamic-select/dynami
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
+import {DynamicAutocompleteComponent} from './components/forms/dynamic-autocomplete/dynamic-autocomplete.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
         { name: FIELD_TYPES.MASK, component: DynamicInputMaskComponent },
         { name: FIELD_TYPES.SELECT, component: DynamicSelectComponent },
         { name: FIELD_TYPES.TEXTAREA, component: DynamicTextareaComponent },
+        { name: FIELD_TYPES.AUTOCOMPLETE, component: DynamicAutocompleteComponent },
       ],
       wrappers: [
         { name: 'input-wrapper', component: WrapperDynamicInputComponent },

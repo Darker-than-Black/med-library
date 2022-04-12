@@ -1,4 +1,4 @@
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { MedSelectOption } from '../../../types/form';
@@ -19,6 +19,8 @@ export class SelectComponent<T> extends FormInputMixin{
   constructor(private store: MedDynamicFormService) {
     super();
   }
+
+  @Output() onSelect = new EventEmitter<T>();
 
   @Input() fieldName: string = '';
 

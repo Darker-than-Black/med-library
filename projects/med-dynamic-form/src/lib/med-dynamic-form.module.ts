@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { AutoCompleteModule } from 'primeng/autocomplete';
 
 import { LibFormlyModule } from './lib-formly.module';
 import { InputPatternDirective } from './directives/input-pattern.directive';
@@ -19,6 +20,8 @@ import { DynamicSelectComponent } from './components/forms/dynamic-select/dynami
 import { DynamicTextareaComponent } from './components/forms/dynamic-textarea/dynamic-textarea.component';
 import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask/dynamic-input-mask.component';
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
+import { AutocompleteComponent } from './components/forms/autocomplete/autocomplete.component';
+import { DynamicAutocompleteComponent } from './components/forms/dynamic-autocomplete/dynamic-autocomplete.component';
 
 @NgModule({
   declarations: [
@@ -33,16 +36,19 @@ import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic
     DynamicTextareaComponent,
     DynamicInputMaskComponent,
     WrapperDynamicInputComponent,
+    AutocompleteComponent,
+    DynamicAutocompleteComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
     InputTextModule,
     InputMaskModule,
+    LibFormlyModule,
     InputNumberModule,
+    AutoCompleteModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    LibFormlyModule,
   ],
   exports: [
     InputPatternDirective,

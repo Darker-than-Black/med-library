@@ -1,0 +1,12 @@
+<p-autoComplete
+  #input
+  styleClass="autocomplete"
+  [inputId]="inputId"
+  [(ngModel)]="value"
+  [suggestions]="filteredDatalist"
+  [minLength]="2"
+  (completeMethod)="filter($event)"
+  (focusout)="leave.emit()"
+  (keydown.enter)="leave.emit()"
+  (onSelect)="onSelect.emit($event)"
+></p-autoComplete>

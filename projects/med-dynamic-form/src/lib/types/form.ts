@@ -13,6 +13,7 @@ export interface MedFormFieldConfig {
   wrappers?: string[]
   autoFocus?: boolean
   onLeave?: () => void
+  onSelect?: (data: any) => void
   pattern?: PATTERN_TYPES // use with FIELD_TYPES.TEXT
 }
 
@@ -22,7 +23,6 @@ export interface MedSelectOption<T> {
 }
 
 /* ------ FORMLY ------ */
-
 export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   label?: string
   class?: string
@@ -31,6 +31,7 @@ export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   autoFocus: boolean
   inputPattern: PATTERN_TYPES
   onLeave: () => void
+  onSelect: (data: any) => void
 }
 
 export interface MedCustomFormlyFieldConfig extends Omit<FormlyFieldConfig, 'templateOptions'> {

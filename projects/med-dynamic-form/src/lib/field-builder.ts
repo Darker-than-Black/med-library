@@ -14,6 +14,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     required: false,
     autoFocus: false,
     onLeave: () => {},
+    onSelect: (t: any) => {},
   };
 
   constructor(options: MedFormFieldConfig) {
@@ -23,6 +24,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     this.templateOptions.mask = options.inputMask || this.templateOptions.mask;
     this.templateOptions.inputPattern = options.pattern || this.templateOptions.inputPattern;
     this.templateOptions.onLeave = options.onLeave || this.templateOptions.onLeave;
+    this.templateOptions.onSelect = options.onSelect || this.templateOptions.onSelect;
     this.templateOptions.labelKey = options.key;
     this.templateOptions.label = options.label || this.templateOptions.label;
     this.className = options.class || this.className;
