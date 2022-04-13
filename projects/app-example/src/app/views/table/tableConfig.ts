@@ -108,12 +108,14 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Посилання на Prozorro',
     filterable: true,
     editorType: FIELD_TYPES.TEXT,
+    filterType: FILTER_TYPES.SELECT,
   },
   {
     key: 'api_id',
     label: 'API Prozorro',
     filterable: true,
     editorType: FIELD_TYPES.TEXT,
+    filterType: FILTER_TYPES.SELECT,
   },
   {
     key: 'quantity',

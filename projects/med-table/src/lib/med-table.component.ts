@@ -87,6 +87,10 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     this.cb.detectChanges();
   }
 
+  public clearFilters(): void {
+    this.tableRef.clear();
+  }
+
   exportData(): void {
     const sheetsGenerator = new SheetsGenerator(this.data, this.config);
     sheetsGenerator.generate(this.localSettings.exportFileName);

@@ -1,4 +1,5 @@
 <med-table
+  #tableRef
   [data]="data"
   [loading]="loading"
   [config]="tableConfig"
@@ -6,8 +7,13 @@
   (updateColumn)="onUpdateColumn($event)"
 >
   <ng-template mTemplate="toolbar">
-    <h1>Hello word</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut beatae ex fugit neque nesciunt quod veniam veritatis! Assumenda atque corporis dignissimos ducimus iure numquam quis similique. Ducimus laborum magnam sint.</p>
+    <button
+      pButton
+      title="Очистити всі фільтри"
+      class="p-button-outlined"
+      icon="pi pi-filter-slash"
+      (click)="tableRef.clearFilters()"
+    ></button>
   </ng-template>
 
   <ng-template mTemplate="tableData" let-data let-item="item" let-config="config">

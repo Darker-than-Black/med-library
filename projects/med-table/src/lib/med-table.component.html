@@ -1,15 +1,17 @@
 <p-toolbar *ngIf="toolbarTemplate || localSettings.export">
-  <button
-    *ngIf="localSettings.export"
-    pButton
-    pRipple
-    type="button"
-    icon="pi pi-file-excel"
-    class="p-button-rounded p-button-success"
-    (click)="exportData()"
-  ></button>
+  <div class="flex align-items-center justify-content-start">
+    <button
+      *ngIf="localSettings.export"
+      pButton
+      pRipple
+      type="button"
+      icon="pi pi-file-excel"
+      class="p-button-rounded p-button-success mr-4"
+      (click)="exportData()"
+    ></button>
 
-  <ng-container *ngTemplateOutlet="toolbarTemplate || null"></ng-container>
+    <ng-container *ngTemplateOutlet="toolbarTemplate || null"></ng-container>
+  </div>
 </p-toolbar>
 
 <div #upScrollRef class="med-table__up-scroll">

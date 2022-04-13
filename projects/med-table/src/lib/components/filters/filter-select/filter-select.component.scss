@@ -1,0 +1,11 @@
+:host ::ng-deep {
+  .filter-select {
+    .p-multiselect-items {
+      max-width: 360px;
+    }
+
+    .p-multiselect-item {
+      white-space: break-spaces;
+    }
+  }
+}
