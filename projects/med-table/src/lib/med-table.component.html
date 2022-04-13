@@ -51,7 +51,7 @@
         class="med-table__th"
       >
         <span>{{ col.label }}</span>
-        <p-sortIcon [field]="col.key"></p-sortIcon>
+        <p-sortIcon *ngIf="col.label" [field]="col.key"></p-sortIcon>
       </th>
     </tr>
 
