@@ -34,7 +34,7 @@ export class TableComponent {
     setTimeout(() => {
       this.data = MOCK_DATA;
       this.loading = false;
-    }, 2000);
+    }, 0);
   }
 
   onUpdateColumn({ item, key }: MedUpdateColumnEvent<any>) {

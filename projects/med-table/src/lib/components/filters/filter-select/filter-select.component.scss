@@ -1,5 +1,9 @@
 :host ::ng-deep {
   .filter-select {
+    .p-inputtext {
+      min-width: 180px;
+    }
+
     .p-multiselect-items {
       max-width: 360px;
     }

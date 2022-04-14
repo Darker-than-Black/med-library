@@ -1,11 +1,14 @@
 <p-columnFilter [field]="key" matchMode="in" [showMenu]="false">
   <ng-template pTemplate="filter" let-value let-filter="filterCallback">
     <p-multiSelect
+      #selectRef
       placeholder="Всі"
+      styleClass="filter-select"
       [ngModel]="value"
       [options]="filterSelectOptions"
       (onChange)="filter($event.value)"
-      styleClass="filter-select"
-    ></p-multiSelect>
+      (onFilter)="onFilter($event)"
+    >
+    </p-multiSelect>
   </ng-template>
 </p-columnFilter>
