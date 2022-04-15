@@ -1,1 +1,9 @@
-<med-table [config]="config" [data]="data"></med-table>
+<med-table
+  [config]="config"
+  [data]="store.list"
+  [loading]="loading"
+  [settings]="settings"
+  (updateColumn)="onUpdateColumn($event)"
+></med-table>
+
+<p-toast [baseZIndex]="5000" position="bottom-right"></p-toast>

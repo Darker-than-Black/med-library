@@ -44,8 +44,9 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   }
 
   get previewData(): string {
-    const { viewHandler = DEFAULT_HANDLER, defaultValue = '–' } = this.config;
-    return this.fieldData ? viewHandler(this.fieldData) : defaultValue;
+    const { viewHandler = DEFAULT_HANDLER, defaultValue = '–', key, sortKey } = this.config;
+    const value = this.getValue(this.item, sortKey || key);
+    return this.fieldData ? viewHandler(value) : defaultValue;
   }
 
   get isEditable(): boolean {
@@ -89,7 +90,6 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
     }
 
     this.fields = [];
-    this.form.reset();
   }
 
   private getValue(data: Record<string, any>, key: string): any {
