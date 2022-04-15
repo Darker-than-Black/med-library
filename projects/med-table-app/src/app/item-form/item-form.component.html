@@ -1,0 +1,14 @@
+<med-dynamic-form
+  [config]="formFields"
+  [form]="form"
+></med-dynamic-form>
+
+<div class="text-center">
+  <p-button
+    label="Зберегти"
+    styleClass="p-button-success"
+    [loading]="loading"
+    [disabled]="isInvalidForm"
+    (click)="onAddItem()"
+  ></p-button>
+</div>

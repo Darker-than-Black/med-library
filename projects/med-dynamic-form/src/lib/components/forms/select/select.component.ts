@@ -15,7 +15,7 @@ import { MedDynamicFormService } from '../../../med-dynamic-form.service';
     multi: true
   }]
 })
-export class SelectComponent<T> extends FormInputMixin{
+export class SelectComponent<T> extends FormInputMixin {
   constructor(private store: MedDynamicFormService) {
     super();
   }

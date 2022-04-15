@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
-import { MedTableColumnConfig, MedTableSettings, MedUpdateColumnEvent } from 'med-table';
+import { MedFormFieldConfig, MedSelectOption, MedDynamicFormService } from 'med-dynamic-form';
+import { MedTableColumnConfig, MedTableSettings, MedUpdateColumnEvent, MedTableService } from 'med-table';
 
 import { Config, Urls } from './types';
 import { MESSAGES } from './messages';
@@ -16,25 +17,41 @@ export class AppComponent<T> implements OnDestroy, OnInit {
     public store: StoreService<T>,
     private elementRef: ElementRef,
     private api: ApiService,
+    private dynamicFormService: MedDynamicFormService,
+    private tableService: MedTableService,
   ) {
-    const { fields, settings, urls } = this.getProp<Config>('config', MESSAGES.error.configProp, {});
+    const { tableColumns, settings, urls, formFields } = this.getProp<Config>('config', MESSAGES.error.configProp, {});
     this.urls = urls || {};
-    this.config = fields || [];
+    this.tableColumns = tableColumns || [];
     this.settings = settings || {};
+    this.formFields = formFields || [];
   }
 
   urls: Urls = {};
+  // table
   loading: boolean = false;
   settings: MedTableSettings = {};
-  config: MedTableColumnConfig[] = [];
+  tableColumns: MedTableColumnConfig[] = [];
+  // form
+  display: boolean = false;
+  formFields: MedFormFieldConfig[] = [];
 
   ngOnInit() {
-    if (this.urls.get) {
+    if (this.urls.getData) {
       this.loading = true;
 
-      this.api.getData<T[]>(this.urls.get).subscribe(data => {
+      this.api.getData<T[]>(this.urls.getData).subscribe(data => {
         this.store.setList(data);
         this.loading = false;
+      });
+    }
+
+    if (this.urls.selectData) {
+      this.api.getData<Record<string, MedSelectOption<any>[]>>(this.urls.selectData, {}, {}).subscribe(data => {
+        Object.entries(data).forEach(([key, value]) => {
+          this.dynamicFormService.setSelectData(value, key);
+          this.tableService.setSelectData(value, key);
+        });
       });
     }
   }

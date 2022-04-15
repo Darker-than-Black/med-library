@@ -11,6 +11,7 @@ import {
   ViewChild,
   Output,
   EventEmitter,
+  AfterViewInit,
 } from '@angular/core';
 
 import { EditorBuilder } from './editor-builder';
@@ -25,7 +26,7 @@ const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
   templateUrl: './table-data.component.html',
   styleUrls: ['./table-data.component.scss']
 })
-export class TableDataComponent<ItemType extends Record<string, any>> implements OnInit {
+export class TableDataComponent<ItemType extends Record<string, any>> implements OnInit, AfterViewInit {
   constructor(private cd: ChangeDetectorRef) {}
 
   @Input() item!: ItemType;
@@ -46,7 +47,7 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   get previewData(): string {
     const { viewHandler = DEFAULT_HANDLER, defaultValue = '–', key, sortKey } = this.config;
     const value = this.getValue(this.item, sortKey || key);
-    return this.fieldData ? viewHandler(value) : defaultValue;
+    return value ? viewHandler(value) : defaultValue;
   }
 
   get isEditable(): boolean {

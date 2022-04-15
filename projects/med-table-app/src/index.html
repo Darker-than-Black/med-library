@@ -15,7 +15,7 @@
     const appRoot = document.querySelector('app-med-table');
 
     appRoot.setAttribute('config', JSON.stringify({
-      fields: [
+      tableColumns: [
         {
           key: 'mnn.id',
           label: 'mnn_id',
@@ -175,13 +175,141 @@
           editorType: "date",
         },
       ],
+      formFields: [
+        {
+          key: 'cpv_code',
+          label: 'CPV-код',
+          editorType: "select",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'responsible',
+          label: 'Відповідальний менеджер',
+          editorType: "select",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 's20',
+          label: 'Доведена кількість МОЗ',
+          editorType: "number",
+          class: 'field col-12 md:col-6',
+          required: true,
+        },
+        {
+          key: 'tender_quantity',
+          label: 'Кількість закупівлі',
+          editorType: "number",
+          class: 'field col-12 md:col-6',
+          required: true,
+        },
+        {
+          key: 'publisher',
+          label: 'Відповідальна особа за підписання',
+          editorType: "select",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'agreement_value',
+          label: 'Сума позиції за договором',
+          editorType: "text",
+          decimal: true,
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'agreement_num',
+          label: 'Номер договору',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'agreement_fact_date',
+          label: 'Дата підписання договору',
+          editorType: "date",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'agreement_final_date',
+          label: 'Кінцева дата дії договору',
+          editorType: "date",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'delivery_date',
+          label: 'Строк поставки',
+          editorType: "date",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'winner',
+          label: 'Переможець',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'winner_edrpou',
+          label: 'ЄДРПОУ переможця',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'manufacturer',
+          label: 'Виробник',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'manufacturer_country',
+          label: 'Країна виробника',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'trade_name',
+          label: 'Торгова назва',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'tender_id',
+          label: 'Посилання на Prozorro',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'api_id',
+          label: 'API Prozorro',
+          editorType: "text",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'quantity',
+          label: 'Кількість закупівлі (Додаткова угода)',
+          editorType: "number",
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'proc_sum',
+          label: 'Сума позиції (Додаткова угода)',
+          editorType: "text",
+          decimal: true,
+          class: 'field col-12 md:col-6',
+        },
+        {
+          key: 'agreement_final_date',
+          label: 'Кінцева дата дії договору (Додаткова угода)',
+          editorType: "date",
+          class: 'field col-12 md:col-6',
+        },
+      ],
       settings: {
         export: true,
         // sticky: false,
       },
       urls: {
-        get: 'https://meddata.com.ua/index.php?method=Procurements&function=purchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
+        getData: 'https://meddata.com.ua/index.php?method=Procurements&function=purchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
         update: 'https://meddata.com.ua/index.php?method=Procurements&function=savePurchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
+        add: 'https://meddata.com.ua/index.php?method=Procurements&function=savePurchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
+        selectData: '',
       },
     }));
   </script>

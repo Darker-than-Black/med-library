@@ -1,15 +1,18 @@
+import { MedFormFieldConfig } from 'med-dynamic-form';
 import { MedTableColumnConfig, MedTableSettings } from 'med-table';
 
 export interface Config {
-  fields: MedTableColumnConfig[]
+  tableColumns: MedTableColumnConfig[]
+  formFields?: MedFormFieldConfig[]
   settings: MedTableSettings
   urls?: Urls
 }
 
 export interface Urls {
-  get?: string,
+  getData?: string,
   update?: string,
   add?: string,
+  selectData?: string,
 }
 
 export interface ServerResponse<T> {
