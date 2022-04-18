@@ -1,9 +1,41 @@
 <med-table
-  [config]="config"
+  #tableRef
   [data]="store.list"
   [loading]="loading"
   [settings]="settings"
+  [config]="tableColumns"
   (updateColumn)="onUpdateColumn($event)"
-></med-table>
+>
+  <ng-template mTemplate="toolbar">
+    <p-button
+      icon="pi pi-filter-slash"
+      styleClass="p-button-rounded mr-4"
+      (click)="tableRef.clearFilters()"
+    ></p-button>
+
+    <p-button
+      *ngIf="urls.add"
+      label="Add"
+      icon="pi pi-plus"
+      styleClass="p-button-help p-button-rounded"
+      (click)="display = true"
+    ></p-button>
+  </ng-template>
+</med-table>
+
+<p-dialog
+  [(visible)]="display"
+  [modal]="true"
+  [maximizable]="true"
+  [style]="{width: '50vw'}"
+  [breakpoints]="{'960px': '75vw', '640px': '97vw'}"
+>
+  <item-form
+    *ngIf="display"
+    [formFields]="formFields"
+    [apiUrl]="urls.add"
+    (closeModal)="display = false;"
+  ></item-form>
+</p-dialog>
 
 <p-toast [baseZIndex]="5000" position="bottom-right"></p-toast>

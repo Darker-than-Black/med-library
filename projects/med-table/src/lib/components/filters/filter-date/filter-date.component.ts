@@ -1,11 +1,9 @@
 import { Component, Input } from '@angular/core';
+
 import { FilterService, SelectItem } from 'primeng/api';
+import { FilterMethods } from '../../../services/FilterDataHandler/FilterMethods';
 
 const dateRangeFilterName = 'date-range';
-const END_DATE = {
-  HOURS: 23,
-  MINUTES: 59,
-};
 
 @Component({
   selector: 'filter-date',
@@ -22,22 +20,6 @@ export class FilterDateComponent {
   ];
 
   ngOnInit() {
-    this.filterService.register(dateRangeFilterName, this.dateRangeHandler);
-  }
-
-  private dateRangeHandler(value?: string, filter?: (Date | undefined)[]): boolean {
-    const [startDate, endDate] = filter || [];
-
-    if (!startDate) return true;
-
-    if (!value) return false;
-
-    const currentDate = new Date(value).getTime();
-
-    if (endDate) {
-      return startDate.getTime() <= currentDate && currentDate < endDate.setHours(END_DATE.HOURS, END_DATE.MINUTES);
-    }
-
-    return startDate.getTime() <= currentDate;
+    this.filterService.register(dateRangeFilterName, FilterMethods.dateRangeHandler);
   }
 }

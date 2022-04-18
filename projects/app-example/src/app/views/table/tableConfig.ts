@@ -9,12 +9,26 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     minWidth: '10rem',
   },
   {
+    key: 'winner',
+    label: 'Переможець',
+    filterable: true,
+    editorType: FIELD_TYPES.TEXT,
+    filterType: FILTER_TYPES.SELECT,
+  },
+  {
+    key: 'publisher',
+    sortKey: 'publisher.name',
+    label: 'Відповідальна особа за підписання',
+    filterable: true,
+    editorType: FIELD_TYPES.SELECT,
+    filterType: FILTER_TYPES.SELECT,
+  },
+  {
     key: 'responsible',
     sortKey: 'responsible.name',
     label: 'Відповідальний менеджер',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
-    viewHandler: ({name}: any) => name || '–',
   },
   {
     key: 's20',
@@ -31,25 +45,14 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     defaultValue: '0',
   },
   {
-    key: 'publisher',
-    sortKey: 'publisher.name',
-    label: 'Відповідальна особа за підписання',
-    filterable: true,
-    editorType: FIELD_TYPES.SELECT,
-    viewHandler: ({name}: any) => name || '–',
-    filterType: FILTER_TYPES.SELECT,
-  },
-  {
     key: 'agreement_value',
     label: 'Сума позиції за договором',
-    filterable: true,
     editorType: FIELD_TYPES.TEXT,
     pattern: PATTERN_TYPES.DECIMAL,
   },
   {
     key: 'agreement_num',
     label: 'Номер договору',
-    filterable: true,
     editorType: FIELD_TYPES.TEXT,
   },
   {
@@ -72,12 +75,6 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     filterable: true,
     editorType: FIELD_TYPES.DATE,
     filterType: FILTER_TYPES.DATE,
-  },
-  {
-    key: 'winner',
-    label: 'Переможець',
-    filterable: true,
-    editorType: FIELD_TYPES.TEXT,
   },
   {
     key: 'winner_edrpou',

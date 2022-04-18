@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import { FormGroup, FormControl } from '@angular/forms';
 import { MedFormFieldConfig } from 'med-dynamic-form';
 import {
@@ -15,10 +14,10 @@ import {
 } from '@angular/core';
 
 import { EditorBuilder } from './editor-builder';
-import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
+import { TableCell } from '../../services/TableCell';
 import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
+import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
 
-const DEFAULT_HANDLER = (data: any) => data;
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
 @Component({
@@ -29,9 +28,29 @@ const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 export class TableDataComponent<ItemType extends Record<string, any>> implements OnInit, AfterViewInit {
   constructor(private cd: ChangeDetectorRef) {}
 
-  @Input() item!: ItemType;
-  @Input() config!: MedTableColumnConfig;
+  private _item: ItemType | {} = {};
+  private _config: MedTableColumnConfig = {key: '', label: ''};
+  private _tableCell = new TableCell<ItemType>();
+
   @Input() template?: TemplateRef<any>;
+
+  @Input() set config(newValue: MedTableColumnConfig) {
+    this._tableCell.setConfig(newValue);
+    this._config = newValue;
+  }
+
+  get config(): MedTableColumnConfig {
+    return this._config;
+  }
+
+  @Input() set item(newValue: ItemType) {
+    this._tableCell.setItem(newValue);
+    this._item = newValue;
+  }
+
+  get item(): ItemType {
+    return this._item as ItemType;
+  }
 
   @Output() update = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
@@ -41,13 +60,11 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
   form: any = new FormGroup({});
 
   get fieldData(): string {
-    return this.getValue(this.item, this.config.key);
+    return this._tableCell.fieldData;
   }
 
   get previewData(): string {
-    const { viewHandler = DEFAULT_HANDLER, defaultValue = '–', key, sortKey } = this.config;
-    const value = this.getValue(this.item, sortKey || key);
-    return value ? viewHandler(value) : defaultValue;
+    return this._tableCell.previewData;
   }
 
   get isEditable(): boolean {
@@ -86,14 +103,10 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
     const { key } = this.config;
     const { value } = this.form;
 
-    if (this.getValue(value, key) !== this.fieldData) {
+    if (this._tableCell.getValue(value, key) !== this.fieldData) {
       this.update.emit({item: {...this.item, ...value}, key});
     }
 
     this.fields = [];
-  }
-
-  private getValue(data: Record<string, any>, key: string): any {
-    return get(data, key) || '';
   }
 }

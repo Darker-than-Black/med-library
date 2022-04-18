@@ -32,6 +32,7 @@
   [rowsPerPageOptions]="localSettings.rowsPerPageOptions"
   [showCurrentPageReport]="localSettings.showCurrentPageReport"
   [currentPageReportTemplate]="localSettings.currentPageReportTemplate"
+  (onFilter)="onFilter($event)"
 >
   <ng-template pTemplate="caption">
     <span class="p-input-icon-left p-ml-auto">
@@ -68,6 +69,7 @@
             <filter-select
               *ngSwitchCase="FILTER_TYPES.SELECT"
               [key]="col.sortKey || col.key"
+              [filterDataHandler]="filterDataHandler"
             ></filter-select>
 
             <filter-date

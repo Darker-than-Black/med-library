@@ -24,6 +24,8 @@ import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 import { MedSelectOption } from './types/MedSelectOption';
 import { MedTableService } from './services/med-table.service';
+import { PrimeOnFilterEvent } from './types/PrimeFilter';
+import { FilterDataHandler } from './services/FilterDataHandler/FilterDataHandler';
 
 @Component({
   selector: APP_SELECTOR,
@@ -31,23 +33,29 @@ import { MedTableService } from './services/med-table.service';
   styleUrls: ['./med-table.component.scss'],
 })
 export class MedTableComponent<ItemType> extends PrimengConfigMixin implements AfterViewInit {
-  constructor(
-    primeConfig: PrimeNGConfig,
-    private cb: ChangeDetectorRef,
-    private store: MedTableService,
-  ) {
+  constructor(primeConfig: PrimeNGConfig, private cb: ChangeDetectorRef, private store: MedTableService) {
     super(primeConfig);
   }
 
-  private _data: ItemType[] = [];
   public readonly FILTER_TYPES = FILTER_TYPES;
+  public readonly filterDataHandler = new FilterDataHandler<ItemType>();
+  private _data: ItemType[] = [];
+  private _config: MedTableColumnConfig[] = []
 
   @Input() loading: boolean = false;
   @Input() settings: MedTableSettings = {};
-  @Input() config: MedTableColumnConfig[] = [];
+  @Input() set config(newValue: MedTableColumnConfig[]) {
+    this.filterDataHandler.setConfig(newValue);
+    this._config = newValue;
+  }
+
+  get config(): MedTableColumnConfig[] {
+    return this._config;
+  }
 
   @Input() set data(newValue: ItemType[]) {
     this.store.data = newValue;
+    this.filterDataHandler.setData(newValue);
     this._data = newValue;
   }
 
@@ -88,6 +96,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   }
 
   public clearFilters(): void {
+    this.store.filters = {};
     this.tableRef.clear();
   }
 
@@ -101,6 +110,10 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
       .map(obj => get(obj, sortKey || key))
       .filter(Boolean);
     return [...new Set(options)].map(value => ({ value, label: value })); // delete duplicates
+  }
+
+  onFilter({filters}: PrimeOnFilterEvent<ItemType>): void {
+    this.store.filters = filters;
   }
 
   private addDoubleScrollbar() {

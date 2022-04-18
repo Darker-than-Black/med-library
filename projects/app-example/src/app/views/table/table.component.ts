@@ -1,3 +1,4 @@
+import { set, get } from 'lodash';
 import { Component } from '@angular/core';
 
 import { MedTableService, MedUpdateColumnEvent } from 'med-table';
@@ -38,6 +39,11 @@ export class TableComponent {
   }
 
   onUpdateColumn({ item, key }: MedUpdateColumnEvent<any>) {
-    console.log(key, item);
+    console.log(`onUpdateColumn ${key}:`, item);
+
+    this.data.forEach(el => {
+      if (el['id'] !== item['id']) return;
+      set(el, key, get(item, key));
+    });
   }
 }
