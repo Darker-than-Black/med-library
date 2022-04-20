@@ -12,7 +12,7 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { MedDynamicFormModule } from 'med-dynamic-form';
 
 import { MedTableComponent } from './med-table.component';
-import { TableDataComponent } from './components/table-data/table-data.component';
+import { TableCellComponent } from './components/table-cell/table-cell.component';
 import { DateRangeComponent } from './components/forms/date-range/date-range.component';
 import { MedTemplateDirective } from './directives/med-template.directive';
 import { FilterTextComponent } from './components/filters/filter-text/filter-text.component';
@@ -22,7 +22,7 @@ import { FilterSelectComponent } from './components/filters/filter-select/filter
 @NgModule({
   declarations: [
     MedTableComponent,
-    TableDataComponent,
+    TableCellComponent,
     DateRangeComponent,
     MedTemplateDirective,
     FilterTextComponent,

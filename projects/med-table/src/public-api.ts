@@ -2,6 +2,7 @@
  * Public API Surface of med-table
  */
 
+export { CELL_TYPES } from './lib/types/cellTypes';
 export { FILTER_TYPES } from './lib/types/filterTypes';
 export { FIELD_TYPES, PATTERN_TYPES } from 'med-dynamic-form';
 

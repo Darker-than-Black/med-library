@@ -1,36 +1,33 @@
-import { FormGroup, FormControl } from '@angular/forms';
-import { MedFormFieldConfig } from 'med-dynamic-form';
+import {FormControl, FormGroup} from '@angular/forms';
+import {MedFormFieldConfig} from 'med-dynamic-form';
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
+  EventEmitter,
   Input,
   OnInit,
+  Output,
   TemplateRef,
   ViewChild,
-  Output,
-  EventEmitter,
-  AfterViewInit,
 } from '@angular/core';
 
-import { EditorBuilder } from './editor-builder';
-import { TableCell } from '../../services/TableCell';
-import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
-import { MedUpdateColumnEvent } from '../../types/MedUpdateColumnEvent';
+import {EditorBuilder} from './editor-builder';
+import {CELL_TYPES} from '../../types/cellTypes';
+import {TableCell} from '../../services/TableCell';
+import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
+import {MedUpdateColumnEvent} from '../../types/MedUpdateColumnEvent';
 
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
 @Component({
-  selector: 'table-data',
-  templateUrl: './table-data.component.html',
-  styleUrls: ['./table-data.component.scss']
+  selector: 'table-cell',
+  templateUrl: './table-cell.component.html',
+  styleUrls: ['./table-cell.component.scss']
 })
-export class TableDataComponent<ItemType extends Record<string, any>> implements OnInit, AfterViewInit {
+export class TableCellComponent<ItemType extends Record<string, any>> implements OnInit, AfterViewInit {
   constructor(private cd: ChangeDetectorRef) {}
-
-  private _item: ItemType | {} = {};
-  private _config: MedTableColumnConfig = {key: '', label: ''};
-  private _tableCell = new TableCell<ItemType>();
 
   @Input() template?: TemplateRef<any>;
 
@@ -56,8 +53,12 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
+  readonly cellType = CELL_TYPES;
   fields: MedFormFieldConfig[] = [];
   form: any = new FormGroup({});
+  private _item: ItemType | {} = {};
+  private _config: MedTableColumnConfig = {key: '', label: ''};
+  private _tableCell = new TableCell<ItemType>();
 
   get fieldData(): string {
     return this._tableCell.fieldData;
@@ -65,6 +66,19 @@ export class TableDataComponent<ItemType extends Record<string, any>> implements
 
   get previewData(): string {
     return this._tableCell.previewData;
+  }
+
+  get linkUrl(): string {
+    const { linkOptions } = this.config;
+
+    if(!linkOptions) return this._tableCell.fieldData;
+
+    return this._tableCell.getValue(this.item, linkOptions.urlPath);
+  }
+
+  get linkTarget(): string {
+    const { linkOptions: { target } = {} } = this.config;
+    return target ? target : '_self';
   }
 
   get isEditable(): boolean {

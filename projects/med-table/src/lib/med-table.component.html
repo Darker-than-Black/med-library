@@ -51,6 +51,8 @@
       <th
         *ngFor="let col of config"
         [pSortableColumn]="col.sortKey || col.key"
+        [style.minWidth]="col.minWidth || localSettings.colMinWidth"
+        [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
         class="med-table__th"
       >
         <span>{{ col.label }}</span>
@@ -60,26 +62,20 @@
 
     <tr *ngIf="filterableFields.length">
       <th *ngFor="let col of config" class="med-table__th">
-        <div
-          *ngIf="col.filterable"
-          [style.minWidth]="col.minWidth || localSettings.colMinWidth"
-          [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
-        >
-          <ng-container [ngSwitch]="col.filterType">
-            <filter-select
-              *ngSwitchCase="FILTER_TYPES.SELECT"
-              [key]="col.sortKey || col.key"
-              [filterDataHandler]="filterDataHandler"
-            ></filter-select>
+        <ng-container *ngIf="col.filterable" [ngSwitch]="col.filterType">
+          <filter-select
+            *ngSwitchCase="FILTER_TYPES.SELECT"
+            [key]="col.sortKey || col.key"
+            [filterDataHandler]="filterDataHandler"
+          ></filter-select>
 
-            <filter-date
-              *ngSwitchCase="FILTER_TYPES.DATE"
-              [key]="col.sortKey || col.key"
-            ></filter-date>
+          <filter-date
+            *ngSwitchCase="FILTER_TYPES.DATE"
+            [key]="col.sortKey || col.key"
+          ></filter-date>
 
-            <filter-text *ngSwitchDefault [key]="col.sortKey || col.key"></filter-text>
-          </ng-container>
-        </div>
+          <filter-text *ngSwitchDefault [key]="col.sortKey || col.key"></filter-text>
+        </ng-container>
       </th>
     </tr>
   </ng-template>
@@ -87,12 +83,12 @@
   <ng-template pTemplate="body" let-item>
     <tr class="med-table__row">
       <td *ngFor="let column of config" class="med-table__td">
-        <table-data
+        <table-cell
           [item]="item"
           [config]="column"
           [template]="tdTemplate"
           (update)="updateColumn.emit($event)"
-        ></table-data>
+        ></table-cell>
 
         <ng-template #tdTemplate let-data let-item="item">
           <ng-container *ngTemplateOutlet="

@@ -1,9 +1,9 @@
-<div class="table-data__item">
-  <span class="table-data__column-title">
+<div class="table-cell__item">
+  <span class="table-cell__column-title">
     {{ config.label }}
   </span>
 
-  <span class="table-data__content">
+  <span class="table-cell__content">
     <med-dynamic-form
       *ngIf="fields.length"
       [config]="fields"
@@ -24,10 +24,16 @@
 
       <ng-container
         *ngIf="isEmptyTemplate"
-        [ngTemplateOutlet]="defaultTemplate"
+        [ngTemplateOutlet]="config.cellType === cellType.LINK ? linkTemplate : defaultTemplate"
       ></ng-container>
     </div>
   </span>
 </div>
 
-<ng-template #defaultTemplate>{{ previewData }}</ng-template>
+<ng-template #linkTemplate>
+  <a [attr.href]="linkUrl" [attr.target]="linkTarget">{{ previewData }}</a>
+</ng-template>
+
+<ng-template #defaultTemplate>
+  {{ previewData }}
+</ng-template>

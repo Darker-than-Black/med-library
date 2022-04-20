@@ -100,7 +100,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     this.tableRef.clear();
   }
 
-  exportData(): void {
+  public exportData(): void {
     const sheetsGenerator = new SheetsGenerator(this.data, this.config);
     sheetsGenerator.generate(this.localSettings.exportFileName);
   }
