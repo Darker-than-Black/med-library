@@ -8,6 +8,7 @@ export const DEFAULT_TABLE_SETTINGS: MedTableSettingsLocal = {
   scrollHeight: 'flex',
   colMinWidth: '15rem',
   colMaxWidth: '20rem',
+  expandedDataKey: '',
   doubleScrollbar: true,
   showCurrentPageReport: true,
   emptyMessage: 'Дані відсутні.',

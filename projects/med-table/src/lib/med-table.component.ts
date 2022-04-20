@@ -82,6 +82,14 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     };
   }
 
+  get colspan(): number {
+    if (this.localSettings.expandedDataKey) {
+      return this.config.length + 1;
+    }
+
+    return this.config.length;
+  }
+
   ngAfterViewInit() {
     if (this.localSettings.doubleScrollbar) {
       this.addDoubleScrollbar();

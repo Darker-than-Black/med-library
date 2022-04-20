@@ -28,6 +28,7 @@
   [globalFilterFields]="filterableFields"
   [paginator]="localSettings.paginator"
   [filterDelay]="localSettings.filterDelay"
+  [dataKey]="localSettings.expandedDataKey"
   [scrollHeight]="localSettings.scrollHeight"
   [rowsPerPageOptions]="localSettings.rowsPerPageOptions"
   [showCurrentPageReport]="localSettings.showCurrentPageReport"
@@ -48,6 +49,8 @@
 
   <ng-template pTemplate="header">
     <tr>
+      <th *ngIf="localSettings.expandedDataKey" class="med-table__th"></th>
+
       <th
         *ngFor="let col of config"
         [pSortableColumn]="col.sortKey || col.key"
@@ -61,6 +64,8 @@
     </tr>
 
     <tr *ngIf="filterableFields.length">
+      <th *ngIf="localSettings.expandedDataKey" class="med-table__th"></th>
+
       <th *ngFor="let col of config" class="med-table__th">
         <ng-container *ngIf="col.filterable" [ngSwitch]="col.filterType">
           <filter-select
@@ -80,8 +85,19 @@
     </tr>
   </ng-template>
 
-  <ng-template pTemplate="body" let-item>
+  <ng-template pTemplate="body" let-item let-expanded="expanded">
     <tr class="med-table__row">
+      <td *ngIf="localSettings.expandedDataKey" class="med-table__td">
+        <button
+          type="button"
+          pButton
+          pRipple
+          [pRowToggler]="item"
+          class="p-button-text p-button-rounded p-button-plain w-2rem h-2rem m-2"
+          [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"
+        ></button>
+      </td>
+
       <td *ngFor="let column of config" class="med-table__td">
         <table-cell
           [item]="item"
@@ -100,9 +116,20 @@
     </tr>
   </ng-template>
 
+  <ng-template pTemplate="rowexpansion" let-item>
+    <tr>
+      <th [attr.colspan]="colspan">
+        <ng-container *ngTemplateOutlet="
+          rowExpansion || null
+          context: { $implicit: item }"
+        ></ng-container>
+      </th>
+    </tr>
+  </ng-template>
+
   <ng-template pTemplate="emptymessage">
     <tr>
-      <td [attr.colspan]="config.length">{{ localSettings.emptyMessage }}</td>
+      <td [attr.colspan]="colspan">{{ localSettings.emptyMessage }}</td>
     </tr>
   </ng-template>
 

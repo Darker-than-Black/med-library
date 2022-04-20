@@ -9,6 +9,7 @@ export interface MedTableSettingsLocal {
   scrollHeight: string
   emptyMessage: string
   exportFileName?: string
+  expandedDataKey: string
   doubleScrollbar: boolean
   rowsPerPageOptions: number[]
   showCurrentPageReport: boolean

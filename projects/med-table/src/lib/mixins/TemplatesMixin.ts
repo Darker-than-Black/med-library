@@ -8,6 +8,7 @@ import { MedTemplateDirective } from '../directives/med-template.directive';
 export class TemplatesMixin implements AfterContentInit {
   @ContentChildren(MedTemplateDirective) templates!: QueryList<MedTemplateDirective>;
 
+  rowExpansion?: TemplateRef<any>;
   toolbarTemplate?: TemplateRef<any>;
   tableDataTemplate?: TemplateRef<any>;
   paginatorTemplate?: TemplateRef<any>;
@@ -23,6 +24,9 @@ export class TemplatesMixin implements AfterContentInit {
           break;
         case 'paginator':
           this.paginatorTemplate = item.template;
+          break;
+        case 'rowExpansion':
+          this.rowExpansion = item.template;
           break;
       }
     });

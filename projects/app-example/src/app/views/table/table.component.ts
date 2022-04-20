@@ -1,7 +1,7 @@
 import { set, get } from 'lodash';
 import { Component } from '@angular/core';
 
-import { MedTableService, MedUpdateColumnEvent } from 'med-table';
+import { MedTableService, MedTableSettings, MedUpdateColumnEvent } from 'med-table';
 
 import { MOCK_DATA } from './mockData';
 import { TABLE_CONFIG } from './tableConfig';
@@ -24,9 +24,10 @@ export class TableComponent {
   data: any[] = [];
   loading: boolean = true;
   readonly tableConfig = TABLE_CONFIG;
-  readonly tableSettings = {
+  readonly tableSettings: MedTableSettings = {
     export: true,
     exportFileName: 'Облік поставок',
+    expandedDataKey: 'id',
   };
 
   ngOnInit() {
