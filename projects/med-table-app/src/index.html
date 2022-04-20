@@ -13,8 +13,7 @@
 
   <script>
     const appRoot = document.querySelector('app-med-table');
-
-    appRoot.setAttribute('config', JSON.stringify({
+    const CONFIG = {
       tableColumns: [
         {
           key: 'mnn.id',
@@ -310,6 +309,147 @@
         update: 'https://meddata.com.ua/index.php?method=Procurements&function=savePurchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
         add: 'https://meddata.com.ua/index.php?method=Procurements&function=savePurchaseForm&option=com_fabrik&format=raw&task=plugin.userAjax&dev=1',
         selectData: '',
+      },
+    };
+
+    const CONFIG2 = {
+      tableColumns: [
+        {
+          key: 'item_id',
+          label: '№',
+          filterable: true,
+          minWidth: '5rem',
+        },
+        {
+          key: 'name',
+          label: 'Находження на ДОЗ',
+          filterable: true,
+          cellType: 'link',
+          linkOptions: {
+            url: 'http://localhost:4200',
+            keyParam: 'id',
+            target: '_blank',
+          },
+        },
+        {
+          key: 'delivered',
+          label: 'Дата надходження',
+          filterable: true,
+          filterType: 'date',
+        },
+        {
+          editorType: 'text',
+          key: 'status.name',
+          label: 'Поточний статус',
+          filterable: true,
+          minWidth: '18rem',
+          filterType: 'select',
+        },
+        {
+          key: 'updated',
+          label: 'Дата остінньої зміни статусу',
+          filterable: true,
+          filterType: 'date',
+        },
+        {
+          key: 'location',
+          label: 'Поточне місцезнаходження',
+          filterable: true,
+        },
+        {
+          key: 'sender',
+          label: 'Відправник',
+          filterable: true,
+        },
+        {
+          key: 'transport',
+          sortKey: 'transport.name',
+          label: 'Транспорт',
+          filterable: true,
+        },
+        {
+          key: 'driver',
+          sortKey: 'driver.name',
+          label: 'Водій',
+          filterable: true,
+        },
+      ],
+      settings: {
+        export: true,
+      },
+      urls: {
+        getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getDozSupply&supply=1&dev=1',
+      },
+    };
+
+    const CONFIG3 = {
+      tableColumns: [
+        {
+          key: 'name',
+          label: 'Назва',
+          filterable: true,
+        },
+        {
+          key: 'dosage',
+          label: 'одиниця',
+          filterable: true,
+        },
+        {
+          key: 'quantity',
+          label: 'Кількість поставки',
+          filterable: true,
+        },
+        {
+          key: 'delivery_balance',
+          label: 'Залишок поставки',
+          filterable: true,
+          defaultValue: 0,
+          cellType: 'link',
+          linkOptions: {
+            url: 'http://localhost:4200',
+            keyParam: 'item_id',
+            target: '_blank',
+          },
+        },
+      ],
+      urls: {
+        getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getSupplyDistribution&dev=1',
+      },
+    };
+
+    // http://localhost:4200/item_id=21997
+    appRoot.setAttribute('config', JSON.stringify({
+      tableColumns: [
+        {
+          key: 'division',
+          label: 'ЗОЗ-отримувачі',
+          filterable: true,
+          minWidth: '25rem',
+        },
+        {
+          key: 'need',
+          label: 'Середньомісячна потреба',
+          filterable: true,
+        },
+        {
+          key: 'recommended_quantity',
+          label: 'Рекомендована кількість розподілу',
+          filterable: true,
+        },
+        {
+          key: 'distribution_quantity',
+          label: 'Обсяг розподілу',
+          filterable: true,
+          editorType: 'number',
+        },
+        {
+          key: 'comment',
+          label: 'Коментар',
+          filterable: true,
+        },
+      ],
+      urls: {
+        getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getZozDistribution&dev=1',
       },
     }));
   </script>

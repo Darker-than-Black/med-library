@@ -4,6 +4,7 @@ import { catchError, map, Observable, of, tap } from 'rxjs';
 
 import { MESSAGES } from '../messages';
 import { ServerResponse } from '../types';
+import { urlAddQueryParam } from '../uitls';
 import { NotificationService } from './notification.service';
 import { NOTIFICATION_TYPES } from '../notificationTypes';
 
@@ -18,14 +19,14 @@ export class ApiService {
   };
 
   getData<T>(url: string, params?: Record<string, string>, defaultValue: any = []): Observable<T> {
-    return this.http.get<ServerResponse<T>>(url,{ params }).pipe(
+    return this.http.get<ServerResponse<T>>(urlAddQueryParam(url, location.search),{ params }).pipe(
       map(data => this.responseHandler<T>(data, defaultValue)),
       catchError(this.handleError<T>(MESSAGES.error.serverError, 'getData', defaultValue)),
     );
   }
 
   updateItem<T>(url: string, item: T, defaultValue?: any): Observable<T> {
-    return this.http.post<ServerResponse<T>>(url, item, this.httpOptions).pipe(
+    return this.http.post<ServerResponse<T>>(urlAddQueryParam(url, location.search), item, this.httpOptions).pipe(
       map(({ data}) => data),
       tap(() => this.notification.add(MESSAGES.success.updated, NOTIFICATION_TYPES.SUCCESS)),
       catchError(this.handleError<T>(MESSAGES.error.serverError, 'updateItem', defaultValue)),
@@ -33,7 +34,7 @@ export class ApiService {
   }
 
   addItem<T, R>(url: string, item: T, defaultValue?: any): Observable<R> {
-    return this.http.post<ServerResponse<R>>(url, item, this.httpOptions).pipe(
+    return this.http.post<ServerResponse<R>>(urlAddQueryParam(url, location.search), item, this.httpOptions).pipe(
       map(({ data }) => data),
       tap(() => this.notification.add(MESSAGES.success.added, NOTIFICATION_TYPES.SUCCESS)),
       catchError(this.handleError<R>(MESSAGES.error.serverError, 'addItem', defaultValue)),

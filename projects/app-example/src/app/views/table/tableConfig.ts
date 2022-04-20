@@ -1,4 +1,4 @@
-import { FILTER_TYPES, MedTableColumnConfig, FIELD_TYPES, PATTERN_TYPES } from 'med-table';
+import { FILTER_TYPES, CELL_TYPES, MedTableColumnConfig, FIELD_TYPES, PATTERN_TYPES } from 'med-table';
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -12,8 +12,13 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     key: 'winner',
     label: 'Переможець',
     filterable: true,
-    editorType: FIELD_TYPES.TEXT,
     filterType: FILTER_TYPES.SELECT,
+    cellType: CELL_TYPES.LINK,
+    linkOptions: {
+      url: 'urlPath',
+      keyParam: 'id',
+      target: '_blank',
+    },
   },
   {
     key: 'publisher',

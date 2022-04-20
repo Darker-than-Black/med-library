@@ -15,7 +15,8 @@ export interface MedTableColumnConfig {
   editorType?: FIELD_TYPES
   cellType?: CELL_TYPES // default: CELL_TYPES.TEXT
   linkOptions?: {
-    urlPath: string
+    url: string
+    keyParam?: string
     target?: string // default: '_self'
   }
   pattern?: PATTERN_TYPES

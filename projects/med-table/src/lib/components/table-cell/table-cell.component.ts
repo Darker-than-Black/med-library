@@ -18,6 +18,7 @@ import {CELL_TYPES} from '../../types/cellTypes';
 import {TableCell} from '../../services/TableCell';
 import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
 import {MedUpdateColumnEvent} from '../../types/MedUpdateColumnEvent';
+import {STRING} from "../../constants/string";
 
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
@@ -69,11 +70,16 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
   }
 
   get linkUrl(): string {
-    const { linkOptions } = this.config;
+    const { url, keyParam } = this.config.linkOptions || {};
 
-    if(!linkOptions) return this._tableCell.fieldData;
+    if(!url) return STRING.EMPTY;
 
-    return this._tableCell.getValue(this.item, linkOptions.urlPath);
+    if (keyParam) {
+      const param = this._tableCell.getValue(this.item, keyParam);
+      return `${url}?${keyParam}=${param}`;
+    }
+
+    return url;
   }
 
   get linkTarget(): string {
