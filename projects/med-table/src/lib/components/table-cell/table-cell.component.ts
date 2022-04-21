@@ -1,4 +1,4 @@
-import { set, clone } from 'lodash';
+import {set} from 'lodash';
 import {AbstractControl, FormBuilder, FormGroup} from '@angular/forms';
 import {MedFormFieldConfig} from 'med-dynamic-form';
 import {
@@ -14,6 +14,7 @@ import {
   ViewChild,
 } from '@angular/core';
 
+import {deepClone} from '../../utils';
 import {STRING} from '../../constants/string';
 import {EditorBuilder} from './editor-builder';
 import {CELL_TYPES} from '../../types/cellTypes';
@@ -126,7 +127,7 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
     const { value } = this.form;
 
     if (this._tableCell.getValue(value, key) !== this.fieldData) {
-      const item = set(clone(this.item), key, this._tableCell.getValue(value, key));
+      const item = set(deepClone(this.item), key, this._tableCell.getValue(value, key));
       this.update.emit({item, key});
     }
 
