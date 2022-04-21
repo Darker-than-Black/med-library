@@ -7400,3 +7400,1629 @@ export const MOCK_DATA: any[] = [
     }
   }
 ];
+
+export const ACT_PROTECTION_MOCK_DATA: any[] = [
+  {
+    "info": {
+      "id": "1001406",
+      "group_name": "M01 Протизапальні та протиревматичні засоби",
+      "name": "Ібупрофен",
+      "dosage": "600 мг",
+      "release_form": "таблетки",
+      "unit": "таблетки",
+      "trade_name": "ІБУПРОФЕН 600 мг №50",
+      "multiplicity": "50",
+      "start_quantity": "291050",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16089": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16089",
+        "application_id": "149",
+        "distribution": "40000",
+        "supplies": {
+          "24534": {
+            "si_id": "24534",
+            "fact_quantity": "40000",
+            "supply_quantity": "40000",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16090": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16090",
+        "application_id": "149",
+        "distribution": "40000",
+        "supplies": {
+          "24541": {
+            "si_id": "24541",
+            "fact_quantity": "40000",
+            "supply_quantity": "40000",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16091": {
+        "region_id": "8",
+        "region": "Івано-Франківська",
+        "item_id": "16091",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20626": {
+            "si_id": "20626",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2750"
+          }
+        }
+      },
+      "16092": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16092",
+        "application_id": "149",
+        "distribution": "40000",
+        "supplies": {
+          "24548": {
+            "si_id": "24548",
+            "fact_quantity": "40000",
+            "supply_quantity": "40000",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16093": {
+        "region_id": "10",
+        "region": "Кіровоградська",
+        "item_id": "16093",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20629": {
+            "si_id": "20629",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2752"
+          }
+        }
+      },
+      "16094": {
+        "region_id": "11",
+        "region": "Луганська",
+        "item_id": "16094",
+        "application_id": "149",
+        "distribution": "5000",
+        "supplies": {
+          "24473": {
+            "si_id": "24473",
+            "fact_quantity": "5000",
+            "supply_quantity": "5000",
+            "supply_id": "2753"
+          }
+        }
+      },
+      "16095": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16095",
+        "application_id": "149",
+        "distribution": "30000",
+        "supplies": {
+          "24481": {
+            "si_id": "24481",
+            "fact_quantity": "30000",
+            "supply_quantity": "30000",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16096": {
+        "region_id": "14",
+        "region": "Одеська",
+        "item_id": "16096",
+        "application_id": "149",
+        "distribution": "20000",
+        "supplies": {
+          "24487": {
+            "si_id": "24487",
+            "fact_quantity": "20000",
+            "supply_quantity": "20000",
+            "supply_id": "2755"
+          }
+        }
+      },
+      "16097": {
+        "region_id": "15",
+        "region": "Полтавська",
+        "item_id": "16097",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20633": {
+            "si_id": "20633",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2756"
+          }
+        }
+      },
+      "16098": {
+        "region_id": "16",
+        "region": "Рівненська",
+        "item_id": "16098",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20634": {
+            "si_id": "20634",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2757"
+          }
+        }
+      },
+      "16099": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16099",
+        "application_id": "149",
+        "distribution": "35650",
+        "supplies": {
+          "24494": {
+            "si_id": "24494",
+            "fact_quantity": "35650",
+            "supply_quantity": "35650",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16100": {
+        "region_id": "18",
+        "region": "Тернопільська",
+        "item_id": "16100",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20636": {
+            "si_id": "20636",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2759"
+          }
+        }
+      },
+      "16101": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16101",
+        "application_id": "149",
+        "distribution": "24950",
+        "supplies": {
+          "24503": {
+            "si_id": "24503",
+            "fact_quantity": "24950",
+            "supply_quantity": "24950",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16102": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16102",
+        "application_id": "149",
+        "distribution": "30000",
+        "supplies": {
+          "24512": {
+            "si_id": "24512",
+            "fact_quantity": "30000",
+            "supply_quantity": "30000",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16103": {
+        "region_id": "21",
+        "region": "Хмельницька",
+        "item_id": "16103",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20639": {
+            "si_id": "20639",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2762"
+          }
+        }
+      },
+      "16104": {
+        "region_id": "23",
+        "region": "Чернівецька",
+        "item_id": "16104",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20640": {
+            "si_id": "20640",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2763"
+          }
+        }
+      },
+      "16105": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16105",
+        "application_id": "149",
+        "distribution": "12450",
+        "supplies": {
+          "24519": {
+            "si_id": "24519",
+            "fact_quantity": "12450",
+            "supply_quantity": "12450",
+            "supply_id": "2764"
+          }
+        }
+      },
+      "16106": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16106",
+        "application_id": "149",
+        "distribution": "8000",
+        "supplies": {
+          "24468": {
+            "si_id": "24468",
+            "fact_quantity": "8000",
+            "supply_quantity": "8000",
+            "supply_id": "2765"
+          }
+        }
+      },
+      "16107": {
+        "region_id": "26",
+        "region": "МВС",
+        "item_id": "16107",
+        "application_id": "149",
+        "distribution": "5000",
+        "supplies": {
+          "20643": {
+            "si_id": "20643",
+            "fact_quantity": null,
+            "supply_quantity": "5000",
+            "supply_id": "2766"
+          }
+        }
+      },
+      "16108": {
+        "region_id": "53",
+        "region": "ДЗ СМСЧ 10",
+        "item_id": "16108",
+        "application_id": "149",
+        "distribution": "0",
+        "supplies": {
+          "20644": {
+            "si_id": "20644",
+            "fact_quantity": null,
+            "supply_quantity": "0",
+            "supply_id": "2767"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001407",
+      "group_name": "N02 Анальгетики",
+      "name": "Парацетамол",
+      "dosage": "500 мг",
+      "release_form": "таблетки",
+      "unit": "таблетки",
+      "trade_name": "ПАРАЦЕТАМОЛ 500 мг №30",
+      "multiplicity": "30",
+      "start_quantity": "102150",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16109": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16109",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24533": {
+            "si_id": "24533",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16110": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16110",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24540": {
+            "si_id": "24540",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16111": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16111",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24547": {
+            "si_id": "24547",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16112": {
+        "region_id": "11",
+        "region": "Луганська",
+        "item_id": "16112",
+        "application_id": "149",
+        "distribution": "4980",
+        "supplies": {
+          "24472": {
+            "si_id": "24472",
+            "fact_quantity": "4980",
+            "supply_quantity": "4980",
+            "supply_id": "2753"
+          }
+        }
+      },
+      "16113": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16113",
+        "application_id": "149",
+        "distribution": "7260",
+        "supplies": {
+          "24480": {
+            "si_id": "24480",
+            "fact_quantity": "7260",
+            "supply_quantity": "7260",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16114": {
+        "region_id": "14",
+        "region": "Одеська",
+        "item_id": "16114",
+        "application_id": "149",
+        "distribution": "9660",
+        "supplies": {
+          "24486": {
+            "si_id": "24486",
+            "fact_quantity": "9660",
+            "supply_quantity": "9660",
+            "supply_id": "2755"
+          }
+        }
+      },
+      "16115": {
+        "region_id": "15",
+        "region": "Полтавська",
+        "item_id": "16115",
+        "application_id": "149",
+        "distribution": "360",
+        "supplies": {
+          "20651": {
+            "si_id": "20651",
+            "fact_quantity": null,
+            "supply_quantity": "360",
+            "supply_id": "2756"
+          }
+        }
+      },
+      "16116": {
+        "region_id": "16",
+        "region": "Рівненська",
+        "item_id": "16116",
+        "application_id": "149",
+        "distribution": "1890",
+        "supplies": {
+          "20652": {
+            "si_id": "20652",
+            "fact_quantity": null,
+            "supply_quantity": "1890",
+            "supply_id": "2757"
+          }
+        }
+      },
+      "16117": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16117",
+        "application_id": "149",
+        "distribution": "12780",
+        "supplies": {
+          "24493": {
+            "si_id": "24493",
+            "fact_quantity": "12780",
+            "supply_quantity": "12780",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16118": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16118",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24502": {
+            "si_id": "24502",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16119": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16119",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24511": {
+            "si_id": "24511",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16120": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16120",
+        "application_id": "149",
+        "distribution": "9990",
+        "supplies": {
+          "24518": {
+            "si_id": "24518",
+            "fact_quantity": "9990",
+            "supply_quantity": "9990",
+            "supply_id": "2764"
+          }
+        }
+      },
+      "16121": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16121",
+        "application_id": "149",
+        "distribution": "4980",
+        "supplies": {
+          "24467": {
+            "si_id": "24467",
+            "fact_quantity": "4980",
+            "supply_quantity": "4980",
+            "supply_id": "2765"
+          }
+        }
+      },
+      "16122": {
+        "region_id": "46",
+        "region": "ДЗ Центр. стомат. полік",
+        "item_id": "16122",
+        "application_id": "149",
+        "distribution": "30",
+        "supplies": {
+          "20658": {
+            "si_id": "20658",
+            "fact_quantity": null,
+            "supply_quantity": "30",
+            "supply_id": "2768"
+          }
+        }
+      },
+      "16123": {
+        "region_id": "47",
+        "region": "ДЗ УНПЦ екстр.мед катаст.",
+        "item_id": "16123",
+        "application_id": "149",
+        "distribution": "180",
+        "supplies": {
+          "20659": {
+            "si_id": "20659",
+            "fact_quantity": null,
+            "supply_quantity": "180",
+            "supply_id": "2769"
+          }
+        }
+      },
+      "16124": {
+        "region_id": "48",
+        "region": "ДЗУ лепрозорій",
+        "item_id": "16124",
+        "application_id": "149",
+        "distribution": "90",
+        "supplies": {
+          "20660": {
+            "si_id": "20660",
+            "fact_quantity": null,
+            "supply_quantity": "90",
+            "supply_id": "2770"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001408",
+      "group_name": "C01 Кардіологічні препарати",
+      "name": "Нітрогліцерин",
+      "dosage": "400 мкг",
+      "release_form": "флакони",
+      "unit": "флакони",
+      "trade_name": "Нітрогліцерин",
+      "multiplicity": "1",
+      "start_quantity": "4000",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16164": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16164",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24527": {
+            "si_id": "24527",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16165": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16165",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24537": {
+            "si_id": "24537",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16166": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16166",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24544": {
+            "si_id": "24544",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16167": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16167",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24476": {
+            "si_id": "24476",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16168": {
+        "region_id": "14",
+        "region": "Одеська",
+        "item_id": "16168",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24483": {
+            "si_id": "24483",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2755"
+          }
+        }
+      },
+      "16169": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16169",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24490": {
+            "si_id": "24490",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16170": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16170",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24498": {
+            "si_id": "24498",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16171": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16171",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24507": {
+            "si_id": "24507",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16172": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16172",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24515": {
+            "si_id": "24515",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2764"
+          }
+        }
+      },
+      "16173": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16173",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "24464": {
+            "si_id": "24464",
+            "fact_quantity": "400",
+            "supply_quantity": "400",
+            "supply_id": "2765"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001409",
+      "group_name": "D06 Антибіотики і хіміотерапевтичні препарати для застосування в дерматології",
+      "name": "Тиротрицин",
+      "dosage": "1",
+      "release_form": "таблетки",
+      "unit": "таблетки",
+      "trade_name": "Тиротрицин №20",
+      "multiplicity": "20",
+      "start_quantity": "1432720",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16174": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16174",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24526": {
+            "si_id": "24526",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16175": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16175",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24536": {
+            "si_id": "24536",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16176": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16176",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24543": {
+            "si_id": "24543",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16177": {
+        "region_id": "11",
+        "region": "Луганська",
+        "item_id": "16177",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24469": {
+            "si_id": "24469",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2753"
+          }
+        }
+      },
+      "16178": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16178",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24475": {
+            "si_id": "24475",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16179": {
+        "region_id": "14",
+        "region": "Одеська",
+        "item_id": "16179",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24482": {
+            "si_id": "24482",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2755"
+          }
+        }
+      },
+      "16180": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16180",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24489": {
+            "si_id": "24489",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16181": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16181",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24497": {
+            "si_id": "24497",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16182": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16182",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24506": {
+            "si_id": "24506",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16183": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16183",
+        "application_id": "149",
+        "distribution": "122900",
+        "supplies": {
+          "24514": {
+            "si_id": "24514",
+            "fact_quantity": "122900",
+            "supply_quantity": "122900",
+            "supply_id": "2764"
+          }
+        }
+      },
+      "16184": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16184",
+        "application_id": "149",
+        "distribution": "203720",
+        "supplies": {
+          "24463": {
+            "si_id": "24463",
+            "fact_quantity": "203720",
+            "supply_quantity": "203720",
+            "supply_id": "2765"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001410",
+      "group_name": "Витратні матеріали",
+      "name": "Пов'язки на рану",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Пов'язки на рану",
+      "multiplicity": "1",
+      "start_quantity": "223",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16185": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16185",
+        "application_id": "149",
+        "distribution": "73",
+        "supplies": {
+          "24525": {
+            "si_id": "24525",
+            "fact_quantity": "73",
+            "supply_quantity": "73",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16186": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16186",
+        "application_id": "149",
+        "distribution": "50",
+        "supplies": {
+          "24535": {
+            "si_id": "24535",
+            "fact_quantity": "50",
+            "supply_quantity": "50",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16187": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16187",
+        "application_id": "149",
+        "distribution": "50",
+        "supplies": {
+          "24496": {
+            "si_id": "24496",
+            "fact_quantity": "50",
+            "supply_quantity": "50",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16188": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16188",
+        "application_id": "149",
+        "distribution": "50",
+        "supplies": {
+          "24505": {
+            "si_id": "24505",
+            "fact_quantity": "50",
+            "supply_quantity": "50",
+            "supply_id": "2761"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001411",
+      "group_name": "Тактична аптечка",
+      "name": "Турнікет типу \"swat\" ",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "кількість одиниць ",
+      "trade_name": "Турнікети",
+      "multiplicity": "1",
+      "start_quantity": "739",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16125": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16125",
+        "application_id": "149",
+        "distribution": "20",
+        "supplies": {
+          "24532": {
+            "si_id": "24532",
+            "fact_quantity": "20",
+            "supply_quantity": "20",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16126": {
+        "region_id": "26",
+        "region": "МВС",
+        "item_id": "16126",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "20662": {
+            "si_id": "20662",
+            "fact_quantity": null,
+            "supply_quantity": "100",
+            "supply_id": "2766"
+          }
+        }
+      },
+      "16127": {
+        "region_id": "37",
+        "region": "Міноборони",
+        "item_id": "16127",
+        "application_id": "149",
+        "distribution": "400",
+        "supplies": {
+          "20663": {
+            "si_id": "20663",
+            "fact_quantity": null,
+            "supply_quantity": "400",
+            "supply_id": "2771"
+          }
+        }
+      },
+      "16128": {
+        "region_id": "38",
+        "region": "СБУ",
+        "item_id": "16128",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "20664": {
+            "si_id": "20664",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2772"
+          }
+        }
+      },
+      "16129": {
+        "region_id": "40",
+        "region": "ДСЗЗІ",
+        "item_id": "16129",
+        "application_id": "149",
+        "distribution": "19",
+        "supplies": {
+          "20665": {
+            "si_id": "20665",
+            "fact_quantity": "19",
+            "supply_quantity": "19",
+            "supply_id": "2773"
+          }
+        }
+      },
+      "16130": {
+        "region_id": "67",
+        "region": "Азов",
+        "item_id": "16130",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24522": {
+            "si_id": "24522",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2774"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001412",
+      "group_name": "Витратні матеріали",
+      "name": "Ізраїльський бандаж",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Ізраїльський бандаж",
+      "multiplicity": "1",
+      "start_quantity": "125",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16189": {
+        "region_id": "67",
+        "region": "Азов",
+        "item_id": "16189",
+        "application_id": "149",
+        "distribution": "125",
+        "supplies": {
+          "24520": {
+            "si_id": "24520",
+            "fact_quantity": "125",
+            "supply_quantity": "125",
+            "supply_id": "2774"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001413",
+      "group_name": "Витратні матеріали",
+      "name": "Грудні ущільнення з клапаном",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Грудні ущільнення з клапаном",
+      "multiplicity": "1",
+      "start_quantity": "102",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16190": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16190",
+        "application_id": "149",
+        "distribution": "102",
+        "supplies": {
+          "24524": {
+            "si_id": "24524",
+            "fact_quantity": "102",
+            "supply_quantity": "102",
+            "supply_id": "2748"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001414",
+      "group_name": "Витратні матеріали",
+      "name": "Надгрудне ущільнення",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Нагрудний ущільнення комбінований пакет",
+      "multiplicity": "1",
+      "start_quantity": "250",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16191": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16191",
+        "application_id": "149",
+        "distribution": "150",
+        "supplies": {
+          "24542": {
+            "si_id": "24542",
+            "fact_quantity": "150",
+            "supply_quantity": "150",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16192": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16192",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24495": {
+            "si_id": "24495",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2760"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001415",
+      "group_name": "Витратні матеріали",
+      "name": "Іммобілізаційні шини різних типів і розмірів",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "кількість одиниць ",
+      "trade_name": "Шина гнучка типу SAM splint",
+      "multiplicity": "1",
+      "start_quantity": "1500",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16131": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16131",
+        "application_id": "149",
+        "distribution": "200",
+        "supplies": {
+          "24531": {
+            "si_id": "24531",
+            "fact_quantity": "200",
+            "supply_quantity": "200",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16132": {
+        "region_id": "7",
+        "region": "Запорізька",
+        "item_id": "16132",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24539": {
+            "si_id": "24539",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2749"
+          }
+        }
+      },
+      "16133": {
+        "region_id": "9",
+        "region": "Київська",
+        "item_id": "16133",
+        "application_id": "149",
+        "distribution": "200",
+        "supplies": {
+          "24546": {
+            "si_id": "24546",
+            "fact_quantity": "200",
+            "supply_quantity": "200",
+            "supply_id": "2751"
+          }
+        }
+      },
+      "16134": {
+        "region_id": "11",
+        "region": "Луганська",
+        "item_id": "16134",
+        "application_id": "149",
+        "distribution": "40",
+        "supplies": {
+          "24471": {
+            "si_id": "24471",
+            "fact_quantity": "40",
+            "supply_quantity": "40",
+            "supply_id": "2753"
+          }
+        }
+      },
+      "16135": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16135",
+        "application_id": "149",
+        "distribution": "60",
+        "supplies": {
+          "24479": {
+            "si_id": "24479",
+            "fact_quantity": "60",
+            "supply_quantity": "60",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16136": {
+        "region_id": "14",
+        "region": "Одеська",
+        "item_id": "16136",
+        "application_id": "149",
+        "distribution": "80",
+        "supplies": {
+          "24485": {
+            "si_id": "24485",
+            "fact_quantity": "80",
+            "supply_quantity": "80",
+            "supply_id": "2755"
+          }
+        }
+      },
+      "16137": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16137",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24492": {
+            "si_id": "24492",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16138": {
+        "region_id": "19",
+        "region": "Харківська",
+        "item_id": "16138",
+        "application_id": "149",
+        "distribution": "150",
+        "supplies": {
+          "24501": {
+            "si_id": "24501",
+            "fact_quantity": "150",
+            "supply_quantity": "150",
+            "supply_id": "2760"
+          }
+        }
+      },
+      "16139": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16139",
+        "application_id": "149",
+        "distribution": "80",
+        "supplies": {
+          "24510": {
+            "si_id": "24510",
+            "fact_quantity": "80",
+            "supply_quantity": "80",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16140": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16140",
+        "application_id": "149",
+        "distribution": "110",
+        "supplies": {
+          "24517": {
+            "si_id": "24517",
+            "fact_quantity": "110",
+            "supply_quantity": "110",
+            "supply_id": "2764"
+          }
+        }
+      },
+      "16141": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16141",
+        "application_id": "149",
+        "distribution": "80",
+        "supplies": {
+          "24466": {
+            "si_id": "24466",
+            "fact_quantity": "80",
+            "supply_quantity": "80",
+            "supply_id": "2765"
+          }
+        }
+      },
+      "16142": {
+        "region_id": "26",
+        "region": "МВС",
+        "item_id": "16142",
+        "application_id": "149",
+        "distribution": "200",
+        "supplies": {
+          "20678": {
+            "si_id": "20678",
+            "fact_quantity": null,
+            "supply_quantity": "200",
+            "supply_id": "2766"
+          }
+        }
+      },
+      "16143": {
+        "region_id": "37",
+        "region": "Міноборони",
+        "item_id": "16143",
+        "application_id": "149",
+        "distribution": "40",
+        "supplies": {
+          "20679": {
+            "si_id": "20679",
+            "fact_quantity": null,
+            "supply_quantity": "40",
+            "supply_id": "2771"
+          }
+        }
+      },
+      "16144": {
+        "region_id": "38",
+        "region": "СБУ",
+        "item_id": "16144",
+        "application_id": "149",
+        "distribution": "10",
+        "supplies": {
+          "20680": {
+            "si_id": "20680",
+            "fact_quantity": "10",
+            "supply_quantity": "10",
+            "supply_id": "2772"
+          }
+        }
+      },
+      "16145": {
+        "region_id": "39",
+        "region": "СЗР",
+        "item_id": "16145",
+        "application_id": "149",
+        "distribution": "10",
+        "supplies": {
+          "20681": {
+            "si_id": "20681",
+            "fact_quantity": "10",
+            "supply_quantity": "10",
+            "supply_id": "2775"
+          }
+        }
+      },
+      "16146": {
+        "region_id": "42",
+        "region": "УЗ",
+        "item_id": "16146",
+        "application_id": "149",
+        "distribution": "40",
+        "supplies": {
+          "20682": {
+            "si_id": "20682",
+            "fact_quantity": "40",
+            "supply_quantity": "40",
+            "supply_id": "2776"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001416",
+      "group_name": "Витратні матеріали",
+      "name": "Бандаж різного типу",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Бандаж для невідкладних травм ",
+      "multiplicity": "1",
+      "start_quantity": "175",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16193": {
+        "region_id": "20",
+        "region": "Херсонська",
+        "item_id": "16193",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24504": {
+            "si_id": "24504",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2761"
+          }
+        }
+      },
+      "16194": {
+        "region_id": "24",
+        "region": "Чернігівська",
+        "item_id": "16194",
+        "application_id": "149",
+        "distribution": "75",
+        "supplies": {
+          "24513": {
+            "si_id": "24513",
+            "fact_quantity": "75",
+            "supply_quantity": "75",
+            "supply_id": "2764"
+          }
+        }
+      }
+    }
+  },
+  {
+    "info": {
+      "id": "1001417",
+      "group_name": "Витратні матеріали",
+      "name": "Бандаж різного типу",
+      "dosage": "1",
+      "release_form": "штуки",
+      "unit": "штуки",
+      "trade_name": "Шийний бандаж типу Stifneck Select",
+      "multiplicity": "1",
+      "start_quantity": "500",
+      "reserve": "0",
+      "distribution_quantity": "0",
+      "balance_quantity": "0",
+      "distribution_units": "0"
+    },
+    "distribution": {
+      "16195": {
+        "region_id": "3",
+        "region": "Дніпропетровська",
+        "item_id": "16195",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24523": {
+            "si_id": "24523",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2748"
+          }
+        }
+      },
+      "16196": {
+        "region_id": "13",
+        "region": "Миколаївська",
+        "item_id": "16196",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24474": {
+            "si_id": "24474",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2754"
+          }
+        }
+      },
+      "16197": {
+        "region_id": "17",
+        "region": "Сумська",
+        "item_id": "16197",
+        "application_id": "149",
+        "distribution": "200",
+        "supplies": {
+          "24488": {
+            "si_id": "24488",
+            "fact_quantity": "200",
+            "supply_quantity": "200",
+            "supply_id": "2758"
+          }
+        }
+      },
+      "16198": {
+        "region_id": "25",
+        "region": "м. Київ",
+        "item_id": "16198",
+        "application_id": "149",
+        "distribution": "100",
+        "supplies": {
+          "24462": {
+            "si_id": "24462",
+            "fact_quantity": "100",
+            "supply_quantity": "100",
+            "supply_id": "2765"
+          }
+        }
+      }
+    }
+  }
+];

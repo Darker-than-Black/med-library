@@ -1,4 +1,5 @@
-import {FormControl, FormGroup} from '@angular/forms';
+import { set, clone } from 'lodash';
+import {AbstractControl, FormBuilder, FormGroup} from '@angular/forms';
 import {MedFormFieldConfig} from 'med-dynamic-form';
 import {
   AfterViewInit,
@@ -13,12 +14,12 @@ import {
   ViewChild,
 } from '@angular/core';
 
+import {STRING} from '../../constants/string';
 import {EditorBuilder} from './editor-builder';
 import {CELL_TYPES} from '../../types/cellTypes';
 import {TableCell} from '../../services/TableCell';
 import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
 import {MedUpdateColumnEvent} from '../../types/MedUpdateColumnEvent';
-import {STRING} from "../../constants/string";
 
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
@@ -28,7 +29,7 @@ const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
   styleUrls: ['./table-cell.component.scss']
 })
 export class TableCellComponent<ItemType extends Record<string, any>> implements OnInit, AfterViewInit {
-  constructor(private cd: ChangeDetectorRef) {}
+  constructor(private cd: ChangeDetectorRef, private fb: FormBuilder) {}
 
   @Input() template?: TemplateRef<any>;
 
@@ -100,7 +101,8 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
 
   ngOnInit(): void {
     const { key } = this.config;
-    this.form.addControl(key, new FormControl(this.fieldData));
+    const keyList = key.split(STRING.DOT);
+    this.form.addControl(...this.setFormControl(keyList));
   }
 
   ngAfterViewInit() {
@@ -119,14 +121,22 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
     this.fields.push(field);
   }
 
-  onLeave(): void {
+  private onLeave(): void {
     const { key } = this.config;
     const { value } = this.form;
 
     if (this._tableCell.getValue(value, key) !== this.fieldData) {
-      this.update.emit({item: {...this.item, ...value}, key});
+      const item = set(clone(this.item), key, this._tableCell.getValue(value, key));
+      this.update.emit({item, key});
     }
 
     this.fields = [];
+  }
+
+  private setFormControl([firstKey, ...keys]: string[]): [string, AbstractControl] {
+    if (!keys.length) return [firstKey, this.fb.control(this.fieldData)];
+
+    const [newKey, control] = this.setFormControl(keys);
+    return [firstKey, this.fb.group({[newKey]: control})];
   }
 }

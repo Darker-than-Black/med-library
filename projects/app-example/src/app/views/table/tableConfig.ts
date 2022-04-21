@@ -1,4 +1,4 @@
-import { FILTER_TYPES, CELL_TYPES, MedTableColumnConfig, FIELD_TYPES, PATTERN_TYPES } from 'med-table';
+import {CELL_TYPES, FILTER_TYPES, FIELD_TYPES, MedTableColumnConfig, PATTERN_TYPES} from 'med-table';
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -135,6 +135,88 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
     key: 'agreement_final_date',
     label: 'Кінцева дата дії договору (Додаткова угода)',
+    filterable: true,
+  },
+];
+
+export const ACT_PROTECTION_TABLE_CONFIG: MedTableColumnConfig[] = [
+  {
+    key: 'id',
+    label: 'T1 ID',
+    filterable: true,
+    editorType: FIELD_TYPES.NUMBER,
+  },
+  {
+    key: 'info.id',
+    label: 'ID',
+    filterable: true,
+    editorType: FIELD_TYPES.NUMBER,
+  },
+  {
+    key: 'info.level.id',
+    label: 'T2 ID',
+    filterable: true,
+    editorType: FIELD_TYPES.NUMBER,
+  },
+  {
+    key: 'info.group_name',
+    label: 'Група',
+    filterable: true,
+  },
+  {
+    key: 'info.name',
+    label: 'Назва',
+    filterable: true,
+  },
+  {
+    key: 'info.dosage',
+    label: 'Дозування',
+    filterable: true,
+  },
+  {
+    key: 'info.release_form',
+    label: 'Форма випуску',
+    filterable: true,
+  },
+  {
+    key: 'info.unit',
+    label: 'Одиниця виміру',
+    filterable: true,
+  },
+  {
+    key: 'info.trade_name',
+    label: 'Торгова назва',
+    filterable: true,
+  },
+  {
+    key: 'info.multiplicity',
+    label: 'Кратність',
+    filterable: true,
+  },
+  {
+    key: 'info.start_quantity',
+    label: 'Кількість поставки',
+    filterable: true,
+  },
+  {
+    key: 'info.reserve',
+    label: 'Резерв',
+    filterable: true,
+  },
+  {
+    key: 'info.distribution_quantity',
+    label: 'Кілкість  до розподілу',
+    filterable: true,
+    editorType: FIELD_TYPES.NUMBER,
+  },
+  {
+    key: 'info.balance_quantity',
+    label: 'Залишок',
+    filterable: true,
+  },
+  {
+    key: 'info.distribution_units',
+    label: 'Кількість упаковок',
     filterable: true,
   },
 ];
