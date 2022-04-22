@@ -13,4 +13,4 @@ import { FormInputMixin } from '../../../mixins/FormInputMixin';
     multi: true
   }]
 })
-export class TextareaComponent extends FormInputMixin {}
+export class TextareaComponent extends FormInputMixin<string> {}

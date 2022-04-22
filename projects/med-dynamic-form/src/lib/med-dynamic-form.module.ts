@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CheckboxModule } from 'primeng/checkbox';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
@@ -22,6 +23,8 @@ import { DynamicInputMaskComponent } from './components/forms/dynamic-input-mask
 import { WrapperDynamicInputComponent } from './components/forms/wrapper-dynamic-input/wrapper-dynamic-input.component';
 import { AutocompleteComponent } from './components/forms/autocomplete/autocomplete.component';
 import { DynamicAutocompleteComponent } from './components/forms/dynamic-autocomplete/dynamic-autocomplete.component';
+import { CheckboxComponent } from './components/forms/checkbox/checkbox.component';
+import { DynamicCheckboxComponent } from './components/forms/dynamic-checkbox/dynamic-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +41,13 @@ import { DynamicAutocompleteComponent } from './components/forms/dynamic-autocom
     WrapperDynamicInputComponent,
     AutocompleteComponent,
     DynamicAutocompleteComponent,
+    CheckboxComponent,
+    DynamicCheckboxComponent,
   ],
   imports: [
     FormsModule,
     BrowserModule,
+    CheckboxModule,
     InputTextModule,
     InputMaskModule,
     LibFormlyModule,

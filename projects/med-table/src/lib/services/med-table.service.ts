@@ -17,6 +17,10 @@ export class MedTableService {
     this.dynamicFormService.setSelectData(data, key);
   }
 
+  setDatalist(data: string[], key: string): void {
+    this.dynamicFormService.setDatalist(data, key);
+  }
+
   get filters(): PrimeFilters {
     return this._filters;
   }

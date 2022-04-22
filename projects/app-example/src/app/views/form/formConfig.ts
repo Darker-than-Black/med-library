@@ -10,6 +10,12 @@ export const FORM_CONFIG: MedFormFieldConfig[] = [
     onSelect: (t: string) => console.log('select: ', t)
   },
   {
+    key: 'checkbox',
+    label: 'checkbox',
+    editorType: FIELD_TYPES.CHECKBOX,
+    class: 'field col-12 md:col-6',
+  },
+  {
     key: 'responsible',
     label: 'Відповідальний менеджер',
     editorType: FIELD_TYPES.SELECT,

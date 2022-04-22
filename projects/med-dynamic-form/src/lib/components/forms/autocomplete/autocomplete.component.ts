@@ -14,7 +14,7 @@ import { MedDynamicFormService } from '../../../med-dynamic-form.service';
     multi: true
   }]
 })
-export class AutocompleteComponent extends FormInputMixin {
+export class AutocompleteComponent extends FormInputMixin<string> {
   constructor(private store: MedDynamicFormService) {
     super();
   }

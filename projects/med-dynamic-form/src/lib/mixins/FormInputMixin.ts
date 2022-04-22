@@ -4,8 +4,8 @@ import { ControlValueAccessor } from '@angular/forms';
 @Component({
   template: '',
 })
-export class FormInputMixin implements ControlValueAccessor {
-  private _value: string = '';
+export class FormInputMixin<T> implements ControlValueAccessor {
+  protected _value: T | any = '';
 
   @ViewChild('input') inputEl!: ElementRef;
 
@@ -14,7 +14,7 @@ export class FormInputMixin implements ControlValueAccessor {
   @Input() handler?: (data: any) => any;
   @Input() autoFocus?: boolean;
   @Input() inputId: string = '';
-  @Input() set value(val: string) {
+  @Input() set value(val: T) {
     this._value = val;
     this.onChange(this._value);
   }
@@ -36,9 +36,9 @@ export class FormInputMixin implements ControlValueAccessor {
     }
   }
 
-  onChange(_: string) {}
+  onChange(_: T) {}
 
-  writeValue(value: string) {
+  writeValue(value: T) {
     this.value = value;
   }
 

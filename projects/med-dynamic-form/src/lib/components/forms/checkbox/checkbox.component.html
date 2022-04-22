@@ -1,0 +1,10 @@
+<div class="w-full">
+  <p-checkbox
+    #input
+    [binary]="true"
+    [inputId]="inputId"
+    [(ngModel)]="value"
+    (focusout)="leave.emit()"
+    (keydown.enter)="leave.emit()"
+  ></p-checkbox>
+</div>

@@ -1,0 +1,7 @@
+<checkbox
+  [inputId]="field.key"
+  [formControl]="formControl"
+  [formlyAttributes]="field"
+  [autoFocus]="field.templateOptions.autoFocus"
+  (leave)="field.templateOptions.onLeave()"
+></checkbox>

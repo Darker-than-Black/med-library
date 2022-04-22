@@ -25,6 +25,7 @@ export class FormComponent {
   readonly formConfig = FORM_CONFIG;
   form: FormGroup = new FormGroup({
     s20: new FormControl('1234'),
+    checkbox: new FormControl(true),
   });
 
   get isValid(): boolean {
