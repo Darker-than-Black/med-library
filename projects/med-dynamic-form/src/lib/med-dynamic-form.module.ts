@@ -25,6 +25,7 @@ import { AutocompleteComponent } from './components/forms/autocomplete/autocompl
 import { DynamicAutocompleteComponent } from './components/forms/dynamic-autocomplete/dynamic-autocomplete.component';
 import { CheckboxComponent } from './components/forms/checkbox/checkbox.component';
 import { DynamicCheckboxComponent } from './components/forms/dynamic-checkbox/dynamic-checkbox.component';
+import { ClickOutsideDirective } from './directives/click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { DynamicCheckboxComponent } from './components/forms/dynamic-checkbox/dy
     DynamicAutocompleteComponent,
     CheckboxComponent,
     DynamicCheckboxComponent,
+    ClickOutsideDirective,
   ],
   imports: [
     FormsModule,

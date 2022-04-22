@@ -1,10 +1,11 @@
-<div class="w-full">
+<div class="w-full ml-2">
   <p-checkbox
     #input
     [binary]="true"
     [inputId]="inputId"
     [(ngModel)]="value"
-    (focusout)="leave.emit()"
+    [fieldWrapperSelector]="fieldWrapperSelector"
+    (clickOutside)="leave.emit()"
     (keydown.enter)="leave.emit()"
   ></p-checkbox>
 </div>

@@ -27,11 +27,12 @@ export class FormInputMixin<T> implements ControlValueAccessor {
     if (this.autoFocus) {
       setTimeout(() => {
         const { nativeElement, el } = this.inputEl as any;
-        if (el === undefined) {
-          return nativeElement.focus();
+
+        if (el !== undefined) {
+          return el.nativeElement.querySelector('input').focus();
         }
 
-        el.nativeElement.querySelector('input').focus();
+        nativeElement?.focus();
       }, 0);
     }
   }

@@ -1,6 +1,6 @@
 {
   "name": "med-dynamic-form",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "author": "Dmytro Rybachek",
   "license": "MIT",
   "description": "Wrapper over formly for Ministry of Health",

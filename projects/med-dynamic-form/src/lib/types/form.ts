@@ -13,6 +13,7 @@ export interface MedFormFieldConfig {
   wrappers?: string[]
   autoFocus?: boolean
   onLeave?: () => void
+  fieldWrapperSelector?: string
   onSelect?: (data: any) => void
   pattern?: PATTERN_TYPES // use with FIELD_TYPES.TEXT
 }
@@ -29,6 +30,7 @@ export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   labelKey?: string
   mask: string
   autoFocus: boolean
+  fieldWrapperSelector: string
   inputPattern: PATTERN_TYPES
   onLeave: () => void
   onSelect: (data: any) => void

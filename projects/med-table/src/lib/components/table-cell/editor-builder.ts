@@ -12,6 +12,7 @@ export class EditorBuilder implements MedFormFieldConfig {
   autoFocus: boolean = true;
   wrappers: string[] = [];
   inputMask: string = '';
+  fieldWrapperSelector: string = '.table-cell__content';
   pattern: PATTERN_TYPES = PATTERN_TYPES.NONE;
 
   constructor(options: EditorBuilderOptions) {

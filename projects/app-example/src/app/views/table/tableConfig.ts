@@ -1,4 +1,5 @@
-import {CELL_TYPES, FILTER_TYPES, FIELD_TYPES, MedTableColumnConfig, PATTERN_TYPES} from 'med-table';
+import {CELL_TYPES, FILTER_TYPES, MedTableColumnConfig, PATTERN_TYPES} from 'med-table';
+import {FIELD_TYPES} from "med-dynamic-form";
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -25,6 +26,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Bool',
     filterable: true,
     filterType: FILTER_TYPES.CHECKBOX,
+    editorType: FIELD_TYPES.CHECKBOX,
   },
   {
     key: 'publisher',

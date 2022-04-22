@@ -1,4 +1,4 @@
-import {Component, forwardRef, Input} from '@angular/core';
+import { Component, forwardRef, Input } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { FormInputMixin } from '../../../mixins/FormInputMixin';
@@ -13,4 +13,6 @@ import { FormInputMixin } from '../../../mixins/FormInputMixin';
     multi: true
   }]
 })
-export class CheckboxComponent extends FormInputMixin<boolean> {}
+export class CheckboxComponent extends FormInputMixin<boolean> {
+  @Input() fieldWrapperSelector!: string;
+}

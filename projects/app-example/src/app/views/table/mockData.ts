@@ -35,7 +35,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": ""
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "5",
@@ -73,7 +73,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": ""
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "6",
@@ -111,7 +111,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мкг (1500 МО)",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "7",
@@ -149,7 +149,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "125 мкг (625 МО)",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "8",
@@ -187,7 +187,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "600 мг/300 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "9",
@@ -225,7 +225,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 мг/мл, 1 мл",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "10",
@@ -263,7 +263,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "600 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "11",
@@ -301,7 +301,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "12",
@@ -339,7 +339,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "13",
@@ -377,7 +377,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг/150 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "14",
@@ -415,7 +415,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "16",
@@ -453,7 +453,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "150 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "17",
@@ -491,7 +491,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "18",
@@ -529,7 +529,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг/50 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "19",
@@ -567,7 +567,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг/25 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "20",
@@ -605,7 +605,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "80 мг/20 мг, 1 мл",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "21",
@@ -643,7 +643,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "22",
@@ -681,7 +681,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "23",
@@ -719,7 +719,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "24",
@@ -757,7 +757,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг/200 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "25",
@@ -795,7 +795,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг/200 мг/600 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "26",
@@ -833,7 +833,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "27",
@@ -871,7 +871,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг/300 мг/400 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "28",
@@ -909,7 +909,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мг/300 мг/50 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "29",
@@ -947,7 +947,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "30",
@@ -985,7 +985,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "60 мг/30 мг",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "31",
@@ -1023,7 +1023,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "60 мг/30 мг",
       "subtype": null
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "32",
@@ -1061,7 +1061,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "25 мг/200 мг/50 мг",
       "subtype": ""
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "106",
@@ -1099,7 +1099,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "250 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "107",
@@ -1137,7 +1137,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "108",
@@ -1175,7 +1175,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "109",
@@ -1213,7 +1213,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "110",
@@ -1251,7 +1251,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "250 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "111",
@@ -1289,7 +1289,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "112",
@@ -1327,7 +1327,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "113",
@@ -1365,7 +1365,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "114",
@@ -1403,7 +1403,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО та/або 600 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "115",
@@ -1441,7 +1441,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "116",
@@ -1479,7 +1479,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО та/або 1200 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "117",
@@ -1517,7 +1517,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування та профілактика дітей з хворобою Віллебранда 3-го типу"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "118",
@@ -1555,7 +1555,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування та профілактика дітей з хворобою Віллебранда 3-го типу"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "119",
@@ -1593,7 +1593,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "120",
@@ -1631,7 +1631,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 мг (100 КМО)",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "121",
@@ -1669,7 +1669,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5 мг (250 КМО)",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "122",
@@ -1707,7 +1707,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "123",
@@ -1745,7 +1745,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "124",
@@ -1783,7 +1783,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "30 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "125",
@@ -1821,7 +1821,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "60 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "126",
@@ -1859,7 +1859,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "105 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "127",
@@ -1897,7 +1897,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "15 мкг/мл, 1 мл",
       "subtype": "Лікування дітей з хворобою Віллебранда 1-го та 2-го типу та легкої форми гемофілії типу A"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "128",
@@ -1935,7 +1935,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування дітей з хворобою Віллебранда 2-го типу"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "129",
@@ -1973,7 +1973,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з хворобою Віллебранда 2-го типу"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "130",
@@ -2011,7 +2011,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "131",
@@ -2049,7 +2049,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "132",
@@ -2087,7 +2087,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "250 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "133",
@@ -2125,7 +2125,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "25 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "134",
@@ -2163,7 +2163,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "135",
@@ -2201,7 +2201,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "136",
@@ -2239,7 +2239,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "250 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "137",
@@ -2277,7 +2277,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "15 мг (15 МО)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "139",
@@ -2315,7 +2315,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "60 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "140",
@@ -2353,7 +2353,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "141",
@@ -2391,7 +2391,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "142",
@@ -2429,7 +2429,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "143",
@@ -2467,7 +2467,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "144",
@@ -2505,7 +2505,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "145",
@@ -2543,7 +2543,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "146",
@@ -2581,7 +2581,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "147",
@@ -2619,7 +2619,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "148",
@@ -2657,7 +2657,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "149",
@@ -2695,7 +2695,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "150",
@@ -2733,7 +2733,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "0,5 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "151",
@@ -2771,7 +2771,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "350 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "152",
@@ -2809,7 +2809,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "153",
@@ -2847,7 +2847,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "154",
@@ -2885,7 +2885,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "155",
@@ -2923,7 +2923,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "156",
@@ -2961,7 +2961,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "40 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "157",
@@ -2999,7 +2999,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "158",
@@ -3037,7 +3037,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "159",
@@ -3075,7 +3075,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "160",
@@ -3113,7 +3113,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "161",
@@ -3151,7 +3151,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "162",
@@ -3189,7 +3189,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "163",
@@ -3227,7 +3227,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг/ 500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "164",
@@ -3265,7 +3265,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2,5 г (5%) або 5 г (10%) в 50 мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "165",
@@ -3303,7 +3303,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "166",
@@ -3341,7 +3341,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "150 мл (10 мг/мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "167",
@@ -3379,7 +3379,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "168",
@@ -3417,7 +3417,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "30 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "169",
@@ -3455,7 +3455,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "170",
@@ -3493,7 +3493,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "171",
@@ -3531,7 +3531,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 000 000 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "172",
@@ -3569,7 +3569,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "33,6 млн. МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "173",
@@ -3607,7 +3607,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "174",
@@ -3645,7 +3645,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "300 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "175",
@@ -3683,7 +3683,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "176",
@@ -3721,7 +3721,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "177",
@@ -3759,7 +3759,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "178",
@@ -3797,7 +3797,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "179",
@@ -3835,7 +3835,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "180",
@@ -3873,7 +3873,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "181",
@@ -3911,7 +3911,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "182",
@@ -3949,7 +3949,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2,5 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "183",
@@ -3987,7 +3987,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "184",
@@ -4025,7 +4025,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "185",
@@ -4063,7 +4063,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "25 мг/мл по 2 мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "186",
@@ -4101,7 +4101,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг/мл по 5 мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "187",
@@ -4139,7 +4139,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "188",
@@ -4177,7 +4177,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "189",
@@ -4215,7 +4215,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "190",
@@ -4253,7 +4253,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "191",
@@ -4291,7 +4291,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг/250 мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "192",
@@ -4329,7 +4329,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 мг/мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "193",
@@ -4367,7 +4367,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "194",
@@ -4405,7 +4405,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "4 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "195",
@@ -4443,7 +4443,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "3750 МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "196",
@@ -4481,7 +4481,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "6 мг/0,6 мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "197",
@@ -4519,7 +4519,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "4г/0,5г",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "198",
@@ -4557,7 +4557,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "105 мл (40 мг/мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "199",
@@ -4595,7 +4595,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "200",
@@ -4633,7 +4633,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "201",
@@ -4671,7 +4671,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "202",
@@ -4709,7 +4709,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "0,5г / 0,5г",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "203",
@@ -4747,7 +4747,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "204",
@@ -4785,7 +4785,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "0,5 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "205",
@@ -4823,7 +4823,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "207",
@@ -4861,7 +4861,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5 мг/мл",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "208",
@@ -4899,7 +4899,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "209",
@@ -4937,7 +4937,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "210",
@@ -4975,7 +4975,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "211",
@@ -5013,7 +5013,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "212",
@@ -5051,7 +5051,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "213",
@@ -5089,7 +5089,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "4 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "214",
@@ -5127,7 +5127,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1 г",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "215",
@@ -5165,7 +5165,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5 г",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "216",
@@ -5203,7 +5203,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "217",
@@ -5241,7 +5241,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "218",
@@ -5279,7 +5279,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "30 млн. МО",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "219",
@@ -5317,7 +5317,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "220",
@@ -5355,7 +5355,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 мг/мл (по 100 мл)",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "221",
@@ -5393,7 +5393,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 г",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "222",
@@ -5431,7 +5431,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "223",
@@ -5469,7 +5469,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "224",
@@ -5507,7 +5507,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "225",
@@ -5545,7 +5545,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "25 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "226",
@@ -5583,7 +5583,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "227",
@@ -5621,7 +5621,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "228",
@@ -5659,7 +5659,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "229",
@@ -5697,7 +5697,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "230",
@@ -5735,7 +5735,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "231",
@@ -5773,7 +5773,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "232",
@@ -5811,7 +5811,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "233",
@@ -5849,7 +5849,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "234",
@@ -5887,7 +5887,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "235",
@@ -5925,7 +5925,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "236",
@@ -5963,7 +5963,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "237",
@@ -6001,7 +6001,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "238",
@@ -6039,7 +6039,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "239",
@@ -6077,7 +6077,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "240",
@@ -6115,7 +6115,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "242",
@@ -6153,7 +6153,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "244",
@@ -6191,7 +6191,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "245",
@@ -6229,7 +6229,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "246",
@@ -6267,7 +6267,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "247",
@@ -6305,7 +6305,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "248",
@@ -6343,7 +6343,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "249",
@@ -6381,7 +6381,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "250",
@@ -6419,7 +6419,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "252",
@@ -6457,7 +6457,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "253",
@@ -6495,7 +6495,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "254",
@@ -6533,7 +6533,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "255",
@@ -6571,7 +6571,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "256",
@@ -6609,7 +6609,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "257",
@@ -6647,7 +6647,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "258",
@@ -6685,7 +6685,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "259",
@@ -6723,7 +6723,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "260",
@@ -6761,7 +6761,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "",
       "subtype": "Медичні вироби"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "675",
@@ -6799,7 +6799,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "100 мг або 120 мг або 135 мг фосфоліпідної фракції по 4 мл або 1.5 мл або 5 мл.",
       "subtype": ""
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "676",
@@ -6837,7 +6837,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "20 мг/мл",
       "subtype": null
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "778",
@@ -6875,7 +6875,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "779",
@@ -6913,7 +6913,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "780",
@@ -6951,7 +6951,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "781",
@@ -6989,7 +6989,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "782",
@@ -7027,7 +7027,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "783",
@@ -7065,7 +7065,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "784",
@@ -7103,7 +7103,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "3000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "785",
@@ -7141,7 +7141,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО та/або 600 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "786",
@@ -7179,7 +7179,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО та/або 1200 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "787",
@@ -7217,7 +7217,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "788",
@@ -7255,7 +7255,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "789",
@@ -7293,7 +7293,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 2-го типу"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "790",
@@ -7331,7 +7331,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 2-го типу"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "791",
@@ -7369,7 +7369,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 3-го типу"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "792",
@@ -7407,7 +7407,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 3-го типу"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "793",
@@ -7445,7 +7445,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "2 мг (100 КМО)",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "794",
@@ -7483,7 +7483,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "5 мг (250 КМО)",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "795",
@@ -7521,7 +7521,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "500 МО",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 1
+    "bool": true
   },
   {
     "id": "796",
@@ -7559,7 +7559,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
     },
-    "bool": 0
+    "bool": false
   },
   {
     "id": "797",
@@ -7597,7 +7597,7 @@ export const MOCK_DATA: any[] = [
       "dosage": "15 мкг/мл, 1 мл",
       "subtype": "Лікування хворих з хворобою Віллебранда 1-го та 2-го типу та легкої форми гемофілії типу A"
     },
-    "bool": 1
+    "bool": true
   }
 ];
 
