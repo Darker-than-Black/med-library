@@ -21,6 +21,12 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     },
   },
   {
+    key: 'bool',
+    label: 'Bool',
+    filterable: true,
+    filterType: FILTER_TYPES.CHECKBOX,
+  },
+  {
     key: 'publisher',
     sortKey: 'publisher.name',
     label: 'Відповідальна особа за підписання',

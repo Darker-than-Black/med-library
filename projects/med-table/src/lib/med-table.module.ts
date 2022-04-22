@@ -18,6 +18,7 @@ import { MedTemplateDirective } from './directives/med-template.directive';
 import { FilterTextComponent } from './components/filters/filter-text/filter-text.component';
 import { FilterDateComponent } from './components/filters/filter-date/filter-date.component';
 import { FilterSelectComponent } from './components/filters/filter-select/filter-select.component';
+import { FilterCheckboxComponent } from './components/filters/filter-checkbox/filter-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FilterSelectComponent } from './components/filters/filter-select/filter
     FilterTextComponent,
     FilterDateComponent,
     FilterSelectComponent,
+    FilterCheckboxComponent,
   ],
   imports: [
     FormsModule,

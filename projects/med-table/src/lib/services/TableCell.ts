@@ -1,4 +1,6 @@
 import { get } from 'lodash';
+import { STRING } from '../constants/string';
+import { FILTER_TYPES } from '../types/filterTypes';
 import { MedTableColumnConfig } from '../types/MedTableColumnConfig';
 
 const DEFAULT_HANDLER = (data: any) => data;
@@ -20,9 +22,17 @@ export class TableCell<T extends Record<string, any>> implements TableCellInterf
   }
 
   get previewData(): string {
-    const { viewHandler = DEFAULT_HANDLER, defaultValue = '–', key, sortKey } = this._config;
+    const { viewHandler = DEFAULT_HANDLER, key, sortKey } = this._config;
     const value = this.getValue(this._item, sortKey || key);
-    return value ? viewHandler(value) : defaultValue;
+    return value ? viewHandler(value) : this.defaultValue;
+  }
+
+  private get defaultValue(): any {
+    const { defaultValue, filterType } = this._config;
+
+    if (defaultValue) return defaultValue;
+    if (filterType === FILTER_TYPES.CHECKBOX) return 0;
+    return STRING.HYPHEN;
   }
 
   getValue(data: Record<string, any>, key: string): any {

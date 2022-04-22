@@ -14,7 +14,7 @@
   </div>
 </p-toolbar>
 
-<div #upScrollRef class="med-table__up-scroll">
+<div *ngIf="localSettings.doubleScrollbar" #upScrollRef class="med-table__up-scroll">
   <div #upScrollItemRef class="med-table__up-scroll-item"></div>
 </div>
 
@@ -78,6 +78,11 @@
             *ngSwitchCase="FILTER_TYPES.DATE"
             [key]="col.sortKey || col.key"
           ></filter-date>
+
+          <filter-checkbox
+            *ngSwitchCase="FILTER_TYPES.CHECKBOX"
+            [key]="col.sortKey || col.key"
+          ></filter-checkbox>
 
           <filter-text *ngSwitchDefault [key]="col.sortKey || col.key"></filter-text>
         </ng-container>

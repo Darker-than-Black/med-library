@@ -34,7 +34,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "набори",
       "dosage": "",
       "subtype": ""
-    }
+    },
+    "bool": 0
   },
   {
     "id": "5",
@@ -71,7 +72,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "набори",
       "dosage": "",
       "subtype": ""
-    }
+    },
+    "bool": 1
   },
   {
     "id": "6",
@@ -108,7 +110,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "300 мкг (1500 МО)",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "7",
@@ -145,7 +148,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "125 мкг (625 МО)",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "8",
@@ -182,7 +186,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "600 мг/300 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "9",
@@ -219,7 +224,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для перорального застосування",
       "dosage": "20 мг/мл, 1 мл",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "10",
@@ -256,7 +262,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "600 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "11",
@@ -293,7 +300,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "400 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "12",
@@ -330,7 +338,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для перорального застосування",
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "13",
@@ -367,7 +376,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "300 мг/150 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "14",
@@ -404,7 +414,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули",
       "dosage": "200 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "16",
@@ -441,7 +452,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "150 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "17",
@@ -478,7 +490,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для перорального застосування",
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "18",
@@ -515,7 +528,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "200 мг/50 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "19",
@@ -552,7 +566,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "100 мг/25 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "20",
@@ -589,7 +604,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для перорального застосування",
       "dosage": "80 мг/20 мг, 1 мл",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "21",
@@ -626,7 +642,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "суспензія для перорального застосування",
       "dosage": "10 мг/мл, 1 мл",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "22",
@@ -663,7 +680,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "400 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "23",
@@ -700,7 +718,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули",
       "dosage": "100 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "24",
@@ -737,7 +756,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "300 мг/200 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "25",
@@ -774,7 +794,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "300 мг/200 мг/600 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "26",
@@ -811,7 +832,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули",
       "dosage": "300 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "27",
@@ -848,7 +870,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "300 мг/300 мг/400 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "28",
@@ -885,7 +908,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "300 мг/300 мг/50 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "29",
@@ -922,7 +946,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "50 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "30",
@@ -959,7 +984,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, що розчиняються",
       "dosage": "60 мг/30 мг",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "31",
@@ -996,7 +1022,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, що розчиняються",
       "dosage": "60 мг/30 мг",
       "subtype": null
-    }
+    },
+    "bool": 0
   },
   {
     "id": "32",
@@ -1033,7 +1060,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки",
       "dosage": "25 мг/200 мг/50 мг",
       "subtype": ""
-    }
+    },
+    "bool": 1
   },
   {
     "id": "106",
@@ -1070,7 +1098,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "250 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "107",
@@ -1107,7 +1136,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "108",
@@ -1144,7 +1174,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "109",
@@ -1181,7 +1212,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "110",
@@ -1218,7 +1250,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "250 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "111",
@@ -1255,7 +1288,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "112",
@@ -1292,7 +1326,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "113",
@@ -1329,7 +1364,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "114",
@@ -1366,7 +1402,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО та/або 600 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "115",
@@ -1403,7 +1440,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "116",
@@ -1440,7 +1478,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО та/або 1200 МО",
       "subtype": "Лікування дітей з гемофілією типу В"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "117",
@@ -1477,7 +1516,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування та профілактика дітей з хворобою Віллебранда 3-го типу"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "118",
@@ -1514,7 +1554,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування та профілактика дітей з хворобою Віллебранда 3-го типу"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "119",
@@ -1551,7 +1592,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "120",
@@ -1588,7 +1630,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "2 мг (100 КМО)",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "121",
@@ -1625,7 +1668,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "5 мг (250 КМО)",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "122",
@@ -1662,7 +1706,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "123",
@@ -1699,7 +1744,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "124",
@@ -1736,7 +1782,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "30 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "125",
@@ -1773,7 +1820,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "60 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "126",
@@ -1810,7 +1858,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "105 мг",
       "subtype": "Лікування дітей з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "127",
@@ -1847,7 +1896,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "15 мкг/мл, 1 мл",
       "subtype": "Лікування дітей з хворобою Віллебранда 1-го та 2-го типу та легкої форми гемофілії типу A"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "128",
@@ -1884,7 +1934,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "500 МО",
       "subtype": "Лікування дітей з хворобою Віллебранда 2-го типу"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "129",
@@ -1921,7 +1972,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "1000 МО",
       "subtype": "Лікування дітей з хворобою Віллебранда 2-го типу"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "130",
@@ -1958,7 +2010,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "131",
@@ -1995,7 +2048,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "132",
@@ -2032,7 +2086,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "250 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "133",
@@ -2069,7 +2124,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "25 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "134",
@@ -2106,7 +2162,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "135",
@@ -2143,7 +2200,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "136",
@@ -2180,7 +2238,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "250 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "137",
@@ -2217,7 +2276,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "15 мг (15 МО)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "139",
@@ -2254,7 +2314,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "60 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "140",
@@ -2291,7 +2352,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "141",
@@ -2328,7 +2390,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "142",
@@ -2365,7 +2428,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "143",
@@ -2402,7 +2466,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "144",
@@ -2439,7 +2504,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "145",
@@ -2476,7 +2542,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "146",
@@ -2513,7 +2580,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "147",
@@ -2550,7 +2618,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "148",
@@ -2587,7 +2656,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "149",
@@ -2624,7 +2694,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "150",
@@ -2661,7 +2732,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "0,5 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "151",
@@ -2698,7 +2770,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "350 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "152",
@@ -2735,7 +2808,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "153",
@@ -2772,7 +2846,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "154",
@@ -2809,7 +2884,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "155",
@@ -2846,7 +2922,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "20 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "156",
@@ -2883,7 +2960,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "40 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "157",
@@ -2920,7 +2998,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "158",
@@ -2957,7 +3036,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "5 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "159",
@@ -2994,7 +3074,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "160",
@@ -3031,7 +3112,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "161",
@@ -3068,7 +3150,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "162",
@@ -3105,7 +3188,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "163",
@@ -3142,7 +3226,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "500 мг/ 500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "164",
@@ -3179,7 +3264,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "2,5 г (5%) або 5 г (10%) в 50 мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "165",
@@ -3216,7 +3302,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "166",
@@ -3253,7 +3340,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "150 мл (10 мг/мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "167",
@@ -3290,7 +3378,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "168",
@@ -3327,7 +3416,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "30 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "169",
@@ -3364,7 +3454,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "170",
@@ -3401,7 +3492,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "171",
@@ -3438,7 +3530,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "2 000 000 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "172",
@@ -3475,7 +3568,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "33,6 млн. МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "173",
@@ -3512,7 +3606,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для інфузій у системах",
       "dosage": "300 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "174",
@@ -3549,7 +3644,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для інфузій",
       "dosage": "300 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "175",
@@ -3586,7 +3682,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин для інфузій",
       "dosage": "100 мл (2 мг/мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "176",
@@ -3623,7 +3720,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "177",
@@ -3660,7 +3758,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "178",
@@ -3697,7 +3796,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "179",
@@ -3734,7 +3834,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "180",
@@ -3771,7 +3872,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "181",
@@ -3808,7 +3910,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "182",
@@ -3845,7 +3948,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "2,5 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "183",
@@ -3882,7 +3986,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "184",
@@ -3919,7 +4024,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "5000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "185",
@@ -3956,7 +4062,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "25 мг/мл по 2 мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "186",
@@ -3993,7 +4100,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "10 мг/мл по 5 мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "187",
@@ -4030,7 +4138,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "188",
@@ -4067,7 +4176,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "189",
@@ -4104,7 +4214,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "190",
@@ -4141,7 +4252,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "191",
@@ -4178,7 +4290,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "400 мг/250 мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "192",
@@ -4215,7 +4328,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "розчин оральний, флакони",
       "dosage": "2 мг/мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "193",
@@ -4252,7 +4366,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "194",
@@ -4289,7 +4404,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "4 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "195",
@@ -4326,7 +4442,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "3750 МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "196",
@@ -4363,7 +4480,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "6 мг/0,6 мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "197",
@@ -4400,7 +4518,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "4г/0,5г",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "198",
@@ -4437,7 +4556,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "105 мл (40 мг/мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "199",
@@ -4474,7 +4594,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "200",
@@ -4511,7 +4632,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "201",
@@ -4548,7 +4670,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "500 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "202",
@@ -4585,7 +4708,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "0,5г / 0,5г",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "203",
@@ -4622,7 +4746,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "204",
@@ -4659,7 +4784,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "0,5 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "205",
@@ -4696,7 +4822,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "1 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "207",
@@ -4733,7 +4860,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "5 мг/мл",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "208",
@@ -4770,7 +4898,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "400 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "209",
@@ -4807,7 +4936,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "210",
@@ -4844,7 +4974,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "20 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "211",
@@ -4881,7 +5012,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "212",
@@ -4918,7 +5050,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "40 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "213",
@@ -4955,7 +5088,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "4 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "214",
@@ -4992,7 +5126,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1 г",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "215",
@@ -5029,7 +5164,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "5 г",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "216",
@@ -5066,7 +5202,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "10 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "217",
@@ -5103,7 +5240,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "218",
@@ -5140,7 +5278,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "30 млн. МО",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "219",
@@ -5177,7 +5316,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "220",
@@ -5214,7 +5354,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "2 мг/мл (по 100 мл)",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "221",
@@ -5251,7 +5392,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "2 г",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "222",
@@ -5288,7 +5430,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "223",
@@ -5325,7 +5468,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, розчин оральний",
       "dosage": "5000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "224",
@@ -5362,7 +5506,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "225",
@@ -5399,7 +5544,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "25 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "226",
@@ -5436,7 +5582,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "227",
@@ -5473,7 +5620,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "228",
@@ -5510,7 +5658,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "таблетки, капсули, драже",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "229",
@@ -5547,7 +5696,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "230",
@@ -5584,7 +5734,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони",
       "dosage": "200 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "231",
@@ -5621,7 +5772,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "50 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "232",
@@ -5658,7 +5810,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "100 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "233",
@@ -5695,7 +5848,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули, флакони, шприци",
       "dosage": "1000 мг",
       "subtype": "Лікарські засоби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "234",
@@ -5732,7 +5886,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "235",
@@ -5769,7 +5924,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "236",
@@ -5806,7 +5962,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "237",
@@ -5843,7 +6000,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "238",
@@ -5880,7 +6038,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "239",
@@ -5917,7 +6076,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "240",
@@ -5954,7 +6114,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "242",
@@ -5991,7 +6152,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "244",
@@ -6028,7 +6190,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "245",
@@ -6065,7 +6228,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "246",
@@ -6102,7 +6266,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "247",
@@ -6139,7 +6304,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "248",
@@ -6176,7 +6342,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "249",
@@ -6213,7 +6380,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "250",
@@ -6250,7 +6418,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "комплектів",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "252",
@@ -6287,7 +6456,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "253",
@@ -6324,7 +6494,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "254",
@@ -6361,7 +6532,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "255",
@@ -6398,7 +6570,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "256",
@@ -6435,7 +6608,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "257",
@@ -6472,7 +6646,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "258",
@@ -6509,7 +6684,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "259",
@@ -6546,7 +6722,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "260",
@@ -6583,7 +6760,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "штук",
       "dosage": "",
       "subtype": "Медичні вироби"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "675",
@@ -6620,7 +6798,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "Флакони (суспензія для інтратрахеального введення)",
       "dosage": "100 мг або 120 мг або 135 мг фосфоліпідної фракції по 4 мл або 1.5 мл або 5 мл.",
       "subtype": ""
-    }
+    },
+    "bool": 0
   },
   {
     "id": "676",
@@ -6657,7 +6836,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "ампули",
       "dosage": "20 мг/мл",
       "subtype": null
-    }
+    },
+    "bool": 1
   },
   {
     "id": "778",
@@ -6694,7 +6874,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "779",
@@ -6731,7 +6912,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "780",
@@ -6768,7 +6950,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "781",
@@ -6805,7 +6988,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "782",
@@ -6842,7 +7026,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1500 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "783",
@@ -6879,7 +7064,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "2000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "784",
@@ -6916,7 +7102,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "3000 МО",
       "subtype": "Лікування хворих з гемофілією типу А"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "785",
@@ -6953,7 +7140,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО та/або 600 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "786",
@@ -6990,7 +7178,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО та/або 1200 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "787",
@@ -7027,7 +7216,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "788",
@@ -7064,7 +7254,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з гемофілією типу В"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "789",
@@ -7101,7 +7292,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 2-го типу"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "790",
@@ -7138,7 +7330,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 2-го типу"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "791",
@@ -7175,7 +7368,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 3-го типу"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "792",
@@ -7212,7 +7406,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з  хворобою Віллебранда 3-го типу"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "793",
@@ -7249,7 +7444,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "2 мг (100 КМО)",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "794",
@@ -7286,7 +7482,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "5 мг (250 КМО)",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "795",
@@ -7323,7 +7520,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "500 МО",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 1
   },
   {
     "id": "796",
@@ -7360,7 +7558,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "1000 МО",
       "subtype": "Лікування хворих з інгібіторною формою гемофілії типу A або B"
-    }
+    },
+    "bool": 0
   },
   {
     "id": "797",
@@ -7397,7 +7596,8 @@ export const MOCK_DATA: any[] = [
       "release_form": "флакони, ампули, шприци",
       "dosage": "15 мкг/мл, 1 мл",
       "subtype": "Лікування хворих з хворобою Віллебранда 1-го та 2-го типу та легкої форми гемофілії типу A"
-    }
+    },
+    "bool": 1
   }
 ];
 

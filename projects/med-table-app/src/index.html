@@ -13,6 +13,7 @@
 
   <script>
     const appRoot = document.querySelector('app-med-table');
+
     const CONFIG = {
       tableColumns: [
         {
@@ -385,42 +386,6 @@
     const CONFIG3 = {
       tableColumns: [
         {
-          key: 'name',
-          label: 'Назва',
-          filterable: true,
-        },
-        {
-          key: 'dosage',
-          label: 'одиниця',
-          filterable: true,
-        },
-        {
-          key: 'quantity',
-          label: 'Кількість поставки',
-          filterable: true,
-        },
-        {
-          key: 'delivery_balance',
-          label: 'Залишок поставки',
-          filterable: true,
-          defaultValue: 0,
-          cellType: 'link',
-          linkOptions: {
-            url: 'http://localhost:4200',
-            keyParam: 'item_id',
-            target: '_blank',
-          },
-        },
-      ],
-      urls: {
-        getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getSupplyDistribution&dev=1',
-      },
-    };
-
-    // http://localhost:4200/item_id=21997
-    appRoot.setAttribute('config', JSON.stringify({
-      tableColumns: [
-        {
           key: 'division',
           label: 'ЗОЗ-отримувачі',
           filterable: true,
@@ -450,6 +415,41 @@
       ],
       urls: {
         getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getZozDistribution&dev=1',
+      },
+    };
+
+    appRoot.setAttribute('config', JSON.stringify({
+      tableColumns: [
+        {
+          key: 'name',
+          label: 'Назва',
+          filterable: true,
+        },
+        {
+          key: 'dosage',
+          label: 'одиниця',
+          filterable: true,
+        },
+        {
+          key: 'quantity',
+          label: 'Кількість поставки',
+          filterable: true,
+        },
+        {
+          key: 'delivery_balance',
+          label: 'Залишок поставки',
+          filterable: true,
+          defaultValue: 0,
+          cellType: 'link',
+          linkOptions: {
+            url: 'http://localhost:4200',
+            keyParam: 'item_id',
+            target: '_blank',
+          },
+        },
+      ],
+      urls: {
+        getData: 'https://meddata.com.ua/index.php?option=com_fabrik&format=raw&task=plugin.userAjax&method=Humanitarian&function=getSupplyDistribution&dev=1',
       },
     }));
   </script>

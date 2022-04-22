@@ -23,6 +23,10 @@
           Ex: {{ data }}
         </button>
       </ng-container>
+
+      <ng-container *ngSwitchCase="'bool'">
+        {{ item.bool ? 'Yes' : 'No' }}
+      </ng-container>
     </ng-container>
   </ng-template>
 

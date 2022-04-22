@@ -1,8 +1,8 @@
-import { TableCell } from '../TableCell';
-import { filterMethodsMap } from './filterMethodsMap';
-import { FILTER_TYPES } from '../../types/filterTypes';
-import { PrimeFilters, PrimeFilter } from '../../types/PrimeFilter';
-import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
+import {TableCell} from '../TableCell';
+import {filterMethodsMap} from './filterMethodsMap';
+import {FILTER_TYPES} from '../../types/filterTypes';
+import {PrimeFilter, PrimeFilters} from '../../types/PrimeFilter';
+import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
 
 export interface FilterDataHandlerInterface<T extends Record<string, any>> {
   setData(data: T[]): void
@@ -19,7 +19,7 @@ export class FilterDataHandler<T extends Record<string, any>> implements FilterD
       const key: string = col.sortKey || col.key;
       const { value }: PrimeFilter = filters[key] || { matchMode: '' };
 
-      if (this.isEmptyValue(value) || exitKey === key) return true;
+      if (this.isEmptyValue(value, col.filterType) || exitKey === key) return true;
 
       const filterType: FILTER_TYPES = col.filterType || FILTER_TYPES.TEXT;
       const tableCell = new TableCell();
@@ -39,7 +39,15 @@ export class FilterDataHandler<T extends Record<string, any>> implements FilterD
     this._config = config;
   }
 
-  private isEmptyValue(value: any): boolean {
-    return !value || Array.isArray(value) && !value.length;
+  private isEmptyValue(value: any, filterType?: FILTER_TYPES): boolean {
+    if (filterType === FILTER_TYPES.SELECT || filterType === FILTER_TYPES.DATE) {
+      return !value || Array.isArray(value) && !value.length;
+    }
+
+    if (filterType === FILTER_TYPES.CHECKBOX) {
+      return false;
+    }
+
+    return !value;
   }
 }

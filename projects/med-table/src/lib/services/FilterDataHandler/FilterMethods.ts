@@ -20,6 +20,14 @@ export class FilterMethods {
     return !filter ? true : filter.includes(value || '');
   }
 
+  static checkboxHandler(value?: any, filter?: boolean): boolean {
+    if (filter === null) {
+      return true;
+    }
+
+    return Boolean(value) === filter;
+  }
+
   static textHandler(value?: string, filter?: string): boolean {
     const regexp = new RegExp(`${filter?.trim()}`, 'i');
     return regexp.test(value || '');
