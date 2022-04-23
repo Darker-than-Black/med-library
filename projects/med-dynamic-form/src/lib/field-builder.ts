@@ -12,6 +12,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     inputPattern: PATTERN_TYPES.NONE,
     labelKey: '',
     fieldWrapperSelector: '',
+    placeholder: '',
     required: false,
     autoFocus: false,
     onLeave: () => {},
@@ -29,6 +30,7 @@ export class FieldBuilder implements MedCustomFormlyFieldConfig {
     this.templateOptions.labelKey = options.key;
     this.templateOptions.label = options.label || this.templateOptions.label;
     this.className = options.class || this.className;
+    this.templateOptions.placeholder = options.placeholder || this.templateOptions.placeholder;
     this.templateOptions.fieldWrapperSelector = options.fieldWrapperSelector || this.templateOptions.fieldWrapperSelector;
     this.templateOptions.required = options.required || this.templateOptions.required;
     this.templateOptions.autoFocus = options.autoFocus || this.templateOptions.autoFocus;

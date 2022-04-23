@@ -8,6 +8,7 @@ export interface MedFormFieldConfig {
 
   class?: string
   label?: string
+  placeholder?: string
   inputMask?: string
   required?: boolean
   wrappers?: string[]
@@ -30,6 +31,7 @@ export interface MedCustomFormlyTemplateOptions extends FormlyTemplateOptions {
   labelKey?: string
   mask: string
   autoFocus: boolean
+  placeholder: string
   fieldWrapperSelector: string
   inputPattern: PATTERN_TYPES
   onLeave: () => void

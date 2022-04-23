@@ -16,6 +16,14 @@ export const FORM_CONFIG: MedFormFieldConfig[] = [
     class: 'field col-12 md:col-6',
   },
   {
+    key: 'email',
+    label: 'E-mail',
+    editorType: FIELD_TYPES.TEXT,
+    placeholder: 'ex@gmail.com',
+    required: true,
+    class: 'field col-12 md:col-6',
+  },
+  {
     key: 'responsible',
     label: 'Відповідальний менеджер',
     editorType: FIELD_TYPES.SELECT,
