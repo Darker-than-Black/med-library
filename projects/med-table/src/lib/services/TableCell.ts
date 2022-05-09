@@ -30,7 +30,7 @@ export class TableCell<T extends Record<string, any>> implements TableCellInterf
   private get defaultValue(): any {
     const { defaultValue, filterType } = this._config;
 
-    if (defaultValue) return defaultValue;
+    if (defaultValue !== undefined) return defaultValue;
     if (filterType === FILTER_TYPES.CHECKBOX) return 0;
     return STRING.HYPHEN;
   }

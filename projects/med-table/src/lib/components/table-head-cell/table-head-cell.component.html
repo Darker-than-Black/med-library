@@ -1,0 +1,19 @@
+<span>
+  <span #contentRef>
+    <ng-container *ngTemplateOutlet="
+      template || defaultTemplate;
+      context: { $implicit: config }"
+    ></ng-container>
+  </span>
+
+  <ng-container
+    *ngIf="isEmptyTemplate"
+    [ngTemplateOutlet]="defaultTemplate"
+  ></ng-container>
+</span>
+
+<p-sortIcon *ngIf="config.label" [field]="config.key"></p-sortIcon>
+
+<ng-template #defaultTemplate>
+  {{ config.label }}
+</ng-template>

@@ -11,6 +11,7 @@ export class TemplatesMixin implements AfterContentInit {
   rowExpansion?: TemplateRef<any>;
   toolbarTemplate?: TemplateRef<any>;
   tableDataTemplate?: TemplateRef<any>;
+  tableHeadTemplate?: TemplateRef<any>;
   paginatorTemplate?: TemplateRef<any>;
 
   ngAfterContentInit() {
@@ -18,6 +19,9 @@ export class TemplatesMixin implements AfterContentInit {
       switch (item.getType()) {
         case 'toolbar':
           this.toolbarTemplate = item.template;
+          break;
+        case 'tableHead':
+          this.tableHeadTemplate = item.template;
           break;
         case 'tableData':
           this.tableDataTemplate = item.template;

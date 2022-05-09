@@ -58,9 +58,18 @@
         [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
         class="med-table__th"
       >
-        <span>{{ col.label }}</span>
-        <p-sortIcon *ngIf="col.label" [field]="col.key"></p-sortIcon>
+        <table-head-cell
+          [config]="col"
+          [template]="thTemplate"
+        ></table-head-cell>
       </th>
+
+      <ng-template #thTemplate let-config>
+        <ng-container *ngTemplateOutlet="
+            tableHeadTemplate || null
+            context: { $implicit: config }"
+        ></ng-container>
+      </ng-template>
     </tr>
 
     <tr *ngIf="filterableFields.length">

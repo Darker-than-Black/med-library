@@ -74,7 +74,8 @@ Table is a template driven component with named templates such as header and bod
 | Name           | Description                                          |
 |:---------------|:-----------------------------------------------------|
 | `toolbar`      | Toolbar content upper the table                      |
-| `paginator`    | Custom content for the left section of the paginator | 
+| `paginator`    | Custom content for the left section of the paginator |
+| `tableHead`    | Custom content for the table data head cell          |
 | `tableData`    | Custom content for the table data cell               |
 | `rowExpansion` | A row can be expanded to display additional content  |
 
@@ -84,6 +85,10 @@ Table is a template driven component with named templates such as header and bod
     <nav>
       <a href="link">Home</a>
     </nav>
+  </ng-template>
+
+  <ng-template mTemplate="tableHead" let-column>
+    {{ column.label }}
   </ng-template>
   
   <ng-template mTemplate="tableData" let-data>

@@ -19,6 +19,7 @@ import { FilterTextComponent } from './components/filters/filter-text/filter-tex
 import { FilterDateComponent } from './components/filters/filter-date/filter-date.component';
 import { FilterSelectComponent } from './components/filters/filter-select/filter-select.component';
 import { FilterCheckboxComponent } from './components/filters/filter-checkbox/filter-checkbox.component';
+import { TableHeadCellComponent } from './components/table-head-cell/table-head-cell.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FilterCheckboxComponent } from './components/filters/filter-checkbox/fi
     FilterDateComponent,
     FilterSelectComponent,
     FilterCheckboxComponent,
+    TableHeadCellComponent,
   ],
   imports: [
     FormsModule,

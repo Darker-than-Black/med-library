@@ -16,6 +16,14 @@
     ></button>
   </ng-template>
 
+  <ng-template mTemplate="tableHead" let-column>
+    <ng-container [ngSwitch]="column.key">
+      <ng-container *ngSwitchCase="'winner'">
+        WIN: {{ column.label }}
+      </ng-container>
+    </ng-container>
+  </ng-template>
+
   <ng-template mTemplate="tableData" let-data let-item="item" let-config="config">
     <ng-container [ngSwitch]="config.key">
       <ng-container *ngSwitchCase="'agreement_final_date'">

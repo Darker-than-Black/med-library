@@ -1,5 +1,5 @@
-import {CELL_TYPES, FILTER_TYPES, MedTableColumnConfig, PATTERN_TYPES} from 'med-table';
-import {FIELD_TYPES} from "med-dynamic-form";
+import {CELL_TYPES, FILTER_TYPES, MedTableColumnConfig} from 'med-table';
+import {FIELD_TYPES, PATTERN_TYPES} from "med-dynamic-form";
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {
@@ -42,6 +42,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Відповідальний менеджер',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
+    defaultValue: '',
   },
   {
     key: 's20',
