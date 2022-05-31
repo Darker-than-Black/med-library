@@ -2,20 +2,20 @@ import {TableCell} from '../TableCell';
 import {filterMethodsMap} from './filterMethodsMap';
 import {FILTER_TYPES} from '../../types/filterTypes';
 import {PrimeFilter, PrimeFilters} from '../../types/PrimeFilter';
-import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
+import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
 
 export interface FilterDataHandlerInterface<T extends Record<string, any>> {
   setData(data: T[]): void
-  setConfig(config: MedTableColumnConfig[]): void
+  setConfig(config: CellDataConfigLocal[]): void
   filter(filters: PrimeFilters, exitKey?: string): T[]
 }
 
 export class FilterDataHandler<T extends Record<string, any>> implements FilterDataHandlerInterface<T> {
   private _data: T[] = [];
-  private _config: MedTableColumnConfig[] = [];
+  private _config: CellDataConfigLocal[] = [];
 
   filter(filters: PrimeFilters, exitKey?: string): T[] {
-    return this._data.filter(row => this._config.every((col: MedTableColumnConfig): boolean => {
+    return this._data.filter(row => this._config.every((col: CellDataConfigLocal): boolean => {
       const key: string = col.sortKey || col.key;
       const { value }: PrimeFilter = filters[key] || { matchMode: '' };
 
@@ -35,7 +35,7 @@ export class FilterDataHandler<T extends Record<string, any>> implements FilterD
     this._data = data;
   }
 
-  setConfig(config: MedTableColumnConfig[]): void {
+  setConfig(config: CellDataConfigLocal[]): void {
     this._config = config;
   }
 

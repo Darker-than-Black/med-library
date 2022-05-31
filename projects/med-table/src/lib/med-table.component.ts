@@ -12,20 +12,25 @@ import {
   AfterViewInit,
 } from '@angular/core';
 
+import {getColspanByKey, getMaxDeepKeyLevel, getNestedList, getRowspanByLevelAndKey} from './utils';
 import { FILTER_TYPES } from './types/filterTypes';
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
+import { PrimeOnFilterEvent } from './types/PrimeFilter';
+import { MedSelectOption } from './types/MedSelectOption';
 import { MedTableSettings } from './types/MedTableSettings';
 import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
+import { MedTableService } from './services/med-table.service';
 import { MedTableColumnConfig } from './types/MedTableColumnConfig';
 import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
+import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
 import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
-import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
-import { MedSelectOption } from './types/MedSelectOption';
-import { MedTableService } from './services/med-table.service';
-import { PrimeOnFilterEvent } from './types/PrimeFilter';
 import { FilterDataHandler } from './services/FilterDataHandler/FilterDataHandler';
+import { CellConfigsFactory } from './services/CellConfigsFactory';
+import { CellDataConfigLocal } from './types/CellDataConfigLocal';
+
+const CONFIG_KEY_CHILDREN = 'children';
 
 @Component({
   selector: APP_SELECTOR,
@@ -39,17 +44,21 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
 
   public readonly FILTER_TYPES = FILTER_TYPES;
   public readonly filterDataHandler = new FilterDataHandler<ItemType>();
+  public columnsConfig: MedTableColumnConfig[] = [];
   private _data: ItemType[] = [];
-  private _config: MedTableColumnConfig[] = []
+  private _config: CellDataConfigLocal[] = [];
 
   @Input() loading: boolean = false;
   @Input() settings: MedTableSettings = {};
   @Input() set config(newValue: MedTableColumnConfig[]) {
-    this.filterDataHandler.setConfig(newValue);
-    this._config = newValue;
+    const cellConfigList = new CellConfigsFactory().build(newValue);
+
+    this.columnsConfig = newValue;
+    this.filterDataHandler.setConfig(cellConfigList);
+    this._config = cellConfigList;
   }
 
-  get config(): MedTableColumnConfig[] {
+  get config(): CellDataConfigLocal[] {
     return this._config;
   }
 
@@ -90,6 +99,14 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     return this.config.length;
   }
 
+  get maxDeepKeyLevel(): number {
+    return getMaxDeepKeyLevel<MedTableColumnConfig>(this.columnsConfig, CONFIG_KEY_CHILDREN);
+  }
+
+  get tableHeadLevels(): number[] {
+    return Array(this.maxDeepKeyLevel).fill(0).map((x,i) => i);
+  }
+
   ngAfterViewInit() {
     if (this.localSettings.doubleScrollbar) {
       this.addDoubleScrollbar();
@@ -113,7 +130,27 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     sheetsGenerator.generate(this.localSettings.exportFileName);
   }
 
-  getFilterSelectOptions({key, sortKey}: MedTableColumnConfig): MedSelectOption<string>[] {
+  getHeadRowConfigByLevel(level: number): Array<MedTableColumnConfig | undefined> {
+    return getNestedList(this.columnsConfig, CONFIG_KEY_CHILDREN, level);
+  }
+
+  getColspan(column: MedTableColumnConfig): number {
+    return getColspanByKey(column, CONFIG_KEY_CHILDREN);
+  }
+
+  getRowspan(column: MedTableColumnConfig, level: number): number {
+    return getRowspanByLevelAndKey(column, CONFIG_KEY_CHILDREN, this.maxDeepKeyLevel, level);
+  }
+
+  getCellMinWidth({minWidth}: MedTableColumnConfig): string {
+    return minWidth || this.localSettings.colMinWidth;
+  }
+
+  getCellMaxWidth({maxWidth}: MedTableColumnConfig): string {
+    return maxWidth || this.localSettings.colMaxWidth;
+  }
+
+  getFilterSelectOptions({key, sortKey}: CellDataConfigLocal): MedSelectOption<string>[] {
     const options = this.data
       .map(obj => get(obj, sortKey || key))
       .filter(Boolean);

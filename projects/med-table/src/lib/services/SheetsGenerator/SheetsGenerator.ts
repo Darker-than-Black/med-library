@@ -2,7 +2,7 @@ import { get } from 'lodash';
 import * as XLSX from 'xlsx-js-style';
 import { CellBuilder } from './CellBuilder';
 import { STRING } from '../../constants/string';
-import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
+import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
 
 const DEFAULT_VIEW_HANDLER = (data: any) => data;
 
@@ -11,9 +11,9 @@ export interface SheetsGeneratorInterface {
 }
 
 export class SheetsGenerator implements SheetsGeneratorInterface {
-  private readonly config: MedTableColumnConfig[];
+  private readonly config: CellDataConfigLocal[];
 
-  constructor(private data: Record<string, any>[], config: MedTableColumnConfig[]) {
+  constructor(private data: Record<string, any>[], config: CellDataConfigLocal[]) {
     this.config = config.filter(({ hideExport }) => !hideExport);
   }
 
@@ -42,7 +42,7 @@ export class SheetsGenerator implements SheetsGeneratorInterface {
       this.cellBuilder.createTextCell(this.getField(row, item)));
   }
 
-  private getField<T>(data: Record<string, any>, config: MedTableColumnConfig): T {
+  private getField<T>(data: Record<string, any>, config: CellDataConfigLocal): T {
     const { key, defaultValue = STRING.HYPHEN, viewHandler = DEFAULT_VIEW_HANDLER } = config;
     const field = viewHandler(get(data, key));
     return field || defaultValue;

@@ -1,7 +1,7 @@
 import { get } from 'lodash';
 import { STRING } from '../constants/string';
 import { FILTER_TYPES } from '../types/filterTypes';
-import { MedTableColumnConfig } from '../types/MedTableColumnConfig';
+import { CellDataConfigLocal } from '../types/CellDataConfigLocal';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
@@ -10,12 +10,12 @@ export interface TableCellInterface<T> {
   previewData: string
   getValue(data: Record<string, any>, key: string): any
   setItem(data: T): void
-  setConfig(config: MedTableColumnConfig): void
+  setConfig(config: CellDataConfigLocal): void
 }
 
 export class TableCell<T extends Record<string, any>> implements TableCellInterface<T> {
   private _item: T | {} = {};
-  private _config: MedTableColumnConfig = {key: '', label: ''};
+  private _config: CellDataConfigLocal = {key: '', label: ''};
 
   get fieldData(): string {
     return this.getValue(this._item, this._config.key);
@@ -43,7 +43,7 @@ export class TableCell<T extends Record<string, any>> implements TableCellInterf
     this._item = data;
   }
 
-  setConfig(config: MedTableColumnConfig): void {
+  setConfig(config: CellDataConfigLocal): void {
     this._config = config;
   }
 }

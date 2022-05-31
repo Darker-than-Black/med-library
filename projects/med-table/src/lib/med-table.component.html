@@ -48,21 +48,30 @@
   </ng-template>
 
   <ng-template pTemplate="header">
-    <tr>
-      <th *ngIf="localSettings.expandedDataKey" class="med-table__th"></th>
-
+    <tr *ngFor="let level of tableHeadLevels">
       <th
-        *ngFor="let col of config"
-        [pSortableColumn]="col.sortKey || col.key"
-        [style.minWidth]="col.minWidth || localSettings.colMinWidth"
-        [style.maxWidth]="col.maxWidth || localSettings.colMaxWidth"
+        *ngIf="localSettings.expandedDataKey && !level"
+        [attr.rowspan]="maxDeepKeyLevel"
         class="med-table__th"
-      >
-        <table-head-cell
-          [config]="col"
-          [template]="thTemplate"
-        ></table-head-cell>
-      </th>
+      ></th>
+
+      <ng-container *ngFor="let col of getHeadRowConfigByLevel(level)">
+        <th
+          *ngIf="col"
+          [attr.colspan]="getColspan(col)"
+          [attr.rowspan]="getRowspan(col, level)"
+          [style.minWidth]="getCellMinWidth(col)"
+          [style.maxWidth]="getCellMaxWidth(col)"
+          [pSortableColumn]="col.sortKey || col.key || ''"
+          [ngClass]="col.headCellClass || ''"
+          class="med-table__th"
+        >
+          <table-head-cell
+            [config]="col"
+            [template]="thTemplate"
+          ></table-head-cell>
+        </th>
+      </ng-container>
 
       <ng-template #thTemplate let-config>
         <ng-container *ngTemplateOutlet="
@@ -75,7 +84,11 @@
     <tr *ngIf="filterableFields.length">
       <th *ngIf="localSettings.expandedDataKey" class="med-table__th"></th>
 
-      <th *ngFor="let col of config" class="med-table__th">
+      <th
+        *ngFor="let col of config"
+        [ngClass]="col.headCellClass || ''"
+        class="med-table__th"
+      >
         <ng-container *ngIf="col.filterable" [ngSwitch]="col.filterType">
           <filter-select
             *ngSwitchCase="FILTER_TYPES.SELECT"
@@ -112,7 +125,11 @@
         ></button>
       </td>
 
-      <td *ngFor="let column of config" class="med-table__td">
+      <td
+        *ngFor="let column of config"
+        [ngClass]="column.dataCellClass || ''"
+        class="med-table__td"
+      >
         <table-cell
           [item]="item"
           [config]="column"

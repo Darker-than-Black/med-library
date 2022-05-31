@@ -1,7 +1,7 @@
-import { FIELD_TYPES, MedFormFieldConfig, PATTERN_TYPES } from 'med-dynamic-form';
-import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
+import {FIELD_TYPES, MedFormFieldConfig, PATTERN_TYPES} from 'med-dynamic-form';
+import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
 
-export interface EditorBuilderOptions extends MedTableColumnConfig {
+export interface EditorBuilderOptions extends CellDataConfigLocal {
   onLeave: () => void
 }
 

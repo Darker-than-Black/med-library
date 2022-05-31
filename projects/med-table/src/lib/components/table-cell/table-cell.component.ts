@@ -19,7 +19,7 @@ import {STRING} from '../../constants/string';
 import {EditorBuilder} from './editor-builder';
 import {CELL_TYPES} from '../../types/cellTypes';
 import {TableCell} from '../../services/TableCell';
-import {MedTableColumnConfig} from '../../types/MedTableColumnConfig';
+import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
 import {MedUpdateColumnEvent} from '../../types/MedUpdateColumnEvent';
 
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
@@ -34,12 +34,12 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
 
   @Input() template?: TemplateRef<any>;
 
-  @Input() set config(newValue: MedTableColumnConfig) {
+  @Input() set config(newValue: CellDataConfigLocal) {
     this._tableCell.setConfig(newValue);
     this._config = newValue;
   }
 
-  get config(): MedTableColumnConfig {
+  get config(): CellDataConfigLocal {
     return this._config;
   }
 
@@ -60,7 +60,7 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
   fields: MedFormFieldConfig[] = [];
   form: any = new FormGroup({});
   private _item: ItemType | {} = {};
-  private _config: MedTableColumnConfig = {key: '', label: ''};
+  private _config: CellDataConfigLocal = {key: '', label: ''};
   private _tableCell = new TableCell<ItemType>();
 
   get fieldData(): string {
