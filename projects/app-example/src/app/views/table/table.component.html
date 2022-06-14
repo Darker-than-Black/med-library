@@ -5,6 +5,7 @@
   [config]="tableConfig"
   [settings]="tableSettings"
   (updateColumn)="onUpdateColumn($event)"
+  (onFocusColumn)="onFocusColumn($event)"
 >
   <ng-template mTemplate="toolbar">
     <button

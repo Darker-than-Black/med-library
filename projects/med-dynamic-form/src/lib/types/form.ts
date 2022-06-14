@@ -13,6 +13,7 @@ export interface MedFormFieldConfig {
   required?: boolean
   wrappers?: string[]
   autoFocus?: boolean
+  onFocus?: () => void
   onLeave?: () => void
   fieldWrapperSelector?: string
   onSelect?: (data: any) => void

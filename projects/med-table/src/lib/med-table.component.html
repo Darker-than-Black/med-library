@@ -135,6 +135,7 @@
           [config]="column"
           [template]="tdTemplate"
           (update)="updateColumn.emit($event)"
+          (onFocus)="onFocusColumn.emit($event)"
         ></table-cell>
 
         <ng-template #tdTemplate let-data let-item="item">

@@ -48,4 +48,8 @@ export class TableComponent {
       set(el, key, get(item, key));
     });
   }
+
+  onFocusColumn($event: MedUpdateColumnEvent<any>) {
+    console.log($event);
+  }
 }

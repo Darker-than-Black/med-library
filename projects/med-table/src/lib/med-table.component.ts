@@ -73,6 +73,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   }
 
   @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
+  @Output() onFocusColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
   @ViewChild('tableRef') tableRef!: Table;
   @ViewChild('upScrollRef') upScrollRef!: ElementRef<HTMLElement>;

@@ -53,6 +53,7 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
   }
 
   @Output() update = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
+  @Output() onFocus = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
@@ -119,6 +120,7 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
       ...this.config,
       onLeave: this.onLeave.bind(this),
     });
+    this.onFocus.emit({item: this.item, key: this.config.key});
     this.fields.push(field);
   }
 
