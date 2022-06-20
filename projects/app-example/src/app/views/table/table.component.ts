@@ -28,7 +28,7 @@ export class TableComponent {
     export: true,
     exportFileName: 'Облік поставок',
     expandedDataKey: 'id',
-    doubleScrollbar: false,
+    doubleScrollbar: true,
   };
 
   ngOnInit() {
