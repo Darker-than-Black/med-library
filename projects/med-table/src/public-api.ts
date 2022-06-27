@@ -9,7 +9,8 @@ export { FIELD_TYPES, PATTERN_TYPES } from 'med-dynamic-form';
 export * from './lib/types/MedSelectOption';
 export * from './lib/types/MedTableColumnConfig';
 export * from './lib/types/MedTableSettings';
-export * from './lib/types/MedUpdateColumnEvent';
+export * from './lib/types/MedUpdateEvent';
+export * from './lib/types/MedUpdateTableEvent';
 
 export * from './lib/directives/med-template.directive';
 export * from './lib/services/med-table.service';

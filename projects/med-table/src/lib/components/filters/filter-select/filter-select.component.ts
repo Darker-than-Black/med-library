@@ -1,7 +1,8 @@
 import { get } from 'lodash';
-import { Component, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, ChangeDetectorRef, AfterViewInit } from '@angular/core';
 
 import { MedTableService } from '../../../services/med-table.service';
+import { MedTableSettingsLocal } from '../../../types/MedTableSettingsLocal';
 import { FilterDataHandlerInterface } from '../../../services/FilterDataHandler/FilterDataHandler';
 
 @Component({
@@ -9,18 +10,27 @@ import { FilterDataHandlerInterface } from '../../../services/FilterDataHandler/
   templateUrl: './filter-select.component.html',
   styleUrls: ['./filter-select.component.scss']
 })
-export class FilterSelectComponent<T> {
-  constructor(private store: MedTableService) {}
+export class FilterSelectComponent<T> implements AfterViewInit {
+  constructor(private store: MedTableService, private cd: ChangeDetectorRef) {}
 
   @Input() key!: string;
+  @Input() settings!: MedTableSettingsLocal;
   @Input() filterDataHandler!: FilterDataHandlerInterface<T>;
 
   @ViewChild('selectRef') selectRef!: ElementRef;
 
   get filterSelectOptions(): string[] {
+    if (this.settings.lazy) {
+      return this.store.getFilterSelectData(this.key) || [];
+    }
+
     const filteredData = this.filterDataHandler.filter(this.store.filters, this.key);
     const options = filteredData.map(obj => get(obj, this.key)).filter(Boolean);
     return [...new Set(options)]; // delete duplicates
+  }
+
+  ngAfterViewInit() {
+    this.cd.detectChanges();
   }
 
   onFilter({ filter }: Record<string, any>) {

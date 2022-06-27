@@ -41,3 +41,5 @@ export const getRowspanByLevelAndKey = <T extends Record<string, any>>(
   if (!isFinite(levelsToDown)) return deepLevel - currentLevel;
   return deepLevel - (levelsToDown + currentLevel + emptyRows);
 }
+
+export const isExist = (value: any) => value !== undefined && value !== null && value !== '';

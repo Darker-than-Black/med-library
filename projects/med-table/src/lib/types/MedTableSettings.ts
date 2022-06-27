@@ -14,4 +14,7 @@ export interface MedTableSettings extends Record<string, any> {
   rowsPerPageOptions?: number[]
   showCurrentPageReport?: boolean
   currentPageReportTemplate?: string
+
+  lazy?: boolean
+  totalRecords?: number
 }

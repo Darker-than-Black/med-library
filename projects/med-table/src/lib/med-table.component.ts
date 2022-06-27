@@ -12,7 +12,6 @@ import {
   AfterViewInit,
 } from '@angular/core';
 
-import {getColspanByKey, getMaxDeepKeyLevel, getNestedList, getRowspanByLevelAndKey} from './utils';
 import { FILTER_TYPES } from './types/filterTypes';
 import { APP_SELECTOR } from './constants/selectors';
 import { StickyHeader } from './services/StickyHeader';
@@ -21,14 +20,23 @@ import { MedSelectOption } from './types/MedSelectOption';
 import { MedTableSettings } from './types/MedTableSettings';
 import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
 import { MedTableService } from './services/med-table.service';
+import { CellDataConfigLocal } from './types/CellDataConfigLocal';
+import { CellConfigsFactory } from './services/CellConfigsFactory';
+import { MedUpdateTableEvent } from './types/MedUpdateTableEvent';
 import { MedTableColumnConfig } from './types/MedTableColumnConfig';
-import { MedUpdateColumnEvent } from './types/MedUpdateColumnEvent';
+import { MedUpdateEvent } from './types/MedUpdateEvent';
 import { MedTableSettingsLocal } from './types/MedTableSettingsLocal';
 import { DEFAULT_TABLE_SETTINGS } from './configs/defaultTableSettings';
+import { PrimeTableLazyLoadEvent } from './types/PrimeTableLazyLoadEvent';
 import { SheetsGenerator } from './services/SheetsGenerator/SheetsGenerator';
 import { FilterDataHandler } from './services/FilterDataHandler/FilterDataHandler';
-import { CellConfigsFactory } from './services/CellConfigsFactory';
-import { CellDataConfigLocal } from './types/CellDataConfigLocal';
+import {
+  isExist,
+  getNestedList,
+  getColspanByKey,
+  getMaxDeepKeyLevel,
+  getRowspanByLevelAndKey,
+} from './utils';
 
 const CONFIG_KEY_CHILDREN = 'children';
 
@@ -72,8 +80,9 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     return this._data;
   }
 
-  @Output() updateColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
-  @Output() onFocusColumn = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
+  @Output() updateTable = new EventEmitter<MedUpdateTableEvent>();
+  @Output() updateRow = new EventEmitter<MedUpdateEvent<ItemType>>();
+  @Output() focusCell = new EventEmitter<MedUpdateEvent<ItemType>>();
 
   @ViewChild('tableRef') tableRef!: Table;
   @ViewChild('upScrollRef') upScrollRef!: ElementRef<HTMLElement>;
@@ -160,6 +169,21 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
 
   onFilter({filters}: PrimeOnFilterEvent<ItemType>): void {
     this.store.filters = filters;
+  }
+
+  onLazyLoad({first, rows, globalFilter, sortField, sortOrder, filters}: PrimeTableLazyLoadEvent) {
+    const formatFilters: any[] = Object.entries(filters)
+      .map(([key, data]) => ([key, data.value]))
+      .filter(([,value]) => isExist(value));
+
+    this.updateTable.emit({
+      rows,
+      sortField,
+      sortOrder,
+      search: globalFilter,
+      page: Math.ceil(first / rows),
+      filters: Object.fromEntries(formatFilters),
+    });
   }
 
   private addDoubleScrollbar() {

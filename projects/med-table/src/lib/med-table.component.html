@@ -24,16 +24,19 @@
   [value]="data"
   [columns]="config"
   [loading]="loading"
+  [lazy]="localSettings.lazy"
   [rows]="localSettings.rows"
   [globalFilterFields]="filterableFields"
   [paginator]="localSettings.paginator"
   [filterDelay]="localSettings.filterDelay"
   [dataKey]="localSettings.expandedDataKey"
+  [totalRecords]="localSettings.totalRecords"
   [scrollHeight]="localSettings.scrollHeight"
   [rowsPerPageOptions]="localSettings.rowsPerPageOptions"
   [showCurrentPageReport]="localSettings.showCurrentPageReport"
   [currentPageReportTemplate]="localSettings.currentPageReportTemplate"
   (onFilter)="onFilter($event)"
+  (onLazyLoad)="onLazyLoad($event)"
 >
   <ng-template pTemplate="caption">
     <span class="p-input-icon-left p-ml-auto">
@@ -92,6 +95,7 @@
         <ng-container *ngIf="col.filterable" [ngSwitch]="col.filterType">
           <filter-select
             *ngSwitchCase="FILTER_TYPES.SELECT"
+            [settings]="localSettings"
             [key]="col.sortKey || col.key"
             [filterDataHandler]="filterDataHandler"
           ></filter-select>
@@ -134,8 +138,8 @@
           [item]="item"
           [config]="column"
           [template]="tdTemplate"
-          (update)="updateColumn.emit($event)"
-          (onFocus)="onFocusColumn.emit($event)"
+          (update)="updateRow.emit($event)"
+          (onFocus)="focusCell.emit($event)"
         ></table-cell>
 
         <ng-template #tdTemplate let-data let-item="item">

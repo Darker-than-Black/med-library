@@ -9,9 +9,18 @@ import { MedSelectOption } from '../types/MedSelectOption';
 })
 export class MedTableService {
   private _filters: PrimeFilters = {};
+  private _filterSelectData: Record<string, string[]> = {};
   private _data: Record<string, any>[] = [];
 
   constructor(private dynamicFormService: MedDynamicFormService) {}
+
+  setFilterSelectData(data: string[], key: string): void {
+    this._filterSelectData[key] = data;
+  }
+
+  getFilterSelectData(key: string): string[] {
+    return this._filterSelectData[key] || [];
+  }
 
   setSelectData(data: MedSelectOption<any>[], key: string): void {
     this.dynamicFormService.setSelectData(data, key);

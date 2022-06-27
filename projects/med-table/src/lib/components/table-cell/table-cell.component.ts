@@ -19,8 +19,8 @@ import {STRING} from '../../constants/string';
 import {EditorBuilder} from './editor-builder';
 import {CELL_TYPES} from '../../types/cellTypes';
 import {TableCell} from '../../services/TableCell';
+import {MedUpdateEvent} from '../../types/MedUpdateEvent';
 import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
-import {MedUpdateColumnEvent} from '../../types/MedUpdateColumnEvent';
 
 const DEFAULT_VISIBLE_EDITOR_HANDLER = () => true;
 
@@ -52,8 +52,8 @@ export class TableCellComponent<ItemType extends Record<string, any>> implements
     return this._item as ItemType;
   }
 
-  @Output() update = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
-  @Output() onFocus = new EventEmitter<MedUpdateColumnEvent<ItemType>>();
+  @Output() update = new EventEmitter<MedUpdateEvent<ItemType>>();
+  @Output() onFocus = new EventEmitter<MedUpdateEvent<ItemType>>();
 
   @ViewChild('contentRef') contentRef!: ElementRef;
 
