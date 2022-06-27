@@ -204,7 +204,7 @@ constructor(private medTableService: MedTableService) {
 
 ## Server side sort, filter and pagination
 
-- [MedUpdateEvent](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedUpdateEvent.ts)
+- [MedUpdateTableEvent](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedUpdateTableEvent.ts)
 - [MedTableSettings](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableSettings.ts)
 
 ```ts
