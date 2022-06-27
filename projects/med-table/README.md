@@ -132,8 +132,14 @@ Table is a template driven component with named templates such as header and bod
 
 Cell editing provides a rapid and user friendly way to manipulate data.
 
+[MedUpdateEvent](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedUpdateEvent.ts)
+
 ```ts
-import { MedTableColumnConfig, FIELD_TYPES, MedUpdateColumnEvent } from 'med-table';
+import { MedTableColumnConfig, FIELD_TYPES, MedUpdateEvent } from 'med-table';
+
+interface DataType {
+    ...
+}
 
 @Component({
   selector: 'app-root',
@@ -142,12 +148,12 @@ import { MedTableColumnConfig, FIELD_TYPES, MedUpdateColumnEvent } from 'med-tab
       [data]="data"
       [loading]="loading"
       [config]="tableConfig"
-      (updateColumn)="onUpdateColumn($event)"
+      (updateRow)="onUpdateRow($event)"
     ></med-table>
   `
 })
 export class AppComponent {
-  data: any[] = [...];
+  data: DataType[] = [...];
   tableConfig: MedTableColumnConfig[] = [
     {
       key: 'key',
@@ -157,7 +163,7 @@ export class AppComponent {
     ...
   ];
 
-  onUpdateColumn(event: MedUpdateColumnEvent<any>) {
+  onUpdateRow(event: MedUpdateEvent<DataType>) {
       ...
   }
 }
@@ -193,6 +199,68 @@ constructor(private medTableService: MedTableService) {
   const data: MedSelectOption<any> = [...];
   const key: string = 'key';
   medTableService.setSelectData(data, key);
+}
+```
+
+## Server side sort, filter and pagination
+
+- [MedUpdateEvent](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedUpdateEvent.ts)
+- [MedTableSettings](https://github.com/Darker-than-Black/med-library/blob/main/projects/med-table/src/lib/types/MedTableSettings.ts)
+
+```ts
+import {
+  MedTableSettings,
+  MedTableService,
+  MedTableColumnConfig, 
+  MedUpdateTableEvent, 
+} from 'med-table';
+
+interface DataType {
+  ...
+}
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <med-table
+      [data]="data"
+      [loading]="loading"
+      [config]="tableConfig"
+      [settings]="tableSettings"
+      (updateTable)="getData($event)"
+    ></med-table>
+  `
+})
+export class AppComponent {
+  constructor(private api: ApiService, private tableService: MedTableService) {
+  }
+
+  loading = false;
+  data: DataType[] = [];
+  tableSettings: MedTableSettings = {
+    lazy: true,
+    rows: 25,
+    totalRecords: 0,
+  };
+  tableConfig: MedTableColumnConfig[] = [
+    {
+      key: 'key',
+      label: 'Label',
+    },
+    ...
+  ];
+
+  getData(event: MedUpdateTableEvent) {
+    this.loading = true;
+
+    this.api.getData(event).subscribe(({data, filterSelectData}) => {
+      this.tableSettings.totalRecords = data.length;
+      this.data = data;
+
+      this.tableSettings.setFilterSelectData(filterSelectData, 'key'); // set data for filter select by key param
+      this.loading = false;
+    });
+  }
 }
 ```
 

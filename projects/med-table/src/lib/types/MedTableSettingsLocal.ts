@@ -16,5 +16,4 @@ export interface MedTableSettingsLocal {
   rowsPerPageOptions: number[]
   showCurrentPageReport: boolean
   currentPageReportTemplate: string
-
 }

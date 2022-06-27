@@ -4,8 +4,9 @@
   [loading]="loading"
   [config]="tableConfig"
   [settings]="tableSettings"
-  (updateColumn)="onUpdateColumn($event)"
-  (onFocusColumn)="onFocusColumn($event)"
+  (updateRow)="onUpdateRow($event)"
+  (focusCell)="onFocusCell($event)"
+  (updateTable)="getData($event)"
 >
   <ng-template mTemplate="toolbar">
     <button

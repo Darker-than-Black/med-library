@@ -1,6 +1,6 @@
 {
   "name": "med-library",
-  "version": "0.3.0",
+  "version": "1.0.1",
   "scripts": {
     "app:start": "ng serve app-example --open",
     "app-table:start": "ng serve med-table-app --open",
