@@ -173,17 +173,19 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
 
   onLazyLoad({first, rows, globalFilter, sortField, sortOrder, filters}: PrimeTableLazyLoadEvent) {
     const formatFilters: any[] = Object.entries(filters)
-      .map(([key, data]) => ([key, data.value]))
-      .filter(([,value]) => isExist(value));
+      .map(([key, data]) => ({key, value: data.value}))
+      .filter(({value}) => isExist(value));
 
-    this.updateTable.emit({
+    const data = {
       rows,
       sortField,
       sortOrder,
       search: globalFilter,
       page: Math.ceil(first / rows),
-      filters: Object.fromEntries(formatFilters),
-    });
+      filters: formatFilters,
+    };
+
+    this.updateTable.emit(Object.fromEntries(Object.entries(data).filter(([, value]) => isExist(value))) as MedUpdateTableEvent);
   }
 
   private addDoubleScrollbar() {
