@@ -176,16 +176,16 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
       .map(([key, data]) => ({key, value: data.value}))
       .filter(({value}) => isExist(value));
 
-    const data = {
+    const data = Object.entries({
       rows,
       sortField,
       sortOrder,
       search: globalFilter,
       page: Math.ceil(first / rows),
       filters: formatFilters,
-    };
+    }).filter(([, value]) => isExist(value));
 
-    this.updateTable.emit(Object.fromEntries(Object.entries(data).filter(([, value]) => isExist(value))) as MedUpdateTableEvent);
+    this.updateTable.emit(Object.fromEntries(data) as MedUpdateTableEvent);
   }
 
   private addDoubleScrollbar() {
