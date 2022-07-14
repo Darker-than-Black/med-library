@@ -66,7 +66,7 @@
           [style.minWidth]="getCellMinWidth(col)"
           [style.maxWidth]="getCellMaxWidth(col)"
           [pSortableColumn]="col.sortKey || col.key || ''"
-          [ngClass]="col.headCellClass || ''"
+          [ngClass]="getHeadColumnClasses(col)"
           class="med-table__th"
         >
           <table-head-cell
@@ -89,7 +89,7 @@
 
       <th
         *ngFor="let col of config"
-        [ngClass]="col.headCellClass || ''"
+        [ngClass]="getHeadColumnClasses(col)"
         class="med-table__th"
       >
         <ng-container *ngIf="col.filterable" [ngSwitch]="col.filterType">
@@ -131,7 +131,7 @@
 
       <td
         *ngFor="let column of config"
-        [ngClass]="column.dataCellClass || ''"
+        [ngClass]="getDataColumnClasses(column, item)"
         class="med-table__td"
       >
         <table-cell

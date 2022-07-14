@@ -71,3 +71,17 @@
     }
   }
 }
+
+.sticky {
+  position: sticky;
+  z-index: 9;
+  background-color: #fff;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+}

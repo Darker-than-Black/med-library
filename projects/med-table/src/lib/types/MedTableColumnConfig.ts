@@ -7,14 +7,16 @@ export interface MedTableColumnConfig {
   key?: string // not important if use property "children"
   label: string
   sortKey?: string
+  hideSortIcon?: boolean
   headCellClass?: string
-  dataCellClass?: string
+  dataCellClass?: (data: any) => string
   defaultValue?: any // default '–'
   minWidth?: string // default: '15rem'
   maxWidth?: string // default: '20rem'
   filterable?: boolean // visible filter
   filterType?: FILTER_TYPES // default: FILTER_TYPES.TEXT
   editorType?: FIELD_TYPES
+  sticky?: 'left' | 'right'
   cellType?: CELL_TYPES // default: CELL_TYPES.TEXT
   linkOptions?: {
     url: string

@@ -140,6 +140,15 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     sheetsGenerator.generate(this.localSettings.exportFileName);
   }
 
+  getHeadColumnClasses({ headCellClass, sticky }: MedTableColumnConfig): string {
+    return `${headCellClass || ''} ${ sticky ? `sticky ${sticky}` : '' }`;
+  }
+
+  getDataColumnClasses({ dataCellClass, sticky }: MedTableColumnConfig, row: ItemType): string {
+    const cellClass = dataCellClass ? dataCellClass(row) : '';
+    return `${cellClass} ${ sticky ? `sticky ${sticky}` : '' }`;
+  }
+
   getHeadRowConfigByLevel(level: number): Array<MedTableColumnConfig | undefined> {
     return getNestedList(this.columnsConfig, CONFIG_KEY_CHILDREN, level);
   }

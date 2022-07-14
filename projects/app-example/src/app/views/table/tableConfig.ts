@@ -15,6 +15,8 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     filterable: true,
     filterType: FILTER_TYPES.SELECT,
     cellType: CELL_TYPES.LINK,
+    hideSortIcon: true,
+    sticky: 'left',
     linkOptions: {
       url: 'urlPath',
       keyParam: 'id',
@@ -32,7 +34,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
         filterType: FILTER_TYPES.CHECKBOX,
         editorType: FIELD_TYPES.CHECKBOX,
         headCellClass: 'bg-blue-100',
-        dataCellClass: 'bg-blue-100',
+        dataCellClass: () => 'bg-blue-100',
       },
       {
         key: 'publisher',
@@ -42,7 +44,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
         editorType: FIELD_TYPES.SELECT,
         filterType: FILTER_TYPES.SELECT,
         headCellClass: 'bg-blue-100',
-        dataCellClass: 'bg-blue-100',
+        dataCellClass: () => 'bg-blue-100',
       },
       {
         key: 'responsible',
@@ -51,7 +53,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
         filterable: true,
         editorType: FIELD_TYPES.SELECT,
         headCellClass: 'bg-blue-100',
-        dataCellClass: 'bg-blue-100',
+        dataCellClass: () => 'bg-blue-100',
       },
     ],
   },
@@ -159,6 +161,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Кількість закупівлі (Додаткова угода)',
     filterable: true,
     editorType: FIELD_TYPES.NUMBER,
+    sticky: 'right',
   },
   {
     key: 'proc_sum',

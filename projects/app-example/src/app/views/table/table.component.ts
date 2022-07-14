@@ -32,7 +32,7 @@ export class TableComponent implements AfterViewInit {
     export: true,
     exportFileName: 'Облік поставок',
     expandedDataKey: 'id',
-    doubleScrollbar: true,
+    doubleScrollbar: false,
 
     lazy: true,
     rows: 10,
