@@ -123,8 +123,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
     }
 
     if (this.localSettings.sticky) {
-      const { tableHeight } = new StickyHeader();
-      this.settings.scrollHeight = tableHeight;
+      this.updateDynamicHeight();
     }
 
     this.cb.detectChanges();
@@ -138,6 +137,17 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   public exportData(data?: ItemType[]): void {
     const sheetsGenerator = new SheetsGenerator(data || this.tableRef.filteredValue || this.data, this.config);
     sheetsGenerator.generate(this.localSettings.exportFileName);
+  }
+
+  /**
+   * Call this method when updated dynamic height of outside content
+   */
+  public updateDynamicHeight(): void {
+    setTimeout(() => {
+      const { tableHeight } = new StickyHeader();
+      console.log('tableHeight', tableHeight);
+      this.settings.scrollHeight = tableHeight;
+    }, 0);
   }
 
   getHeadColumnClasses({ headCellClass, sticky }: MedTableColumnConfig): string {
