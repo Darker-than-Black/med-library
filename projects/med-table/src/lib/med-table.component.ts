@@ -145,7 +145,6 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   public updateDynamicHeight(): void {
     setTimeout(() => {
       const { tableHeight } = new StickyHeader();
-      console.log('tableHeight', tableHeight);
       this.settings.scrollHeight = tableHeight;
     }, 0);
   }

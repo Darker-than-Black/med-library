@@ -7,11 +7,19 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'CPV-код',
     filterable: true,
     editorType: FIELD_TYPES.SELECT,
-    minWidth: '10rem',
+    minWidth: '8rem',
+  },
+  {
+    key: 'manufacturer',
+    sortKey: 'manufacturer.0.name',
+    label: 'Виробник',
+    filterable: true,
+    editorType: FIELD_TYPES.TEXT,
   },
   {
     key: 'winner',
     label: 'Переможець',
+    minWidth: '7rem',
     filterable: true,
     filterType: FILTER_TYPES.SELECT,
     cellType: CELL_TYPES.LINK,
@@ -35,6 +43,7 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
         editorType: FIELD_TYPES.CHECKBOX,
         headCellClass: 'bg-blue-100',
         dataCellClass: () => 'bg-blue-100',
+        minWidth: '5rem',
       },
       {
         key: 'publisher',
@@ -125,12 +134,6 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     ],
   },
   {
-    key: 'manufacturer',
-    label: 'Виробник',
-    filterable: true,
-    editorType: FIELD_TYPES.TEXT,
-  },
-  {
     key: 'manufacturer_country',
     label: 'Країна виробника',
     filterable: true,
@@ -161,7 +164,6 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     label: 'Кількість закупівлі (Додаткова угода)',
     filterable: true,
     editorType: FIELD_TYPES.NUMBER,
-    sticky: 'right',
   },
   {
     key: 'proc_sum',

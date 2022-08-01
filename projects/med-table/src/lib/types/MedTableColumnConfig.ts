@@ -3,8 +3,13 @@ import { FIELD_TYPES, PATTERN_TYPES } from 'med-dynamic-form';
 import { CELL_TYPES } from './cellTypes';
 import { FILTER_TYPES } from './filterTypes';
 
+/**
+ * Should use object dot notation.
+ * Fail: obj.el[1].name
+ * Success: obj.el.1.name
+ */
 export interface MedTableColumnConfig {
-  key?: string // not important if use property "children"
+  key?: string // Not important when use property "children"
   label: string
   sortKey?: string
   hideSortIcon?: boolean

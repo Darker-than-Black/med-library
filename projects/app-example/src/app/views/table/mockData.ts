@@ -164,7 +164,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "АБАЛАМ",
     "tender_id": "UA-2020-09-03-000920-b",
@@ -240,7 +244,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "ГЕТЕРО ЛАБЗ ЛІМІТЕД",
+    "manufacturer": [
+      {
+        "name": "ГЕТЕРО ЛАБЗ ЛІМІТЕД"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ДАНАВІР",
     "tender_id": "UA-2020-09-02-011796-b",
@@ -506,7 +514,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "РИТОВІР-Л",
     "tender_id": "UA-2020-09-02-011903-b",
@@ -544,7 +556,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-31 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Еббві Дойчленд ГмбХ і Ко.",
+    "manufacturer": [
+      {
+        "name": "Еббві Дойчленд ГмбХ і Ко."
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "АЛУВІА",
     "tender_id": "UA-2020-09-02-011806-b",
@@ -582,7 +598,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Еббві Дойчленд ГмбХ і Ко. КГ",
+    "manufacturer": [
+      {
+        "name": "Еббві Дойчленд ГмбХ і Ко. КГ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "КАЛЕТРА",
     "tender_id": "UA-2020-09-02-011849-b",
@@ -658,7 +678,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "Органон Сентрал Іст ГмбХ",
     "winner_edrpou": "CHE-101.840.285",
-    "manufacturer": "Мерк Шарп і Доум Б.В., Нідерланди; МСД Інтернешнл ГмбХ (філія Сінгапур), Сінгапур; МСД Інтернешнл ГмбХ / МСД Ірландія (Беллідайн), Ірландія",
+    "manufacturer": [
+      {
+        "name": "Мерк Шарп і Доум Б.В., Нідерланди; МСД Інтернешнл ГмбХ (філія Сінгапур), Сінгапур; МСД Інтернешнл ГмбХ / МСД Ірландія (Беллідайн), Ірландія"
+      }
+    ],
     "manufacturer_country": "Нідерланди, Сінгапур, Ірландія",
     "trade_name": "ІСЕНСТРЕСС",
     "tender_id": "UA-2020-09-02-011882-b",
@@ -696,7 +720,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-01 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Еббві Дойчленд ГмбХ і Ко. КГ",
+    "manufacturer": [
+      {
+        "name": "Еббві Дойчленд ГмбХ і Ко. КГ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "НОРВІР",
     "tender_id": "UA-2020-09-02-011808-b",
@@ -734,7 +762,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ЕМТРІЦИТАБІН ТЕНОФОВІР ",
     "tender_id": "UA-2020-09-02-011883-b",
@@ -886,7 +918,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-30 00:00:00",
     "winner": "M.Biotech Limited",
     "winner_edrpou": "5918834",
-    "manufacturer": "Майлан Лабораторіз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Майлан Лабораторіз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "АКРИПТЕГА ДОЛУТЕГРАВІР",
     "tender_id": "UA-2020-09-02-011929-b",
@@ -924,7 +960,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-30 00:00:00",
     "winner": "M.Biotech Limited",
     "winner_edrpou": "5918834",
-    "manufacturer": "Майлан Лабораторіз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Майлан Лабораторіз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ДОЛУТЕГРАВІР",
     "tender_id": "UA-2020-09-02-011935-b",
@@ -1076,7 +1116,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-05 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія",
     "trade_name": "НовоЕйт 250 МО",
     "tender_id": "UA-2020-07-28-002957-c",
@@ -1114,7 +1158,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НовоЕйт 500 МО",
     "tender_id": "UA-2020-07-28-009209-c",
@@ -1152,7 +1200,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НовоЕйт  1000 МО",
     "tender_id": "UA-2020-07-28-009240-c",
@@ -1190,7 +1242,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-05 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія",
     "trade_name": "НовоЕйт",
     "tender_id": "UA-2020-07-28-007061-c",
@@ -1228,7 +1284,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-002319-c",
@@ -1266,7 +1322,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-15 00:00:00",
     "winner": "Octapharma AG",
     "winner_edrpou": "CHE-108.025.582",
-    "manufacturer": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма",
+    "manufacturer": [
+      {
+        "name": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма"
+      }
+    ],
     "manufacturer_country": "Швеція, Австрія, Франція",
     "trade_name": "Октанат",
     "tender_id": "UA-2020-07-28-009473-c",
@@ -1304,7 +1364,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-02-25 00:00:00",
     "winner": "KEDRION S.P.A.",
     "winner_edrpou": "01779530466",
-    "manufacturer": "КЕДРІОН С.П.А., ",
+    "manufacturer": [
+      {
+        "name": "КЕДРІОН С.П.А., "
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "ЕМОКЛОТ",
     "tender_id": "UA-2020-07-28-009486-c",
@@ -1342,7 +1406,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009497-c",
@@ -1380,7 +1444,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-23 00:00:00",
     "winner": "KEDRION S.P.A.",
     "winner_edrpou": "01779530466",
-    "manufacturer": "КЕДРІОН С.П.А",
+    "manufacturer": [
+      {
+        "name": "КЕДРІОН С.П.А"
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "АІМАФІКС",
     "tender_id": "UA-2020-09-02-011379-b",
@@ -1418,7 +1486,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009519-c",
@@ -1456,7 +1524,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-10 00:00:00",
     "winner": "KEDRION S.P.A.",
     "winner_edrpou": "01779530466",
-    "manufacturer": "КЕДРІОН С.П.А.",
+    "manufacturer": [
+      {
+        "name": "КЕДРІОН С.П.А."
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "АІМАФІКС",
     "tender_id": "UA-2020-09-02-011444-b",
@@ -1494,7 +1566,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009536-c",
@@ -1532,7 +1604,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-003154-c",
@@ -1570,7 +1642,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-23 00:00:00",
     "winner": "KEDRION S.P.A.",
     "winner_edrpou": "01779530466",
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009486-c",
@@ -1608,7 +1680,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія",
     "trade_name": "НОВОСЕВЕН",
     "tender_id": "UA-2020-07-28-009587-c",
@@ -1646,7 +1722,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НОВОСЕВЕН",
     "tender_id": "UA-2020-07-28-009612-c",
@@ -1684,7 +1764,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-004373-c",
@@ -1722,7 +1802,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-003407-c",
@@ -1760,7 +1840,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"РОШ УКРАЇНА\"",
     "winner_edrpou": "36691549",
-    "manufacturer": "Ф.Хоффманн-Ля Рош Лтд",
+    "manufacturer": [
+      {
+        "name": "Ф.Хоффманн-Ля Рош Лтд"
+      }
+    ],
     "manufacturer_country": "",
     "trade_name": "ГЕМЛІБРА 30 мг",
     "tender_id": "UA-2020-09-15-004543-a",
@@ -1798,7 +1882,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"РОШ УКРАЇНА\"",
     "winner_edrpou": "36691549",
-    "manufacturer": "Ф.Хоффманн-Ля Рош Лтд",
+    "manufacturer": [
+      {
+        "name": "Ф.Хоффманн-Ля Рош Лтд"
+      }
+    ],
     "manufacturer_country": "",
     "trade_name": "ГЕМЛІБРА 60 мг",
     "tender_id": "UA-2020-09-15-004543-a",
@@ -1836,7 +1924,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"РОШ УКРАЇНА\"",
     "winner_edrpou": "36691549",
-    "manufacturer": "Ф.Хоффманн-Ля Рош Лтд",
+    "manufacturer": [
+      {
+        "name": "Ф.Хоффманн-Ля Рош Лтд"
+      }
+    ],
     "manufacturer_country": "",
     "trade_name": "ГЕМЛІБРА 150 мг",
     "tender_id": "UA-2020-09-15-004543-a",
@@ -1874,7 +1966,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-02-25 00:00:00",
     "winner": "ТОВ \"СЕВАФАРМ УА\"",
     "winner_edrpou": "34294404",
-    "manufacturer": "Феррінг ГмбХ",
+    "manufacturer": [
+      {
+        "name": "Феррінг ГмбХ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "ОКТОСТИМ",
     "tender_id": "UA-2020-07-28-001886-c",
@@ -1912,7 +2008,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-001777-c",
@@ -1950,7 +2046,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-001176-c",
@@ -1988,7 +2084,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-31-006064-c",
@@ -2026,7 +2122,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007125-c",
@@ -2064,7 +2160,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-07-05 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Фармацiя i Апджон Компанi,",
+    "manufacturer": [
+      {
+        "name": "Фармацiя i Апджон Компанi,"
+      }
+    ],
     "manufacturer_country": "США\t",
     "trade_name": "АТГАМ / ATGAM ЛІМФОЦИТАРНИЙ ІМУНОГЛОБУЛІН, АНТИТИМОЦИТАРНИЙ ГЛОБУЛІН (КІНСЬКИЙ). ",
     "tender_id": "UA-2020-07-30-007693-c",
@@ -2102,7 +2202,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007758-c",
@@ -2140,7 +2240,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-31-005940-c",
@@ -2178,7 +2278,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007831-c",
@@ -2520,7 +2620,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"ФАРМЕКС ГРУП\"",
     "winner_edrpou": "37002375",
-    "manufacturer": "ТОВ \"ФАРМЕКС Груп\"",
+    "manufacturer": [
+      {
+        "name": "ТОВ \"ФАРМЕКС Груп\""
+      }
+    ],
     "manufacturer_country": "Україна",
     "trade_name": "Ганцикловір-Фармекс",
     "tender_id": "UA-2020-06-15-007763-c",
@@ -2558,7 +2662,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ГЕМТЕРО",
     "tender_id": "UA-2020-06-15-007786-c",
@@ -2596,7 +2704,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-19 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Пфайзер Менюфекчуринг Бельгія НВ",
+    "manufacturer": [
+      {
+        "name": "Пфайзер Менюфекчуринг Бельгія НВ"
+      }
+    ],
     "manufacturer_country": "Бельгія",
     "trade_name": "СОЛУ-КОРТЕФ",
     "tender_id": "UA-2020-07-30-006853-c",
@@ -2634,7 +2746,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007321-c",
@@ -2672,7 +2784,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007135-c",
@@ -2710,7 +2822,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007925-c",
@@ -3014,7 +3126,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-01 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Актавіс, С.п.А.",
+    "manufacturer": [
+      {
+        "name": "Актавіс, С.п.А."
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "Заведос",
     "tender_id": "UA-2020-06-15-007812-c",
@@ -3052,7 +3168,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"Бізнес Центр Фармація\"",
     "winner_edrpou": "30177378",
-    "manufacturer": "Ф. Хоффманн-Ля Рош Лтд (первинне та вторинне пакування, випробування контролю якості, випуск серії), Швейцарія Кетелент Джермані Ебербах ГмбХ (виробництво нерозфасованої продукції, випробування контролю якості), Німеччина",
+    "manufacturer": [
+      {
+        "name": "Ф. Хоффманн-Ля Рош Лтд (первинне та вторинне пакування, випробування контролю якості, випуск серії), Швейцарія Кетелент Джермані Ебербах ГмбХ (виробництво нерозфасованої продукції, випробування контролю якості), Німеччина"
+      }
+    ],
     "manufacturer_country": "Швейцарія, Німеччина",
     "trade_name": "РОАККУТАН",
     "tender_id": "UA-2020-06-15-007832-c",
@@ -3090,7 +3210,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"Бізнес Центр Фармація\"",
     "winner_edrpou": "30177378",
-    "manufacturer": "Ф. Хоффманн-Ля Рош Лтд (первинне та вторинне пакування, випробування контролю якості, випуск серії), Швейцарія Кетелент Джермані Ебербах ГмбХ (виробництво нерозфасованої продукції, випробування контролю якості), Німеччина",
+    "manufacturer": [
+      {
+        "name": "Ф. Хоффманн-Ля Рош Лтд (первинне та вторинне пакування, випробування контролю якості, випуск серії), Швейцарія Кетелент Джермані Ебербах ГмбХ (виробництво нерозфасованої продукції, випробування контролю якості), Німеччина"
+      }
+    ],
     "manufacturer_country": "Швейцарія, Німеччина",
     "trade_name": "РОАККУТАН",
     "tender_id": "UA-2020-06-15-007832-c",
@@ -3128,7 +3252,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ІМАТЕРО",
     "tender_id": "UA-2020-06-15-007714-c",
@@ -3166,7 +3294,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-15 00:00:00",
     "winner": "LLC \"MAGNIPHARMA\"",
     "winner_edrpou": "50003715491",
-    "manufacturer": "Гетеро Лабз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Гетеро Лабз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "ІМАТЕРО",
     "tender_id": "UA-2020-06-15-007714-c",
@@ -3204,7 +3336,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "MISTRAL CAPITAL MANAGEMENT LIMITED",
     "winner_edrpou": "06686834",
-    "manufacturer": "АЦС ДОБФАР С.П.А.",
+    "manufacturer": [
+      {
+        "name": "АЦС ДОБФАР С.П.А."
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "Іміпенем/Циластатин-Віста",
     "tender_id": "UA-2020-06-15-007745-c",
@@ -3242,7 +3378,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БІОФАРМА ПЛАЗМА\"",
     "winner_edrpou": "39000694",
-    "manufacturer": "ТОВ \"ФЗ \"Біофарма\"",
+    "manufacturer": [
+      {
+        "name": "ТОВ \"ФЗ \"Біофарма\""
+      }
+    ],
     "manufacturer_country": "Україна",
     "trade_name": "БІОВЕН",
     "tender_id": "UA-2020-07-30-006861-c",
@@ -3318,7 +3458,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008013-c",
@@ -3432,7 +3572,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007847-c",
@@ -3470,7 +3610,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "Органон Сентрал Іст ГмбХ",
     "winner_edrpou": "CHE-101.840.285",
-    "manufacturer": "Мерк Шарп і Доум Б.В., Нідерланди; Лабораторії Мерк Шарп і Доум Шибре, Франція",
+    "manufacturer": [
+      {
+        "name": "Мерк Шарп і Доум Б.В., Нідерланди; Лабораторії Мерк Шарп і Доум Шибре, Франція"
+      }
+    ],
     "manufacturer_country": "Нідерланди, Франція",
     "trade_name": "КАНСИДАЗ",
     "tender_id": "UA-2020-07-31-006161-c",
@@ -3508,7 +3652,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ Тева Україна",
     "winner_edrpou": "34770471",
-    "manufacturer": "Кселія Фармасьютікелз АпС, Пен Фармасьютікал Сервісез Лімітед, Кселія Фармасьютікелз Лтд.",
+    "manufacturer": [
+      {
+        "name": "Кселія Фармасьютікелз АпС, Пен Фармасьютікал Сервісез Лімітед, Кселія Фармасьютікелз Лтд."
+      }
+    ],
     "manufacturer_country": "Данія, Велика Британія, Угорщина",
     "trade_name": "Коломіцин Ін’єкція ",
     "tender_id": "UA-2020-07-30-007962-c",
@@ -3546,7 +3694,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007006-c",
@@ -3584,7 +3732,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-31 00:00:00",
     "winner": "ТОВ \"АПТЕКИ \"ФАРМАСІТІ\"",
     "winner_edrpou": "38272248",
-    "manufacturer": "С.К. Інфомед Флюідз С.р.л. (виробництво \"in bulk\", первинне та вторинне пакування, третинне пакування), Румунія КРКА, д.д., Ново место (третинне пакування, контроль серії та випуск серії), Словенія",
+    "manufacturer": [
+      {
+        "name": "С.К. Інфомед Флюідз С.р.л. (виробництво \"in bulk\", первинне та вторинне пакування, третинне пакування), Румунія КРКА, д.д., Ново место (третинне пакування, контроль серії та випуск серії), Словенія"
+      }
+    ],
     "manufacturer_country": "Словенія",
     "trade_name": "ЛІНЕЗОЛІД КРКА",
     "tender_id": "UA-2020-08-07-001127-a",
@@ -3622,7 +3774,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Фрезеніус Кабі Норге АС",
+    "manufacturer": [
+      {
+        "name": "Фрезеніус Кабі Норге АС"
+      }
+    ],
     "manufacturer_country": "Норвегія",
     "trade_name": "Зивокс",
     "tender_id": "UA-2020-06-15-007613-c",
@@ -3660,7 +3816,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-30 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Фрезеніус Кабі Норге АС",
+    "manufacturer": [
+      {
+        "name": "Фрезеніус Кабі Норге АС"
+      }
+    ],
     "manufacturer_country": "Норвегія",
     "trade_name": "Зивокс",
     "tender_id": "UA-2020-07-30-007126-c",
@@ -3698,7 +3858,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-10-27-000160-a",
@@ -3736,7 +3896,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007353-c",
@@ -3774,7 +3934,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007471-c",
@@ -3812,7 +3972,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "MISTRAL CAPITAL MANAGEMENT LIMITED",
     "winner_edrpou": "06686834",
-    "manufacturer": "АЦЦ ДОБФАР С.П.А.",
+    "manufacturer": [
+      {
+        "name": "АЦЦ ДОБФАР С.П.А."
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "МЕРОБАК",
     "tender_id": "UA-2020-06-15-007669-c",
@@ -3888,7 +4052,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "СПІЛЬНЕ УКРАЇНСЬКО-ЕСТОНСЬКЕ ПІДПРИЄМСТВО У ФОРМІ ТОВАРИСТВА З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"ОПТІМА-ФАРМ, ЛТД\"",
     "winner_edrpou": "21642228",
-    "manufacturer": "Пфайзер Менюфекчурин Бельгія НВ,  ЕсДжіЕс Лаб Саймон СА",
+    "manufacturer": [
+      {
+        "name": "Пфайзер Менюфекчурин Бельгія НВ,  ЕсДжіЕс Лаб Саймон СА"
+      }
+    ],
     "manufacturer_country": "Бельгія",
     "trade_name": "Солу–Медрол ",
     "tender_id": "UA-2020-07-30-007574-c",
@@ -3926,7 +4094,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "Оріон Корпорейшн",
+    "manufacturer": [
+      {
+        "name": "Оріон Корпорейшн"
+      }
+    ],
     "manufacturer_country": "Фінляндія",
     "trade_name": "Метотрексат Оріон",
     "tender_id": "UA-2020-06-15-007768-c",
@@ -4002,7 +4174,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008019-c",
@@ -4040,7 +4212,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008073-c",
@@ -4078,7 +4250,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008113-c",
@@ -4154,7 +4326,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008171-c",
@@ -4192,7 +4364,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008194-c",
@@ -4230,7 +4402,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008181-c",
@@ -4268,7 +4440,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008184-c",
@@ -4306,7 +4478,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008165-c",
@@ -4344,7 +4516,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-31-005451-c",
@@ -4382,7 +4554,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"ФАРМАЦЕВТИЧНА КОМПАНІЯ \"ЗДОРОВ'Я\"",
     "winner_edrpou": "31437750",
-    "manufacturer": "ТОВ \"ФАРМАЦЕВТИЧНА КОМПАНІЯ \"ЗДОРО'Я\"",
+    "manufacturer": [
+      {
+        "name": "ТОВ \"ФАРМАЦЕВТИЧНА КОМПАНІЯ \"ЗДОРО'Я\""
+      }
+    ],
     "manufacturer_country": "Україна",
     "trade_name": "Емесетрон-Здоров'я",
     "tender_id": "UA-2020-06-15-007600-c",
@@ -4420,7 +4596,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-31-005913-c",
@@ -4458,7 +4634,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"ФАРМАЦЕВТИЧНИЙ ЗАВОД \"БІОФАРМА\"",
     "winner_edrpou": "39071152",
-    "manufacturer": "ТОВ \"ФЗ \"Біофарма\"",
+    "manufacturer": [
+      {
+        "name": "ТОВ \"ФЗ \"Біофарма\""
+      }
+    ],
     "manufacturer_country": "Україна",
     "trade_name": "ПЕГ-ФІЛСТИМ",
     "tender_id": "UA-2020-06-15-007842-c",
@@ -4534,7 +4714,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "Органон Сентрал Іст ГмбХ",
     "winner_edrpou": "CHE-101.840.285",
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008138-c",
@@ -4572,7 +4752,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008107-c",
@@ -4610,7 +4790,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-06-15-007841-c",
@@ -4648,7 +4828,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-31 00:00:00",
     "winner": "Pfizer Export B.V.",
     "winner_edrpou": "34895183",
-    "manufacturer": "Пфайзер Менюфекчуринг Бельгія НВ",
+    "manufacturer": [
+      {
+        "name": "Пфайзер Менюфекчуринг Бельгія НВ"
+      }
+    ],
     "manufacturer_country": "Бельгія",
     "trade_name": "",
     "tender_id": "UA-2020-06-15-007836-c",
@@ -4686,7 +4870,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-02-03 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Каділа Фармасьютикалз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Каділа Фармасьютикалз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "Файтобакт",
     "tender_id": "UA-2020-06-15-007727-c",
@@ -4724,7 +4912,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "СПІЛЬНЕ УКРАЇНСЬКО-ЕСТОНСЬКЕ ПІДПРИЄМСТВО У ФОРМІ ТОВАРИСТВА З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ \"ОПТІМА-ФАРМ, ЛТД\"",
     "winner_edrpou": "21642228",
-    "manufacturer": "Патеон Італія С.п.А.",
+    "manufacturer": [
+      {
+        "name": "Патеон Італія С.п.А."
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "ТИГАЦИЛ ",
     "tender_id": "UA-2020-07-30-007995-c",
@@ -4838,7 +5030,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007394-c",
@@ -4914,7 +5106,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "Органон Сентрал Іст ГмбХ",
     "winner_edrpou": "CHE-101.840.285",
-    "manufacturer": "Бакстер Онколоджі ГмбХ, Німеччина; Шерінг-Плау Лабо Н.В., Бельгія",
+    "manufacturer": [
+      {
+        "name": "Бакстер Онколоджі ГмбХ, Німеччина; Шерінг-Плау Лабо Н.В., Бельгія"
+      }
+    ],
     "manufacturer_country": "Німеччина, Бельгія",
     "trade_name": "ТЕМОДАЛ",
     "tender_id": "UA-2020-07-30-007629-c",
@@ -4952,7 +5148,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-02-10 00:00:00",
     "winner": "ТОВ \"Людмила-Фарм\"",
     "winner_edrpou": "24741764",
-    "manufacturer": "ЕйГен Фарма Лімітед",
+    "manufacturer": [
+      {
+        "name": "ЕйГен Фарма Лімітед"
+      }
+    ],
     "manufacturer_country": "Ірландія",
     "trade_name": "Гліозомід",
     "tender_id": "UA-2020-06-15-007693-c",
@@ -4990,7 +5190,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-01-20 00:00:00",
     "winner": "Alvogen Pharma Trading Europe EOOD",
     "winner_edrpou": "201400639",
-    "manufacturer": "ЕйГен Фарма Лімітед, Мілмаунт Хелекеа Лтд.",
+    "manufacturer": [
+      {
+        "name": "ЕйГен Фарма Лімітед, Мілмаунт Хелекеа Лтд."
+      }
+    ],
     "manufacturer_country": "Ірландія",
     "trade_name": "Гліозомід",
     "tender_id": "UA-2020-06-15-007772-c",
@@ -5028,7 +5232,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007793-c",
@@ -5104,7 +5308,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007860-c",
@@ -5142,7 +5346,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-008041-c",
@@ -5256,7 +5460,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-30 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "д-р Редді\"с Лабораторіс ЛТД",
+    "manufacturer": [
+      {
+        "name": "д-р Редді\"с Лабораторіс ЛТД"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "Грастим",
     "tender_id": "UA-2020-06-15-007603-c",
@@ -5294,7 +5502,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "MISTRAL CAPITAL MANAGEMENT LIMITED",
     "winner_edrpou": "06686834",
-    "manufacturer": "Сіндан Фарма С.Р.Л.",
+    "manufacturer": [
+      {
+        "name": "Сіндан Фарма С.Р.Л."
+      }
+    ],
     "manufacturer_country": "Румунія",
     "trade_name": "ФЛУДАРАБІН-ВІСТА",
     "tender_id": "UA-2020-06-15-007811-c",
@@ -5332,7 +5544,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ПРИВАТНЕ АКЦІОНЕРНЕ ТОВАРИСТВО \"ІНФУЗІЯ\"",
     "winner_edrpou": "31287944",
-    "manufacturer": "ПАТ \"Інфузія\"",
+    "manufacturer": [
+      {
+        "name": "ПАТ \"Інфузія\""
+      }
+    ],
     "manufacturer_country": "Україна",
     "trade_name": "Флуконазол",
     "tender_id": "UA-2020-06-15-007785-c",
@@ -5370,7 +5586,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007994-c",
@@ -5408,7 +5624,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-05 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Каділа Фармасьютикалз Лімітед",
+    "manufacturer": [
+      {
+        "name": "Каділа Фармасьютикалз Лімітед"
+      }
+    ],
     "manufacturer_country": "Індія",
     "trade_name": "Цефікад",
     "tender_id": "UA-2020-06-15-007852-c",
@@ -5446,7 +5666,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-19 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Делфарм Хюнінг САС.",
+    "manufacturer": [
+      {
+        "name": "Делфарм Хюнінг САС."
+      }
+    ],
     "manufacturer_country": "Франція",
     "trade_name": "САНДІМУН НЕОРАЛ",
     "tender_id": "UA-2020-07-30-007909-c",
@@ -5484,7 +5708,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-06-18 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Новартіс Фарма Штейн АГ",
+    "manufacturer": [
+      {
+        "name": "Новартіс Фарма Штейн АГ"
+      }
+    ],
     "manufacturer_country": "Швейцарія",
     "trade_name": "САНДІМУН",
     "tender_id": "UA-2020-07-30-006288-c",
@@ -5636,7 +5864,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-006690-c",
@@ -5674,7 +5902,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007456-c",
@@ -5712,7 +5940,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-30-007152-c",
@@ -5788,7 +6016,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-08-01 00:00:00",
     "winner": "D.D. Сандоз Фармасьютікалз",
     "winner_edrpou": "2159287000",
-    "manufacturer": "ЕБЕБЕ  Фарма  Гес.м.б.Х. Нфг.КГ Лабор  ЛС СЕ & Ко. КГ МПЛ Мікробіологішес Прюфлабор ГмбХ ",
+    "manufacturer": [
+      {
+        "name": "ЕБЕБЕ  Фарма  Гес.м.б.Х. Нфг.КГ Лабор  ЛС СЕ & Ко. КГ МПЛ Мікробіологішес Прюфлабор ГмбХ "
+      }
+    ],
     "manufacturer_country": "Австрія/Німеччина/Австрія",
     "trade_name": "АЛЕКСАН",
     "tender_id": "UA-2020-07-30-007937-c",
@@ -5826,7 +6058,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-07-06 00:00:00",
     "winner": "D.D. Сандоз Фармасьютікалз",
     "winner_edrpou": "2159287000",
-    "manufacturer": "ЕБЕВЕ  Фарма  Гес.м.б.Х. Нфг.КГ Лабор  ЛС СЕ & Ко. КГ МПЛ Мікробіологішес Прюфлабор ГмбХ ",
+    "manufacturer": [
+      {
+        "name": "ЕБЕВЕ  Фарма  Гес.м.б.Х. Нфг.КГ Лабор  ЛС СЕ & Ко. КГ МПЛ Мікробіологішес Прюфлабор ГмбХ "
+      }
+    ],
     "manufacturer_country": "Австрія/Німеччина/Австрія",
     "trade_name": "АЛЕКСАН",
     "tender_id": "UA-2020-07-30-007970-c",
@@ -5864,7 +6100,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-06 00:00:00",
     "winner": "ТОВ \"ЛЕДУМ\"",
     "winner_edrpou": "21869802",
-    "manufacturer": "Гуанчжоу Даджі Медікал Сайнс енд Технолоджі Ко. Лтд. ",
+    "manufacturer": [
+      {
+        "name": "Гуанчжоу Даджі Медікал Сайнс енд Технолоджі Ко. Лтд. "
+      }
+    ],
     "manufacturer_country": "КНР-Китайська Народна Республіка",
     "trade_name": "Пристрій для видалення лейкоцитів із компонентів крові людини одноразового використання стерильний приліжковий  ",
     "tender_id": "UA-2020-07-29-008811-c",
@@ -5902,7 +6142,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ФОП Петренко Дмитро Миколайович",
     "winner_edrpou": "3031625956",
-    "manufacturer": "Б.Браун Мельзунген АГ",
+    "manufacturer": [
+      {
+        "name": "Б.Браун Мельзунген АГ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "Фільтр інфузійний Intrapur® Plus 0,2 мкм",
     "tender_id": "UA-2020-07-29-008721-c",
@@ -5940,7 +6184,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-008891-c",
@@ -5978,7 +6222,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-008872-c",
@@ -6016,7 +6260,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ ДАЙДЖЕСТ ГРУП",
     "winner_edrpou": "37568587",
-    "manufacturer": "Мако Фарма",
+    "manufacturer": [
+      {
+        "name": "Мако Фарма"
+      }
+    ],
     "manufacturer_country": "Франція",
     "trade_name": "Подвійний контейнер PLASMAFLEX/BLUEFLEX / Подвійний контейнер PLASMAFLEX/BLUEFLEX TERAFLEX MB-PLASMA",
     "tender_id": "UA-2020-07-29-008815-c",
@@ -6054,7 +6302,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ ДАЙДЖЕСТ ГРУП",
     "winner_edrpou": "37568587",
-    "manufacturer": "Мако Фарма",
+    "manufacturer": [
+      {
+        "name": "Мако Фарма"
+      }
+    ],
     "manufacturer_country": "Франція",
     "trade_name": "Контейнер MACO BIOTECH EVA для заморозки 30-140мл",
     "tender_id": "UA-2020-07-29-008708-c",
@@ -6092,7 +6344,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-008664-c",
@@ -6130,7 +6382,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-008895-c",
@@ -6168,7 +6420,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-008996-c",
@@ -6206,7 +6458,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009000-c",
@@ -6244,7 +6496,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009128-c",
@@ -6282,7 +6534,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009193-c",
@@ -6320,7 +6572,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"ІНСТАМЕД\"",
     "winner_edrpou": "42268028",
-    "manufacturer": "Терумо БСТ Інк., ",
+    "manufacturer": [
+      {
+        "name": "Терумо БСТ Інк., "
+      }
+    ],
     "manufacturer_country": "США",
     "trade_name": "Комплект TrimaAccel з LRS камерою для колекції тромбоцитів, плазми та еритроцитів",
     "tender_id": "UA-2020-07-29-008935-c",
@@ -6358,7 +6614,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009104-c",
@@ -6396,7 +6652,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009190-c",
@@ -6434,7 +6690,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "Б.Браун Мельзунген АГ",
+    "manufacturer": [
+      {
+        "name": "Б.Браун Мельзунген АГ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "Набір для катетеризації центральних вен Certofix® Duo Paed F5 S 513",
     "tender_id": "UA-2020-07-29-009180-c",
@@ -6472,7 +6732,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-01-21 00:00:00",
     "winner": "ТОВ \"ВЕСТ ОСТ МЕДІКАЛ\"",
     "winner_edrpou": "38639339",
-    "manufacturer": "Форт Медікал Фертріб ГмбХ Карлсру",
+    "manufacturer": [
+      {
+        "name": "Форт Медікал Фертріб ГмбХ Карлсру"
+      }
+    ],
     "manufacturer_country": "Рюппурер штрасс 1а, корпус Б, Німеччина",
     "trade_name": "Набір для катетеризації центральних вен одноразового застосування, двоходовий катетер 7,0Frx20см, економ 2",
     "tender_id": "UA-2020-07-29-009225-c",
@@ -6510,7 +6774,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009265-c",
@@ -6548,7 +6812,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009411-c",
@@ -6586,7 +6850,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009377-c",
@@ -6624,7 +6888,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ ГРІН КОНСАЛТІНГ",
     "winner_edrpou": "42658331",
-    "manufacturer": "Б.Браун Медікал",
+    "manufacturer": [
+      {
+        "name": "Б.Браун Медікал"
+      }
+    ],
     "manufacturer_country": "Сен-Клу, Франція",
     "trade_name": "Порт-система, що імплантується Celsite® ST305C",
     "tender_id": "UA-2020-07-29-009283-c",
@@ -6662,7 +6930,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ ГРІН КОНСАЛТІНГ",
     "winner_edrpou": "42658331",
-    "manufacturer": "Б.Браун Медікал",
+    "manufacturer": [
+      {
+        "name": "Б.Браун Медікал"
+      }
+    ],
     "manufacturer_country": "Сен-Клу, Франція",
     "trade_name": "Порт-система, що імплантується Celsite® ST305",
     "tender_id": "UA-2020-07-29-009221-c",
@@ -6700,7 +6972,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-29-009106-c",
@@ -6738,7 +7010,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-01-29 00:00:00",
     "winner": "ТОВ \"ОНКОМЕДIКА\"",
     "winner_edrpou": "39014885",
-    "manufacturer": "ТОВ \"ОНКОМЕДІКА\", ISOMED s.a.r.l., ",
+    "manufacturer": [
+      {
+        "name": "ТОВ \"ОНКОМЕДІКА\", ISOMED s.a.r.l., "
+      }
+    ],
     "manufacturer_country": "Україна, Франція",
     "trade_name": "Голка Хубера з подовжувачем  22G (0,7 мм) x 20 мм ONCOMEDICA  LR 2220",
     "tender_id": "UA-2020-07-29-009344-c",
@@ -6814,7 +7090,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-30 00:00:00",
     "winner": "ТОВ \"МЕДІТЕК ФАРМ\"",
     "winner_edrpou": "43268998",
-    "manufacturer": "К'єзі Фармас'ютікелз ГмбХ (випуск серії), Австрія Альфасігма С.п.А. (виробництво bulk, первинне та вторинне пакування, маркування, контроль якості), Італія Г.Л. Фарма ГмбХ (маркування та вторинне пакування), Австрія",
+    "manufacturer": [
+      {
+        "name": "К'єзі Фармас'ютікелз ГмбХ (випуск серії), Австрія Альфасігма С.п.А. (виробництво bulk, первинне та вторинне пакування, маркування, контроль якості), Італія Г.Л. Фарма ГмбХ (маркування та вторинне пакування), Австрія"
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "Пейона",
     "tender_id": "UA-2020-07-23-003656-b",
@@ -6852,7 +7132,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-15 00:00:00",
     "winner": "Octapharma AG",
     "winner_edrpou": "CHE-108.025.582",
-    "manufacturer": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма",
+    "manufacturer": [
+      {
+        "name": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма"
+      }
+    ],
     "manufacturer_country": "Швеція, Австрія, Франція",
     "trade_name": "Октанат",
     "tender_id": "UA-2020-07-28-002378-c",
@@ -6890,7 +7174,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-15 00:00:00",
     "winner": "Octapharma AG",
     "winner_edrpou": "CHE-108.025.582",
-    "manufacturer": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма",
+    "manufacturer": [
+      {
+        "name": "Октафарма АБ, Октафарма Фармацевтика Продуктіонсгес м.б.Х., Октафарма"
+      }
+    ],
     "manufacturer_country": "Швеція, Австрія, Франція",
     "trade_name": "Октанат",
     "tender_id": "UA-2020-07-28-002971-c",
@@ -6928,7 +7216,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НовоЕйт 500 МО",
     "tender_id": "UA-2020-07-28-009356-c",
@@ -6966,7 +7258,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НовоЕйт 1000 МО",
     "tender_id": "UA-2020-07-28-009270-c",
@@ -7004,7 +7300,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "НовоЕйт",
+    "manufacturer": [
+      {
+        "name": "НовоЕйт"
+      }
+    ],
     "manufacturer_country": "Данія",
     "trade_name": "А/т НовоНордіск",
     "tender_id": "UA-2020-07-28-007489-c",
@@ -7042,7 +7342,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-05-28 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія",
     "trade_name": "НовоЕйт",
     "tender_id": "UA-2020-07-28-003231-c",
@@ -7080,7 +7384,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-05 00:00:00",
     "winner": "ТОВ \"Ново Нордіск Україна\"",
     "winner_edrpou": "41467446",
-    "manufacturer": "А/Т Ново Нордіск",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НовоЕйт 3000 МО ",
     "tender_id": "UA-2020-07-28-004086-c",
@@ -7118,7 +7426,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-03-23 00:00:00",
     "winner": "KEDRION S.P.A.",
     "winner_edrpou": "01779530466",
-    "manufacturer": "КЕДРІОН С.П.А",
+    "manufacturer": [
+      {
+        "name": "КЕДРІОН С.П.А"
+      }
+    ],
     "manufacturer_country": "Італія",
     "trade_name": "АІМАФІКС",
     "tender_id": "UA-2020-09-02-011706-b",
@@ -7156,7 +7468,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-04-30 00:00:00",
     "winner": "Octapharma AG",
     "winner_edrpou": "CHE-108.025.582",
-    "manufacturer": "Октафарма Фармацевтика Продуктіонсгес м.б.Х, Октафарма,",
+    "manufacturer": [
+      {
+        "name": "Октафарма Фармацевтика Продуктіонсгес м.б.Х, Октафарма,"
+      }
+    ],
     "manufacturer_country": "Австрія, Франція",
     "trade_name": "Октанін Ф 1000",
     "tender_id": "UA-2020-09-02-011590-b",
@@ -7194,7 +7510,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009254-c",
@@ -7232,7 +7548,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-009423-c",
@@ -7270,7 +7586,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-004218-c",
@@ -7308,7 +7624,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-004632-c",
@@ -7346,7 +7662,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-005297-c",
@@ -7384,7 +7700,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-004007-c",
@@ -7422,7 +7738,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "А/Т Ново Нордіск,",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск,"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НОВОСЕВЕН",
     "tender_id": "UA-2020-07-28-009521-c",
@@ -7460,7 +7780,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2020-12-31 00:00:00",
     "winner": "ТОВ \"БаДМ\"",
     "winner_edrpou": "31816235",
-    "manufacturer": "А/Т Ново Нордіск,",
+    "manufacturer": [
+      {
+        "name": "А/Т Ново Нордіск,"
+      }
+    ],
     "manufacturer_country": "Данія ",
     "trade_name": "НОВОСЕВЕН",
     "tender_id": "UA-2020-07-28-009453-c",
@@ -7498,7 +7822,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-004373-c",
@@ -7536,7 +7860,7 @@ export const MOCK_DATA: any[] = [
     "delivery_date": null,
     "winner": null,
     "winner_edrpou": null,
-    "manufacturer": "",
+    "manufacturer": null,
     "manufacturer_country": "",
     "trade_name": "",
     "tender_id": "UA-2020-07-28-003407-c",
@@ -7574,7 +7898,11 @@ export const MOCK_DATA: any[] = [
     "delivery_date": "2021-02-25 00:00:00",
     "winner": "ТОВ \"СЕВАФАРМ УА\"",
     "winner_edrpou": "34294404",
-    "manufacturer": "Феррінг ГмбХ",
+    "manufacturer": [
+      {
+        "name": "Феррінг ГмбХ"
+      }
+    ],
     "manufacturer_country": "Німеччина",
     "trade_name": "ОКТОСТИМ",
     "tender_id": "UA-2020-07-28-001886-c",

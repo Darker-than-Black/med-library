@@ -26,7 +26,7 @@ export class TableComponent implements AfterViewInit {
   }
 
   data: any[] = [];
-  loading: boolean = true;
+  loading: boolean = false;
   readonly tableConfig = TABLE_CONFIG;
   readonly tableSettings: MedTableSettings = {
     export: true,
