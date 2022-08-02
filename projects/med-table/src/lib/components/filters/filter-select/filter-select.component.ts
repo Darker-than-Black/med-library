@@ -3,7 +3,7 @@ import { Component, Input, ViewChild, ElementRef, ChangeDetectorRef, AfterViewIn
 
 import { MedTableService } from '../../../services/med-table.service';
 import { MedTableSettingsLocal } from '../../../types/MedTableSettingsLocal';
-import { FilterDataHandlerInterface } from '../../../services/FilterDataHandler/FilterDataHandler';
+import { IFilterDataHandler } from '../../../services/FilterDataHandler/FilterDataHandler';
 
 @Component({
   selector: 'filter-select',
@@ -15,7 +15,7 @@ export class FilterSelectComponent<T> implements AfterViewInit {
 
   @Input() key!: string;
   @Input() settings!: MedTableSettingsLocal;
-  @Input() filterDataHandler!: FilterDataHandlerInterface<T>;
+  @Input() filterDataHandler!: IFilterDataHandler<T>;
 
   @ViewChild('selectRef') selectRef!: ElementRef;
 

@@ -17,21 +17,6 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     editorType: FIELD_TYPES.TEXT,
   },
   {
-    key: 'winner',
-    label: 'Переможець',
-    minWidth: '7rem',
-    filterable: true,
-    filterType: FILTER_TYPES.SELECT,
-    cellType: CELL_TYPES.LINK,
-    hideSortIcon: true,
-    sticky: 'left',
-    linkOptions: {
-      url: 'urlPath',
-      keyParam: 'id',
-      target: '_blank',
-    },
-  },
-  {
     label: 'Group columns',
     headCellClass: 'bg-blue-100 text-center',
     children: [
@@ -67,10 +52,19 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
     ],
   },
   {
-    key: 'winner_edrpou',
-    label: 'ЄДРПОУ переможця',
+    key: 'winner',
+    label: 'Переможець',
+    minWidth: '7rem',
     filterable: true,
-    editorType: FIELD_TYPES.TEXT,
+    filterType: FILTER_TYPES.SELECT,
+    cellType: CELL_TYPES.LINK,
+    hideSortIcon: true,
+    sticky: 'left',
+    linkOptions: {
+      url: 'urlPath',
+      keyParam: 'id',
+      target: '_blank',
+    },
   },
   {
     label: 'Group columns repeat',
@@ -132,6 +126,12 @@ export const TABLE_CONFIG: MedTableColumnConfig[] = [
         ],
       },
     ],
+  },
+  {
+    key: 'winner_edrpou',
+    label: 'ЄДРПОУ переможця',
+    filterable: true,
+    editorType: FIELD_TYPES.TEXT,
   },
   {
     key: 'manufacturer_country',

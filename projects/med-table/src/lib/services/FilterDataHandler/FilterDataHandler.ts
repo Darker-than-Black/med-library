@@ -4,13 +4,13 @@ import {FILTER_TYPES} from '../../types/filterTypes';
 import {PrimeFilter, PrimeFilters} from '../../types/PrimeFilter';
 import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
 
-export interface FilterDataHandlerInterface<T extends Record<string, any>> {
+export interface IFilterDataHandler<T extends Record<string, any>> {
   setData(data: T[]): void
   setConfig(config: CellDataConfigLocal[]): void
   filter(filters: PrimeFilters, exitKey?: string): T[]
 }
 
-export class FilterDataHandler<T extends Record<string, any>> implements FilterDataHandlerInterface<T> {
+export class FilterDataHandler<T extends Record<string, any>> implements IFilterDataHandler<T> {
   private _data: T[] = [];
   private _config: CellDataConfigLocal[] = [];
 

@@ -5,7 +5,7 @@ import { CellDataConfigLocal } from '../types/CellDataConfigLocal';
 
 const DEFAULT_HANDLER = (data: any) => data;
 
-export interface TableCellInterface<T> {
+export interface ITableCell<T> {
   fieldData: string
   previewData: string
   getValue(data: Record<string, any>, key: string): any
@@ -13,7 +13,7 @@ export interface TableCellInterface<T> {
   setConfig(config: CellDataConfigLocal): void
 }
 
-export class TableCell<T extends Record<string, any>> implements TableCellInterface<T> {
+export class TableCell<T extends Record<string, any>> implements ITableCell<T> {
   private _item: T | {} = {};
   private _config: CellDataConfigLocal = {key: '', label: ''};
 

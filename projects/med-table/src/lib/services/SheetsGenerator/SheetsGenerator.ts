@@ -1,50 +1,55 @@
-import { get } from 'lodash';
 import * as XLSX from 'xlsx-js-style';
-import { CellBuilder } from './CellBuilder';
-import { STRING } from '../../constants/string';
-import {CellDataConfigLocal} from '../../types/CellDataConfigLocal';
+import {  RowBuilder } from './RowBuilder';
+import { WorkSheetSettings } from './WorkSheetSettings';
+import { CellConfigsFactory } from '../CellConfigsFactory';
+import { CellDataConfigLocal } from '../../types/CellDataConfigLocal';
+import { MedTableColumnConfig } from '../../types/MedTableColumnConfig';
+import { ITableHeaderBuilder, TableHeaderBuilder } from './TableHeaderBuilder';
 
-const DEFAULT_VIEW_HANDLER = (data: any) => data;
-
-export interface SheetsGeneratorInterface {
+export interface ISheetsGenerator {
   generate(fileName?: string): void
 }
 
-export class SheetsGenerator implements SheetsGeneratorInterface {
-  private readonly config: CellDataConfigLocal[];
+export class SheetsGenerator<RowValueType extends Record<string, any>> implements ISheetsGenerator {
+  private readonly headerBuilder: ITableHeaderBuilder;
+  private readonly rowBuilder =  new RowBuilder();
+  private readonly dataRowConfig: CellDataConfigLocal[];
+  private readonly settings = new WorkSheetSettings();
 
-  constructor(private data: Record<string, any>[], config: CellDataConfigLocal[]) {
-    this.config = config.filter(({ hideExport }) => !hideExport);
-  }
+  constructor(private data: RowValueType[], config: MedTableColumnConfig[]) {
+    const filteredColumns: MedTableColumnConfig[] = this.hidePrivateFields(config);
 
-  private readonly cellBuilder = new CellBuilder();
-
-  private get getTableHeader(): XLSX.CellObject[] {
-    return this.config.map(({label}) =>
-      this.cellBuilder.createTextCell(label, {bold: true}),
-    );
-  }
-
-  private get createTableData(): XLSX.CellObject[][] {
-    return this.data.map(row => this.createTableRow(row));
+    this.headerBuilder = new TableHeaderBuilder(this.settings, filteredColumns);
+    this.dataRowConfig = new CellConfigsFactory().build(filteredColumns);
   }
 
   generate(fileName: string = 'document'): void {
     const wb = XLSX.utils.book_new();
-    const ws = XLSX.utils.aoa_to_sheet([this.getTableHeader, ...this.createTableData]);
+    const ws = XLSX.utils.aoa_to_sheet([
+      this.headerBuilder.getHeaderRows(),
+      this.createTableData(),
+    ].flat());
+
+    ws['!merges'] = this.settings.merges;
 
     XLSX.utils.book_append_sheet(wb, ws);
     XLSX.writeFile(wb, `${fileName}.xlsx`);
   }
 
-  private createTableRow(row: Record<string, any>): XLSX.CellObject[] {
-    return this.config.map((item) =>
-      this.cellBuilder.createTextCell(this.getField(row, item)));
+  private hidePrivateFields(list: MedTableColumnConfig[]): MedTableColumnConfig[] {
+    return list.filter(({ hideExport }) => !hideExport).map(column => {
+      if (column.children) {
+        return {
+          ...column,
+          children: this.hidePrivateFields(column.children),
+        };
+      }
+
+      return column;
+    });
   }
 
-  private getField<T>(data: Record<string, any>, config: CellDataConfigLocal): T {
-    const { key, defaultValue = STRING.HYPHEN, viewHandler = DEFAULT_VIEW_HANDLER } = config;
-    const field = viewHandler(get(data, key));
-    return field || defaultValue;
+  private createTableData(): XLSX.CellObject[][] {
+    return this.data.map(row => this.rowBuilder.createTableRow(this.dataRowConfig, row));
   }
 }

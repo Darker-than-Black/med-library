@@ -19,6 +19,7 @@ import { PrimeOnFilterEvent } from './types/PrimeFilter';
 import { MedSelectOption } from './types/MedSelectOption';
 import { MedTableSettings } from './types/MedTableSettings';
 import { PrimengConfigMixin } from './mixins/PrimengConfigMixin';
+import { CONFIG_KEY_CHILDREN } from './configs/columnConfigKeys';
 import { MedTableService } from './services/med-table.service';
 import { CellDataConfigLocal } from './types/CellDataConfigLocal';
 import { CellConfigsFactory } from './services/CellConfigsFactory';
@@ -35,10 +36,9 @@ import {
   getNestedList,
   getColspanByKey,
   getMaxDeepKeyLevel,
+  createArrayByNumber,
   getRowspanByLevelAndKey,
 } from './utils';
-
-const CONFIG_KEY_CHILDREN = 'children';
 
 @Component({
   selector: APP_SELECTOR,
@@ -114,7 +114,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   }
 
   get tableHeadLevels(): number[] {
-    return Array(this.maxDeepKeyLevel).fill(0).map((x,i) => i);
+    return createArrayByNumber(this.maxDeepKeyLevel);
   }
 
   ngAfterViewInit() {
@@ -135,7 +135,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   }
 
   public exportData(data?: ItemType[]): void {
-    const sheetsGenerator = new SheetsGenerator(data || this.tableRef.filteredValue || this.data, this.config);
+    const sheetsGenerator = new SheetsGenerator(data || this.tableRef.filteredValue || this.data, this.columnsConfig);
     sheetsGenerator.generate(this.localSettings.exportFileName);
   }
 

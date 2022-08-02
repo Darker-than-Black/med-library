@@ -1,3 +1,7 @@
+import { isEqual } from 'lodash';
+
+export const isExist = (value: any) => value !== undefined && value !== null && value !== '' || Array.isArray(value) && value.length;
+
 export const deepClone = <R>(data: R): R => JSON.parse(JSON.stringify(data));
 
 export const getMaxDeepKeyLevel = <T extends Record<string, any>>(data: T[], key: string, deep: number = 1): number => {
@@ -42,4 +46,29 @@ export const getRowspanByLevelAndKey = <T extends Record<string, any>>(
   return deepLevel - (levelsToDown + currentLevel + emptyRows);
 }
 
-export const isExist = (value: any) => value !== undefined && value !== null && value !== '' || Array.isArray(value) && value.length;
+export const getObjectsByLevel = <T extends Record<string, any>>(list: T[], level: number, childKey: keyof T): T[] => {
+  if (!level) return list;
+
+  const newList: T[] = list.map(el => el[childKey] ? el[childKey] : el).flat() as T[];
+  const hasChildren = newList.some(el => el[childKey]);
+
+  if (hasChildren) {
+    return getObjectsByLevel<T>(newList, --level, childKey);
+  }
+
+  return newList;
+}
+
+export const getColumnIndex = <T extends Record<string, any>>(list: T[], obj: T, childKey: keyof T): number => {
+  const index = list.findIndex((el) => isEqual(obj, el));
+
+  if (index < 0) return 0;
+
+  const elementsBeforeCurrent = list.slice(0, index);
+
+  return elementsBeforeCurrent
+    .map(({ [childKey]: children }) => children ? children.length : 1)
+    .reduce<number>((acc, cur) => acc + cur, 0);
+}
+
+export const createArrayByNumber = (length: number): number[] => Array(length).fill(0).map((x,i) => i);
