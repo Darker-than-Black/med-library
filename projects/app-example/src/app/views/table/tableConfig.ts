@@ -1,5 +1,5 @@
-import {CELL_TYPES, FILTER_TYPES, MedTableColumnConfig} from 'med-table';
 import {FIELD_TYPES, PATTERN_TYPES} from "med-dynamic-form";
+import {CELL_TYPES, FILTER_TYPES, MedTableColumnConfig} from "med-table";
 
 export const TABLE_CONFIG: MedTableColumnConfig[] = [
   {

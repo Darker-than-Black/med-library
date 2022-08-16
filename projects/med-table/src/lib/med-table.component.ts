@@ -1,6 +1,6 @@
 import { get } from 'lodash';
 import { Table } from 'primeng/table';
-import { PrimeNGConfig } from 'primeng/api';
+import {FilterService, PrimeNGConfig} from 'primeng/api';
 import {
   Component,
   Input,
@@ -46,8 +46,8 @@ import {
   styleUrls: ['./med-table.component.scss'],
 })
 export class MedTableComponent<ItemType> extends PrimengConfigMixin implements AfterViewInit {
-  constructor(primeConfig: PrimeNGConfig, private cb: ChangeDetectorRef, private store: MedTableService) {
-    super(primeConfig);
+  constructor(primeConfig: PrimeNGConfig, filterService: FilterService, private cb: ChangeDetectorRef, private store: MedTableService) {
+    super(primeConfig, filterService);
   }
 
   public readonly FILTER_TYPES = FILTER_TYPES;
@@ -91,7 +91,7 @@ export class MedTableComponent<ItemType> extends PrimengConfigMixin implements A
   get filterableFields(): string[] {
     return this.config
       .filter(({filterable}) => filterable)
-      .map(({key}) => key);
+      .map(({key, sortKey}) => sortKey || key);
   }
 
   get localSettings(): MedTableSettingsLocal {

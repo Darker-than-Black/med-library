@@ -45,7 +45,7 @@
         pInputText
         type="text"
         placeholder="Search keyword"
-        (input)="tableRef.filterGlobal($any($event.target).value, 'contains')"
+        (input)="tableRef.filterGlobal($any($event.target).value, 'custom-contains')"
       />
     </span>
   </ng-template>

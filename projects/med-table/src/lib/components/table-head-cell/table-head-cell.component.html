@@ -12,7 +12,10 @@
   ></ng-container>
 </span>
 
-<p-sortIcon *ngIf="config.label && config.key && !config.hideSortIcon" [field]="config.key"></p-sortIcon>
+<p-sortIcon
+  *ngIf="config.label && config.key && !config.hideSortIcon"
+  [field]="config.sortKey || config.key"
+></p-sortIcon>
 
 <ng-template #defaultTemplate>
   {{ config.label }}
