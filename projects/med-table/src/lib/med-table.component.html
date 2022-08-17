@@ -1,20 +1,8 @@
-<p-toolbar *ngIf="toolbarTemplate || localSettings.export">
-  <div class="flex align-items-center justify-content-start">
-    <button
-      *ngIf="localSettings.export"
-      pButton
-      pRipple
-      type="button"
-      icon="pi pi-file-excel"
-      class="p-button-rounded p-button-success mr-4"
-      (click)="exportData()"
-    ></button>
-
-    <ng-container *ngTemplateOutlet="toolbarTemplate || null"></ng-container>
-  </div>
-</p-toolbar>
-
-<div *ngIf="localSettings.doubleScrollbar" #upScrollRef class="med-table__up-scroll">
+<div
+  #upScrollRef
+  *ngIf="localSettings.doubleScrollbar"
+  class="med-table__up-scroll"
+>
   <div #upScrollItemRef class="med-table__up-scroll-item"></div>
 </div>
 
@@ -38,8 +26,8 @@
   (onFilter)="onFilter($event)"
   (onLazyLoad)="onLazyLoad($event)"
 >
-  <ng-template pTemplate="caption">
-    <span class="p-input-icon-left p-ml-auto">
+  <ng-template *ngIf="captionTemplate || localSettings.showGlobalSearchFilter" pTemplate="caption">
+    <span *ngIf="localSettings.showGlobalSearchFilter" class="p-input-icon-left p-ml-auto mr-3">
       <i class="pi pi-search"></i>
       <input
         pInputText
@@ -48,6 +36,8 @@
         (input)="tableRef.filterGlobal($any($event.target).value, 'custom-contains')"
       />
     </span>
+
+    <ng-container *ngTemplateOutlet="captionTemplate || null"></ng-container>
   </ng-template>
 
   <ng-template pTemplate="header">

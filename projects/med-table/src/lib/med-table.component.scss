@@ -8,11 +8,6 @@
     }
 
     @media screen and (min-width: 960px) {
-      // hide search fields for desktop
-      .p-datatable-header {
-        display: none;
-      }
-
       // horizontal scroll
       .p-datatable-wrapper {
         overflow: scroll;

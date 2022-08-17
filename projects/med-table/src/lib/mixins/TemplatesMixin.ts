@@ -13,12 +13,16 @@ export class TemplatesMixin implements AfterContentInit {
   tableDataTemplate?: TemplateRef<any>;
   tableHeadTemplate?: TemplateRef<any>;
   paginatorTemplate?: TemplateRef<any>;
+  captionTemplate?: TemplateRef<any>;
 
   ngAfterContentInit() {
     this.templates.forEach((item) => {
       switch (item.getType()) {
         case 'toolbar':
           this.toolbarTemplate = item.template;
+          break;
+        case 'caption':
+          this.captionTemplate = item.template;
           break;
         case 'tableHead':
           this.tableHeadTemplate = item.template;

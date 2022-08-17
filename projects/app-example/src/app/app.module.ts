@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
+import { MenubarModule } from 'primeng/menubar';
+import { ToolbarModule } from 'primeng/toolbar';
 
 import { MedTableModule } from 'med-table';
 import { MedDynamicFormModule } from 'med-dynamic-form';
@@ -19,11 +20,12 @@ import { FormComponent } from './views/form/form.component';
     FormComponent,
   ],
   imports: [
-    BrowserModule,
     ButtonModule,
-    AppRoutingModule,
+    BrowserModule,
     MenubarModule,
+    ToolbarModule,
     MedTableModule,
+    AppRoutingModule,
     MedDynamicFormModule,
   ],
   providers: [],

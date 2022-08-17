@@ -2,7 +2,6 @@ export interface MedTableSettingsLocal {
   rows: number
   lazy: boolean
   sticky?: boolean
-  export?: boolean
   filterDelay: number
   paginator: boolean
   colMinWidth: string
@@ -15,5 +14,6 @@ export interface MedTableSettingsLocal {
   doubleScrollbar: boolean
   rowsPerPageOptions: number[]
   showCurrentPageReport: boolean
+  showGlobalSearchFilter: boolean
   currentPageReportTemplate: string
 }

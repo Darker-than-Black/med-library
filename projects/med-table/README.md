@@ -71,13 +71,13 @@ imports: [
 
 Table is a template driven component with named templates such as header and body that we've used so far. Templates grant a great level of customization and flexibility where you have total control over the presentation while table handles the features such as paging, sorting, filtering and more. This speeds up development without sacrificing flexibility. Here is the full list of available templates.
 
-| Name           | Description                                          |
-|:---------------|:-----------------------------------------------------|
-| `toolbar`      | Toolbar content upper the table                      |
-| `paginator`    | Custom content for the left section of the paginator |
-| `tableHead`    | Custom content for the table data head cell          |
-| `tableData`    | Custom content for the table data cell               |
-| `rowExpansion` | A row can be expanded to display additional content  |
+| Name             | Description                                          |
+|:-----------------|:-----------------------------------------------------|
+| `caption`        | Caption content upper the table                      |
+| `paginator`      | Custom content for the left section of the paginator |
+| `tableHead`      | Custom content for the table data head cell          |
+| `tableData`      | Custom content for the table data cell               |
+| `rowExpansion`   | A row can be expanded to display additional content  |
 
 ```angular2html
 <med-table [data]="data" [loading]="loading" [config]="config">

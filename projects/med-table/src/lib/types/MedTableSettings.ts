@@ -1,8 +1,8 @@
 export interface MedTableSettings extends Record<string, any> {
   rows?: number // count of rows, default: 25
   sticky?: boolean // sticky header
-  export?: boolean // show export excel button
   exportFileName?: string
+  showGlobalSearchFilter?: boolean
   filterDelay?: number
   paginator?: boolean
   expandedDataKey?: string // must be a key to a unique field
